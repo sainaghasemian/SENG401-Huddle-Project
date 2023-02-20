@@ -1,5 +1,12 @@
 <?php
     session_start();
+
+    $con=mysqli_connect("localhost","root","","huddle");
+    // Check connection
+    if (mysqli_connect_errno())
+    {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -92,9 +99,29 @@
             alt="Vector3105"
             class="no-period-vector"
           />
+
+          <?php
+          $test = "test";
+          $sql = "SELECT * FROM TEAM";
+          $teams_query = mysqli_query($con, $sql);
+          while ($row = mysqli_fetch_array($teams_query)) 
+          {
+            $test = $row['Name'];
+          ?>
+              <tr>
+                  <td><?php echo $row['Name']; ?></td>
+              </tr>
+          <?php
+          }
+          ?>
+          <!-- Not sure how to display this properly in the html -->
+          <span class="no-period-text2"><span><?php echo $test; ?></span></span>
           <span class="no-period-text2"><span>Upcoming Matches</span></span>
           <span class="no-period-text4"><span>My Feed</span></span>
           <span class="no-period-text6"><span>My Teams</span></span>
+
+         
+
         </div>
       </div>
     </div>
