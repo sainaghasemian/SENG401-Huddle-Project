@@ -21,6 +21,9 @@ SET time_zone = "+00:00";
 -- Database: `huddledatabase`
 --
 
+DROP DATABASE IF EXISTS huddledatabase;
+CREATE DATABASE huddledatabase;
+USE huddledatabase;
 -- --------------------------------------------------------
 
 --
