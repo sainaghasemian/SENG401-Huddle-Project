@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2023 at 04:22 AM
+-- Generation Time: Feb 26, 2023 at 04:35 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,9 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `huddledatabase`
 --
-DROP DATABASE IF EXISTS huddledatabase;
-CREATE DATABASE huddledatabase;
-USE huddledatabase;
+
 -- --------------------------------------------------------
 
 --
@@ -32,7 +30,7 @@ USE huddledatabase;
 CREATE TABLE `post` (
   `PostID` int(11) NOT NULL,
   `Content` varchar(2000) DEFAULT NULL,
-  `NumberOfLikes` int(11) DEFAULT NULL,
+  `NumberOfLikes` int(11) DEFAULT 0,
   `User_UserID` varchar(11) NOT NULL,
   `Team_TeamID` int(11) NOT NULL,
   `Post_PostID` int(11) DEFAULT NULL
@@ -114,8 +112,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`UserID`, `Name`, `Password`) VALUES
-('tommydinh', 'tommydinh', 'f'),
-('johnydo', 'Johny Do', 'f');
+('johnydo', 'Johny Do', 'f'),
+('tommydinh', 'tommydinh', 'f');
 
 -- --------------------------------------------------------
 
@@ -133,16 +131,16 @@ CREATE TABLE `usersubscribtion` (
 --
 
 INSERT INTO `usersubscribtion` (`User_UserID`, `Team_TeamID`) VALUES
-('tommydinh', 8),
-('tommydinh', 19),
-('tommydinh', 23),
-('tommydinh', 26),
 ('johnydo', 12),
 ('johnydo', 15),
 ('johnydo', 16),
 ('johnydo', 22),
 ('johnydo', 25),
-('johnydo', 28);
+('johnydo', 28),
+('tommydinh', 8),
+('tommydinh', 19),
+('tommydinh', 23),
+('tommydinh', 26);
 
 --
 -- Indexes for dumped tables
