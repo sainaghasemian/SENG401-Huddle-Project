@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2023 at 07:29 PM
--- Server version: 10.4.27-MariaDB
+-- Generation Time: Feb 20, 2023 at 02:38 AM
+-- Server version: 8.0.32
 -- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `huddledatabase`
+-- Database: `huddle`
 --
 
 -- --------------------------------------------------------
@@ -28,23 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `post` (
-  `PostID` int(11) NOT NULL,
+  `PostID` int NOT NULL,
   `Content` varchar(2000) DEFAULT NULL,
-  `NumberOfLikes` int(11) DEFAULT NULL,
-  `User_UserID` int(11) NOT NULL,
-  `Team_TeamID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `post`
---
-
-INSERT INTO `post` (`PostID`, `Content`, `NumberOfLikes`, `User_UserID`, `Team_TeamID`) VALUES
-(1, 'This team sucks', -1, 0, 25),
-(2, 'Nashville is cool', 20, 1, 21),
-(3, 'a post can only be 2000 characters i wonder if this is big enough or not', 22222222, 0, 26),
-(4, 'How do you take one of the most iconic jerseys/logos of all time, and come up with that orange/gold/black monstrosity?', 13, 0, 24),
-(5, 'Iginla was the a top 5 captain in all of NHL history', 99, 1, 0);
+  `NumberOfLikes` int DEFAULT NULL,
+  `User_UserID` int NOT NULL,
+  `Team_TeamID` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -53,46 +42,16 @@ INSERT INTO `post` (`PostID`, `Content`, `NumberOfLikes`, `User_UserID`, `Team_T
 --
 
 CREATE TABLE `team` (
-  `TeamID` int(11) NOT NULL,
+  `TeamID` int NOT NULL,
   `Name` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `team`
 --
 
 INSERT INTO `team` (`TeamID`, `Name`) VALUES
-(0, 'Calgary Flames'),
-(1, 'Carolina Hurricanes'),
-(2, 'Columbus Blue Jackets'),
-(3, 'New Jersey Devils'),
-(4, 'New York Islanders'),
-(5, 'New York Rangers'),
-(6, 'Philadelphia Flyers'),
-(7, 'Washington Capitals'),
-(8, 'Boston Bruins'),
-(9, 'Buffalo Sabres'),
-(10, 'Detroit Red Wings'),
-(11, 'Florida Panthers'),
-(12, 'Montréal Canadiens'),
-(13, 'Ottawa SEnators'),
-(14, 'Tampa Bay Lightning'),
-(15, 'Toronto Maple Leafs'),
-(16, 'Arizona Coyotes'),
-(17, 'Chicago Blackhawks'),
-(18, 'Colorado Avalanche'),
-(19, 'Dallas Stars'),
-(20, 'Minnesota Wild'),
-(21, 'Nashville Predators'),
-(22, 'St. Louis Blues'),
-(23, 'Winnipeg Jets'),
-(24, 'Anaheim Ducks'),
-(25, 'Edmonton Oilers'),
-(26, 'Los Angeles Kings'),
-(27, 'San Jose Sharks'),
-(28, 'Seattle Kraken'),
-(29, 'Vancouver Canucks'),
-(30, 'Vegas Golden Knights');
+(0, 'Calgary Flames');
 
 -- --------------------------------------------------------
 
@@ -101,18 +60,10 @@ INSERT INTO `team` (`TeamID`, `Name`) VALUES
 --
 
 CREATE TABLE `user` (
-  `UserID` int(11) NOT NULL,
+  `UserID` int NOT NULL,
   `Name` varchar(45) DEFAULT NULL,
   `Password` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`UserID`, `Name`, `Password`) VALUES
-(0, 'tommydinh', 'f'),
-(1, 'Johny Do', 'f');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -121,25 +72,9 @@ INSERT INTO `user` (`UserID`, `Name`, `Password`) VALUES
 --
 
 CREATE TABLE `usersubscribtion` (
-  `User_UserID` int(11) NOT NULL,
-  `Team_TeamID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `usersubscribtion`
---
-
-INSERT INTO `usersubscribtion` (`User_UserID`, `Team_TeamID`) VALUES
-(0, 8),
-(0, 19),
-(0, 23),
-(0, 26),
-(1, 12),
-(1, 15),
-(1, 16),
-(1, 22),
-(1, 25),
-(1, 28);
+  `User_UserID` int NOT NULL,
+  `Team_TeamID` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Indexes for dumped tables
@@ -175,16 +110,6 @@ ALTER TABLE `usersubscribtion`
   ADD PRIMARY KEY (`User_UserID`,`Team_TeamID`),
   ADD KEY `fk_User_has_Team_Team1_idx` (`Team_TeamID`),
   ADD KEY `fk_User_has_Team_User1_idx` (`User_UserID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `post`
---
-ALTER TABLE `post`
-  MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
