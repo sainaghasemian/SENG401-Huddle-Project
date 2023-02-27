@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2023 at 02:38 AM
--- Server version: 8.0.32
--- PHP Version: 8.1.12
+-- Generation Time: Feb 26, 2023 at 04:35 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,9 +18,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `huddle`
+-- Database: `huddledatabase`
 --
 
+DROP DATABASE IF EXISTS huddledatabase;
+CREATE DATABASE huddledatabase;
+USE huddledatabase;
 -- --------------------------------------------------------
 
 --
@@ -28,12 +31,24 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `post` (
-  `PostID` int NOT NULL,
+  `PostID` int(11) NOT NULL,
   `Content` varchar(2000) DEFAULT NULL,
-  `NumberOfLikes` int DEFAULT NULL,
-  `User_UserID` int NOT NULL,
-  `Team_TeamID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `NumberOfLikes` int(11) DEFAULT 0,
+  `User_UserID` varchar(11) NOT NULL,
+  `Team_TeamID` int(11) NOT NULL,
+  `Post_PostID` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`PostID`, `Content`, `NumberOfLikes`, `User_UserID`, `Team_TeamID`, `Post_PostID`) VALUES
+(1, 'This team sucks', 1, 'tommydinh', 25, NULL),
+(2, 'Nashville is cool', 20, 'johnydo', 21, NULL),
+(3, 'a post can only be 2000 characters i wonder if this is big enough or not', 22222222, 'tommydinh', 26, NULL),
+(4, 'How do you take one of the most iconic jerseys/logos of all time, and come up with that orange/gold/black monstrosity?', 13, 'tommydinh', 24, NULL),
+(5, 'Iginla was the a top 5 captain in all of NHL history', 99, 'johnydo', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -42,16 +57,46 @@ CREATE TABLE `post` (
 --
 
 CREATE TABLE `team` (
-  `TeamID` int NOT NULL,
+  `TeamID` int(11) NOT NULL,
   `Name` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `team`
 --
 
 INSERT INTO `team` (`TeamID`, `Name`) VALUES
-(0, 'Calgary Flames');
+(0, 'Calgary Flames'),
+(1, 'Carolina Hurricanes'),
+(2, 'Columbus Blue Jackets'),
+(3, 'New Jersey Devils'),
+(4, 'New York Islanders'),
+(5, 'New York Rangers'),
+(6, 'Philadelphia Flyers'),
+(7, 'Washington Capitals'),
+(8, 'Boston Bruins'),
+(9, 'Buffalo Sabres'),
+(10, 'Detroit Red Wings'),
+(11, 'Florida Panthers'),
+(12, 'Montréal Canadiens'),
+(13, 'Ottawa SEnators'),
+(14, 'Tampa Bay Lightning'),
+(15, 'Toronto Maple Leafs'),
+(16, 'Arizona Coyotes'),
+(17, 'Chicago Blackhawks'),
+(18, 'Colorado Avalanche'),
+(19, 'Dallas Stars'),
+(20, 'Minnesota Wild'),
+(21, 'Nashville Predators'),
+(22, 'St. Louis Blues'),
+(23, 'Winnipeg Jets'),
+(24, 'Anaheim Ducks'),
+(25, 'Edmonton Oilers'),
+(26, 'Los Angeles Kings'),
+(27, 'San Jose Sharks'),
+(28, 'Seattle Kraken'),
+(29, 'Vancouver Canucks'),
+(30, 'Vegas Golden Knights');
 
 -- --------------------------------------------------------
 
@@ -60,10 +105,18 @@ INSERT INTO `team` (`TeamID`, `Name`) VALUES
 --
 
 CREATE TABLE `user` (
-  `UserID` int NOT NULL,
+  `UserID` varchar(11) NOT NULL,
   `Name` varchar(45) DEFAULT NULL,
   `Password` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`UserID`, `Name`, `Password`) VALUES
+('johnydo', 'Johny Do', 'f'),
+('tommydinh', 'tommydinh', 'f');
 
 -- --------------------------------------------------------
 
@@ -72,9 +125,25 @@ CREATE TABLE `user` (
 --
 
 CREATE TABLE `usersubscribtion` (
-  `User_UserID` int NOT NULL,
-  `Team_TeamID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `User_UserID` varchar(11) NOT NULL,
+  `Team_TeamID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `usersubscribtion`
+--
+
+INSERT INTO `usersubscribtion` (`User_UserID`, `Team_TeamID`) VALUES
+('johnydo', 12),
+('johnydo', 15),
+('johnydo', 16),
+('johnydo', 22),
+('johnydo', 25),
+('johnydo', 28),
+('tommydinh', 8),
+('tommydinh', 19),
+('tommydinh', 23),
+('tommydinh', 26);
 
 --
 -- Indexes for dumped tables
@@ -87,7 +156,8 @@ ALTER TABLE `post`
   ADD PRIMARY KEY (`PostID`,`User_UserID`,`Team_TeamID`),
   ADD UNIQUE KEY `PostID_UNIQUE` (`PostID`),
   ADD KEY `fk_Post_User1_idx` (`User_UserID`),
-  ADD KEY `fk_Post_Team1_idx` (`Team_TeamID`);
+  ADD KEY `fk_Post_Team1_idx` (`Team_TeamID`),
+  ADD KEY `fk_Post_Post1` (`Post_PostID`);
 
 --
 -- Indexes for table `team`
@@ -112,6 +182,16 @@ ALTER TABLE `usersubscribtion`
   ADD KEY `fk_User_has_Team_User1_idx` (`User_UserID`);
 
 --
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `post`
+--
+ALTER TABLE `post`
+  MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -119,6 +199,7 @@ ALTER TABLE `usersubscribtion`
 -- Constraints for table `post`
 --
 ALTER TABLE `post`
+  ADD CONSTRAINT `fk_Post_Post1` FOREIGN KEY (`Post_PostID`) REFERENCES `post` (`PostID`),
   ADD CONSTRAINT `fk_Post_Team1` FOREIGN KEY (`Team_TeamID`) REFERENCES `team` (`TeamID`),
   ADD CONSTRAINT `fk_Post_User1` FOREIGN KEY (`User_UserID`) REFERENCES `user` (`UserID`);
 
