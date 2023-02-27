@@ -5,8 +5,9 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <!-- Mobile device compatability -->
     <title>Huddle</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
@@ -113,7 +114,6 @@
           <span class="no-period-text4"><span>My Feed</span></span>
           <span class="no-period-text6"><span>My Teams</span></span>
 
-         
 
         </div>
       </div>
