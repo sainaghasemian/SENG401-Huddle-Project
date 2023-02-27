@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `huddledatabase`
+-- Database: `huddle`
 --
 
 DROP DATABASE IF EXISTS huddledatabase;
@@ -31,7 +31,7 @@ USE huddledatabase;
 --
 
 CREATE TABLE `post` (
-  `PostID` int(11) NOT NULL,
+  `PostID` int NOT NULL,
   `Content` varchar(2000) DEFAULT NULL,
   `NumberOfLikes` int(11) DEFAULT 0,
   `User_UserID` varchar(11) NOT NULL,
@@ -57,46 +57,16 @@ INSERT INTO `post` (`PostID`, `Content`, `NumberOfLikes`, `User_UserID`, `Team_T
 --
 
 CREATE TABLE `team` (
-  `TeamID` int(11) NOT NULL,
+  `TeamID` int NOT NULL,
   `Name` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `team`
 --
 
 INSERT INTO `team` (`TeamID`, `Name`) VALUES
-(0, 'Calgary Flames'),
-(1, 'Carolina Hurricanes'),
-(2, 'Columbus Blue Jackets'),
-(3, 'New Jersey Devils'),
-(4, 'New York Islanders'),
-(5, 'New York Rangers'),
-(6, 'Philadelphia Flyers'),
-(7, 'Washington Capitals'),
-(8, 'Boston Bruins'),
-(9, 'Buffalo Sabres'),
-(10, 'Detroit Red Wings'),
-(11, 'Florida Panthers'),
-(12, 'Montréal Canadiens'),
-(13, 'Ottawa SEnators'),
-(14, 'Tampa Bay Lightning'),
-(15, 'Toronto Maple Leafs'),
-(16, 'Arizona Coyotes'),
-(17, 'Chicago Blackhawks'),
-(18, 'Colorado Avalanche'),
-(19, 'Dallas Stars'),
-(20, 'Minnesota Wild'),
-(21, 'Nashville Predators'),
-(22, 'St. Louis Blues'),
-(23, 'Winnipeg Jets'),
-(24, 'Anaheim Ducks'),
-(25, 'Edmonton Oilers'),
-(26, 'Los Angeles Kings'),
-(27, 'San Jose Sharks'),
-(28, 'Seattle Kraken'),
-(29, 'Vancouver Canucks'),
-(30, 'Vegas Golden Knights');
+(0, 'Calgary Flames');
 
 -- --------------------------------------------------------
 
@@ -180,16 +150,6 @@ ALTER TABLE `usersubscribtion`
   ADD PRIMARY KEY (`User_UserID`,`Team_TeamID`),
   ADD KEY `fk_User_has_Team_Team1_idx` (`Team_TeamID`),
   ADD KEY `fk_User_has_Team_User1_idx` (`User_UserID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `post`
---
-ALTER TABLE `post`
-  MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
