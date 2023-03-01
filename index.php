@@ -5,10 +5,10 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
   <!-- Mobile device compatability -->
     <title>Huddle</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
@@ -73,48 +73,31 @@
             alt="Rectangle33101"
             class="no-period-rectangle3"
           />
+          <span class="no-period-text6"><span>My Teams</span></span>
           <img
             src="public/playground_assets/rectangle73102-kn02-200h.png"
             alt="Rectangle73102"
             class="no-period-rectangle7"
           />
+          <span class="no-period-text4"><span>My Feed</span></span>
           <img
             src="public/playground_assets/rectangle83103-wfete-200h.png"
             alt="Rectangle83103"
             class="no-period-rectangle8"
           />
+          <span class="no-period-text2"><span>Upcoming Matches</span></span>
           <img
             src="public/playground_assets/rectangle93104-8npi-200h.png"
             alt="Rectangle93104"
             class="no-period-rectangle9"
           />
+
+          <!-- Search button -->
           <img
             src="public/playground_assets/vector3105-r6re.svg"
             alt="Vector3105"
             class="no-period-vector"
           />
-
-          <?php
-          $test = "test";
-          $sql = "SELECT * FROM TEAM";
-          $teams_query = mysqli_query($con, $sql);
-          while ($row = mysqli_fetch_array($teams_query)) 
-          {
-            $test = $row['Name'];
-          ?>
-              <tr>
-                  <td><?php echo $row['Name']; ?></td>
-              </tr>
-          <?php
-          }
-          ?>
-          <!-- Not sure how to display this properly in the html -->
-          <span class="no-period-text2"><span><?php echo $test; ?></span></span>
-          <span class="no-period-text2"><span>Upcoming Matches</span></span>
-          <span class="no-period-text4"><span>My Feed</span></span>
-          <span class="no-period-text6"><span>My Teams</span></span>
-
-
         </div>
       </div>
     </div>

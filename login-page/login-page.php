@@ -1,7 +1,10 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -41,56 +44,67 @@
   </head>
   <body>
     <div>
-      <link href="./no-period.css" rel="stylesheet" />
+      <link href="./login-page.css" rel="stylesheet" />
 
-      <div class="no-period-container">
-        <div class="no-period-no-period">
-          <div class="no-period-rectangle5">
+      <div class="login-page-container">
+        <div class="login-page-login-page">
+          <img
+            src="public/playground_assets/rectangle153-ckw-200h.png"
+            alt="Rectangle153"
+            class="login-page-rectangle1"
+          />
+          <img
+            src="public/playground_assets/rectangle454-vkob-1000w.png"
+            alt="Rectangle454"
+            class="login-page-rectangle4"
+          />
+          <span class="login-page-text"><span>Username or Email</span></span>
+          <span class="login-page-text02"><span>Password</span></span>
+          <span class="login-page-text04">
+            <span class="login-page-text05">New to Huddle? Sign up</span>
+            <span class="login-page-text06"></span>
+            <th><a href="../register-page/register-page.php"><button>here</button></a></th>
+          </span>
+          <span class="login-page-text08"><span>Welcome!</span></span>
+          <img
+            src="public/playground_assets/rectangle759-i23n-200h.png"
+            alt="Rectangle759"
+            class="login-page-rectangle7"
+          />
+          <img
+            src="public/playground_assets/rectangle8510-0k1-200h.png"
+            alt="Rectangle8510"
+            class="login-page-rectangle8"
+          />
+          <img
+            src="public/playground_assets/rectangle9511-zr-200h.png"
+            alt="Rectangle9511"
+            class="login-page-rectangle9"
+          />
+          <img
+            src="public/playground_assets/vector512-ucqe.svg"
+            alt="Vector512"
+            class="login-page-vector"
+          />
+          <img
+            src="public/playground_assets/rectangle10513-8v3qh-200h.png"
+            alt="Rectangle10513"
+            class="login-page-rectangle10"
+          />
+          <img
+            src="public/playground_assets/rectangle11514-1vfn-200h.png"
+            alt="Rectangle11514"
+            class="login-page-rectangle11"
+          />
+          <button class="login-page-log-in-button">
             <img
-              src="public/playground_assets/rectangle5397-jesm-400w.png"
-              alt="Rectangle5397"
-              class="no-period-rectangle51"
+              src="public/playground_assets/rectangle12516-j59a-200h.png"
+              alt="Rectangle12516"
+              class="login-page-rectangle12"
             />
-          </div>
-          <img
-            src="public/playground_assets/rectangle1398-o79t-200h.png"
-            alt="Rectangle1398"
-            class="no-period-rectangle1"
-          />
-          <img
-            src="public/playground_assets/rectangle4399-px5w-1000w.png"
-            alt="Rectangle4399"
-            class="no-period-rectangle4"
-          />
-          <span class="no-period-text"><span>Huddle</span></span>
-          <img
-            src="public/playground_assets/rectangle33101-8hvx-400w.png"
-            alt="Rectangle33101"
-            class="no-period-rectangle3"
-          />
-          <img
-            src="public/playground_assets/rectangle73102-kn02-200h.png"
-            alt="Rectangle73102"
-            class="no-period-rectangle7"
-          />
-          <img
-            src="public/playground_assets/rectangle83103-wfete-200h.png"
-            alt="Rectangle83103"
-            class="no-period-rectangle8"
-          />
-          <img
-            src="public/playground_assets/rectangle93104-8npi-200h.png"
-            alt="Rectangle93104"
-            class="no-period-rectangle9"
-          />
-          <img
-            src="public/playground_assets/vector3105-r6re.svg"
-            alt="Vector3105"
-            class="no-period-vector"
-          />
-          <span class="no-period-text2"><span>Upcoming Matches</span></span>
-          <span class="no-period-text4"><span>My Feed</span></span>
-          <span class="no-period-text6"><span>My Teams</span></span>
+            <span class="login-page-text10"><span>Log In</span></span>
+          </button>
+          <span class="login-page-text12"><span>Huddle</span></span>
         </div>
       </div>
     </div>
