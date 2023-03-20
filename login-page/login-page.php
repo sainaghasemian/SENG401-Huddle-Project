@@ -58,7 +58,7 @@
             alt="Rectangle454"
             class="login-page-rectangle4"
           />
-          <span class="login-page-text"><span>Username or Email</span></span>
+          
           <span class="login-page-text02"><span>Password</span></span>
           <span class="login-page-text04">
             <span class="login-page-text05">New to Huddle? Sign up</span>
@@ -91,11 +91,13 @@
             alt="Rectangle10513"
             class="login-page-rectangle10"
           />
+          <span class="login-page-text"><input type="text" id="username" name="username" placeholder="Username or Email" style = "background-color: #BBCEFF; color: #000000;"></span>
           <img
             src="public/playground_assets/rectangle11514-1vfn-200h.png"
             alt="Rectangle11514"
             class="login-page-rectangle11"
           />
+          <span class="login-page-text2"><input type="text" id="password" name="password" placeholder="Password" style = "background-color: #BBCEFF; color: #000000;"></span>
           <button class="login-page-log-in-button">
             <img
               src="public/playground_assets/rectangle12516-j59a-200h.png"
