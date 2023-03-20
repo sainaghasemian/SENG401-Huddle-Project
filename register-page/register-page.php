@@ -81,54 +81,52 @@
             class="register-page-vector"
           />
           <div class="register-page-component1">
-            <span class="register-page-text02"><span>Email Address</span></span>
             <img
               src="public/playground_assets/rectangle10612-hplfl-200h.png"
               alt="Rectangle10612"
               class="register-page-rectangle10"
             />
+            <span class="register-page-text02"><input type="text" id="email" name="email" placeholder="Email Address" style = "background-color: #BBCEFF; color: #000000;"></span>
           </div>
           <div class="register-page-component3">
-            <span class="register-page-text04"><span>Username</span></span>
             <img
               src="public/playground_assets/rectangle10i613-2yf-200h.png"
               alt="Rectangle10I613"
               class="register-page-rectangle101"
             />
+            <span class="register-page-text04"><input type="text" id="username" name="username" placeholder="Username" style = "background-color: #BBCEFF; color: #000000;"></span>
           </div>
           <div class="register-page-component2">
-            <span class="register-page-text06"><span>Password</span></span>
             <img
               src="public/playground_assets/rectangle10i614-n73s-200h.png"
               alt="Rectangle10I614"
               class="register-page-rectangle102"
             />
+            <span class="register-page-text06"><input type="text" id="password" name="password" placeholder="Password" style = "background-color: #BBCEFF; color: #000000;"></span>
           </div>
           <div class="register-page-component4">
-            <span class="register-page-text08">
-              <span>Confirm Password</span>
-            </span>
             <img
               src="public/playground_assets/rectangle10i615-3srk-200h.png"
               alt="Rectangle10I615"
               class="register-page-rectangle103"
             />
+            <span class="register-page-text08"><input type="text" id="cpassword" name="cpassword" placeholder="Confirm Password" style = "background-color: #BBCEFF; color: #000000;"></span>
           </div>
           <div class="register-page-name">
-            <span class="register-page-text10"><span>First Name</span></span>
             <img
               src="public/playground_assets/rectangle10618-vnki3-200h.png"
               alt="Rectangle10618"
               class="register-page-rectangle104"
             />
+            <span class="register-page-text10"><input type="text" id="fname" name="fname" placeholder="First Name" style = "background-color: #BBCEFF; color: #000000;"></span>
           </div>
           <div class="register-page-name1">
-            <span class="register-page-text12"><span>Last Name</span></span>
             <img
               src="public/playground_assets/rectangle10i619-ufze-200h.png"
               alt="Rectangle10I619"
               class="register-page-rectangle105"
             />
+            <span class="register-page-text12"><input type="text" id="lname" name="lname" placeholder="Last Name" style = "background-color: #BBCEFF; color: #000000;"></span>
           </div>
           <button class="register-page-sign-up-button">
             <img

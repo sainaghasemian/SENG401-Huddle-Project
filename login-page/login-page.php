@@ -58,8 +58,6 @@
             alt="Rectangle454"
             class="login-page-rectangle4"
           />
-          
-          <span class="login-page-text02"><span>Password</span></span>
           <span class="login-page-text04">
             <span class="login-page-text05">New to Huddle? Sign up</span>
             <span class="login-page-text06"></span>
@@ -106,6 +104,7 @@
             />
             <span class="login-page-text10"><span>Log In</span></span>
           </button>
+          <th><a href="../register-page/register-page.php"><button>login-page-log-in-button</button></a></th>
           <span class="login-page-text12"><span>Huddle</span></span>
         </div>
       </div>
