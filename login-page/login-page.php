@@ -97,7 +97,7 @@
             alt="Rectangle11514"
             class="login-page-rectangle11"
           />
-          <span class="login-page-text2"><input type="text" id="password" name="password" placeholder="Password" style = "background-color: #BBCEFF; color: #000000;"></span>
+          <span class="login-page-text02"><input type="text" id="password" name="password" placeholder="Password" style = "background-color: #BBCEFF; color: #000000;"></span>
           <button class="login-page-log-in-button">
             <img
               src="public/playground_assets/rectangle12516-j59a-200h.png"
