@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -203,7 +207,7 @@
             src="public/playground_assets/searchicon7464-hrlj.svg"
             class="team-page-search-icon"
           />
-          <a href="home-page1.html" class="team-page-navlink">
+          <a href="home-account-page.php" class="team-page-navlink">
             <img
               alt="AccountIcon7464"
               src="public/playground_assets/accounticon7464-cogs.svg"
@@ -215,7 +219,7 @@
             src="public/playground_assets/menuicon1205-aai.svg"
             class="team-page-menu-icon"
           />
-          <a href="post-page.html" class="team-page-post-button">
+          <a href="post-page.php" class="team-page-post-button">
             <img
               alt="Rectangle121207"
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/583628ca-1b31-44bc-9c48-733a7b50da28?org_if_sml=1826"

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -84,7 +88,7 @@
             placeholder="Last Name"
             class="register-page--lname-input input"
           />
-          <a href="home-page1.html" class="register-page-sign-up-button">
+          <a href="home-account-page.php" class="register-page-sign-up-button">
             <img
               alt="SignUpButton6065"
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/14c8e075-cf54-4ffc-b115-8db824213d04?org_if_sml=11235"

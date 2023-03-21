@@ -85,7 +85,7 @@
             src="public/playground_assets/searchicon1225-xb2.svg"
             class="index-search-icon"
           />
-          <a href="login-page.html" class="index-navlink">
+          <a href="login-page.php" class="index-navlink">
             <img
               alt="AccountIcon1225"
               src="public/playground_assets/accounticon1225-7nvd.svg"

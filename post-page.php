@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -135,7 +139,7 @@
             src="public/playground_assets/searchicon7468-c8vf.svg"
             class="post-page-search-icon"
           />
-          <a href="home-page1.html" class="post-page-navlink">
+          <a href="home-account-page.php" class="post-page-navlink">
             <img
               alt="AccountIcon7468"
               src="public/playground_assets/accounticon7468-2tdj.svg"

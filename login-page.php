@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -75,9 +79,7 @@
           />
           <span class="login-page-text">New to Huddle? Sign up</span>
           <span class="login-page-text01"><span>Welcome!</span></span>
-          <span class="login-page-text03"><span>Username or Email</span></span>
-          <span class="login-page-text05"><span>Password</span></span>
-          <a href="home-page1.html" class="login-page-log-in-button">
+          <a href="home-account-page.php" class="login-page-log-in-button">
             <img
               alt="Rectangle126044"
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235"
@@ -96,7 +98,7 @@
             placeholder="Username"
             class="login-page-username-input input"
           />
-          <a href="register-page.html" class="login-page-navlink button">
+          <a href="register-page.php" class="login-page-navlink button">
             here
           </a>
         </div>
