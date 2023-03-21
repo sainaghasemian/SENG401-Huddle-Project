@@ -83,7 +83,7 @@
             src="public/playground_assets/searchicon7463-kgba.svg"
             class="home-account-page-search-icon"
           />
-          <a href="home-page1.html" class="home-account-page-navlink">
+          <a href="home-page-account.php" class="home-account-page-navlink">
             <img
               alt="AccountIcon7463"
               src="public/playground_assets/accounticon7463-gwrkh.svg"
