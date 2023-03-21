@@ -3,12 +3,16 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="english">
+<html lang="en">
   <head>
-  <!-- Mobile device compatability -->
+    <!-- Mobile device compatability -->
     <title>Huddle</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Huddle" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
@@ -42,68 +46,76 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
       data-tag="font"
     />
+    <!--This is the head section-->
+    <!-- <style> ... </style> -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div>
-      <link href="./no-period.css" rel="stylesheet" />
+      <link href="./index.css" rel="stylesheet" />
 
-      <div class="no-period-container">
-        <div class="no-period-no-period">
-          <div class="no-period-rectangle5">
+      <div class="index-container">
+        <div class="index-full-page-template">
+          <img
+            alt="TopBar1224"
+            src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/d9a678dc-2593-4226-8391-de5b2bad1158?org_if_sml=1887"
+            class="index-top-bar"
+          />
+          <img
+            alt="RightBar1224"
+            src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/0b229d4d-325e-407f-b8c5-ba6cf0523929?org_if_sml=14699"
+            class="index-right-bar"
+          />
+          <img
+            alt="MiddleBar1224"
+            src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/62e3b6c0-216b-4f2b-9101-7bff224e0d07?org_if_sml=16661"
+            class="index-middle-bar"
+          />
+          <img
+            alt="LeftBar1224"
+            src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/37134d5d-04b3-4a0c-a6d4-fd1a05284852?org_if_sml=14699"
+            class="index-left-bar"
+          />
+          <span class="index-text"><span>Huddle</span></span>
+          <span class="index-text02"><span>Upcoming Matches</span></span>
+          <span class="index-text04"><span>Feed</span></span>
+          <span class="index-text06"><span>Top 5 Huddle Teams</span></span>
+          <img
+            alt="SearchIcon1225"
+            src="public/playground_assets/searchicon1225-xb2.svg"
+            class="index-search-icon"
+          />
+          <a href="login-page.html" class="index-navlink">
             <img
-              src="public/playground_assets/rectangle5397-jesm-400w.png"
-              alt="Rectangle5397"
-              class="no-period-rectangle51"
+              alt="AccountIcon1225"
+              src="public/playground_assets/accounticon1225-7nvd.svg"
+              class="index-account-icon"
             />
+          </a>
+          <img
+            alt="MenuIcon1225"
+            src="public/playground_assets/menuicon1225-ehcb.svg"
+            class="index-menu-icon"
+          />
+          <div class="index-huddle-user">
+            <span class="index-text08"><span>@Huddle</span></span>
+            <span class="index-text10"><span>Calgary, AB</span></span>
+            <div class="index-huddle-pic">
+              <img
+                alt="Ellipse61225"
+                src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c8594294-f92f-40ef-b97c-8dcb35bb78d1?org_if_sml=11247"
+                class="index-ellipse6"
+              />
+              <span class="index-text12">H</span>
+            </div>
           </div>
-          <img
-            src="public/playground_assets/rectangle1398-o79t-200h.png"
-            alt="Rectangle1398"
-            class="no-period-rectangle1"
-          />
-          <img
-            src="public/playground_assets/rectangle4399-px5w-1000w.png"
-            alt="Rectangle4399"
-            class="no-period-rectangle4"
-          />
-          <span class="no-period-text"><span>Huddle</span></span>
-          <img
-            src="public/playground_assets/rectangle33101-8hvx-400w.png"
-            alt="Rectangle33101"
-            class="no-period-rectangle3"
-          />
-          <span class="no-period-text6"><span>My Teams</span></span>
-          <img
-            src="public/playground_assets/rectangle73102-kn02-200h.png"
-            alt="Rectangle73102"
-            class="no-period-rectangle7"
-          />
-          <span class="no-period-text4"><span>My Feed</span></span>
-          <img
-            src="public/playground_assets/rectangle83103-wfete-200h.png"
-            alt="Rectangle83103"
-            class="no-period-rectangle8"
-          />
-          <span class="no-period-text2"><span>Upcoming Matches</span></span>
-          <img
-            src="public/playground_assets/rectangle93104-8npi-200h.png"
-            alt="Rectangle93104"
-            class="no-period-rectangle9"
-          />
-
-          <!-- Search button -->
-          <img
-            src="public/playground_assets/vector3105-r6re.svg"
-            alt="Vector3105"
-            class="no-period-vector"
-          />
         </div>
       </div>
     </div>
+    <script
+      data-section-id="navbar"
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
   </body>
 </html>
-
-
-
 

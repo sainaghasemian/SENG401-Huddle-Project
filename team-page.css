@@ -1,0 +1,2167 @@
+.team-page-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.team-page-full-page-template {
+  width: 100%;
+  height: 1193px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.team-page-top-bar {
+  top: 0px;
+  left: -1px;
+  width: 1920px;
+  height: 78px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-right-bar {
+  top: 151px;
+  left: 1486px;
+  width: 367px;
+  height: 983px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 35px;
+}
+.team-page-middle-bar {
+  top: 151px;
+  left: 503px;
+  width: 913px;
+  height: 983px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 35px;
+}
+.team-page-text {
+  top: 12px;
+  left: 784px;
+  color: rgba(255, 255, 255, 1);
+  width: 328px;
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-left-bar {
+  top: 151px;
+  left: 66px;
+  width: 367px;
+  height: 983px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 35px;
+}
+.team-page-genericskatername1 {
+  top: 722px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text002 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text004 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text005 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text006 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text007 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-genericskatername2 {
+  top: 757.111083984375px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text008 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text010 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text011 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text012 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text013 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-genericskatername3 {
+  top: 792.22216796875px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text014 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text016 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text017 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text018 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text019 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-genericskatername4 {
+  top: 1073.111083984375px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text020 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text022 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text023 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text024 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text025 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-genericskatername41 {
+  top: 827.3333129882812px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text026 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text028 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text029 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text030 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text031 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-genericskatername5 {
+  top: 1038px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text032 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text034 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text035 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text036 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text037 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-genericskatername6 {
+  top: 1002.888916015625px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text038 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text040 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text041 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text042 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text043 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-genericskatername7 {
+  top: 967.7777709960938px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text044 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text046 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text047 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text048 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text049 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-genericskatername8 {
+  top: 932.6666259765625px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text050 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text052 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text053 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text054 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text055 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-genericskatername9 {
+  top: 897.5555419921875px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text056 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text058 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text059 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text060 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text061 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-genericskatername10 {
+  top: 862.4444580078125px;
+  left: 95px;
+  width: 311px;
+  height: 33.111114501953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text062 {
+  top: 2px;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text064 {
+  left: 182px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text065 {
+  left: 224px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text066 {
+  left: 258px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text067 {
+  left: 291px;
+  color: rgba(0, 0, 0, 1);
+  width: 20px;
+  height: auto;
+  position: absolute;
+  font-size: 15.19812297821045px;
+  align-self: auto;
+  font-style: Light;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text068 {
+  top: 126px;
+  left: 1518px;
+  color: rgba(0, 0, 0, 1);
+  width: 241px;
+  height: auto;
+  position: absolute;
+  font-size: 19.082178115844727px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-text070 {
+  top: 126px;
+  left: 530px;
+  color: rgba(0, 0, 0, 1);
+  width: 241px;
+  height: auto;
+  position: absolute;
+  font-size: 19.082178115844727px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-text072 {
+  top: 126px;
+  left: 98px;
+  color: rgba(0, 0, 0, 1);
+  width: 241px;
+  height: auto;
+  position: absolute;
+  font-size: 19.082178115844727px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-text074 {
+  top: 396px;
+  left: 807px;
+  color: rgba(0, 0, 0, 1);
+  width: 305px;
+  height: auto;
+  position: absolute;
+  font-size: 38.054054260253906px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-text076 {
+  top: 455px;
+  left: 860px;
+  color: rgba(0, 0, 0, 1);
+  width: 199px;
+  height: auto;
+  position: absolute;
+  font-size: 29.071338653564453px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-profile-pic {
+  top: 191px;
+  left: 863px;
+  width: 192px;
+  height: 192px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-left-bar-separator {
+  top: 656px;
+  left: 95px;
+  width: 309px;
+  height: 0px;
+  position: absolute;
+}
+.team-page-skaters-title {
+  top: 682px;
+  left: 95px;
+  width: 310px;
+  height: 39.78260803222656px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.team-page-text078 {
+  color: rgba(0, 0, 0, 1);
+  width: 71px;
+  height: auto;
+  position: absolute;
+  font-size: 19.43424415588379px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text080 {
+  left: 178px;
+  color: rgba(0, 0, 0, 1);
+  width: 29px;
+  height: auto;
+  position: absolute;
+  font-size: 19.43424415588379px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text082 {
+  left: 223px;
+  color: rgba(0, 0, 0, 1);
+  width: 21px;
+  height: auto;
+  position: absolute;
+  font-size: 19.43424415588379px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text083 {
+  left: 259px;
+  color: rgba(0, 0, 0, 1);
+  width: 18px;
+  height: auto;
+  position: absolute;
+  font-size: 19.43424415588379px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-text084 {
+  left: 293px;
+  color: rgba(0, 0, 0, 1);
+  width: 17px;
+  height: auto;
+  position: absolute;
+  font-size: 19.43424415588379px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-standing-field {
+  top: 176px;
+  left: 126px;
+  width: 241px;
+  height: 58px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(28, 92, 255, 0.6899999976158142);
+}
+.team-page-text085 {
+  top: 9px;
+  left: 22px;
+  color: rgba(0, 0, 0, 1);
+  width: 197px;
+  height: auto;
+  position: absolute;
+  font-size: 29.94417381286621px;
+  align-self: auto;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-g-field {
+  top: 254px;
+  left: 126px;
+  width: 241px;
+  height: 58px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(28, 92, 255, 0.2800000011920929);
+}
+.team-page-text087 {
+  top: 9px;
+  left: 22px;
+  color: rgba(0, 0, 0, 1);
+  width: 197px;
+  height: auto;
+  position: absolute;
+  font-size: 29.94417381286621px;
+  align-self: auto;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page--field {
+  top: 332px;
+  left: 126px;
+  width: 241px;
+  height: 58px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(28, 92, 255, 0.2800000011920929);
+}
+.team-page-text089 {
+  top: 9px;
+  left: 22px;
+  color: rgba(0, 0, 0, 1);
+  width: 197px;
+  height: auto;
+  position: absolute;
+  font-size: 29.94417381286621px;
+  align-self: auto;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page--field {
+  top: 410px;
+  left: 126px;
+  width: 241px;
+  height: 58px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(28, 92, 255, 0.2800000011920929);
+}
+.team-page-text094 {
+  top: 9px;
+  left: 22px;
+  color: rgba(0, 0, 0, 1);
+  width: 197px;
+  height: auto;
+  position: absolute;
+  font-size: 29.94417381286621px;
+  align-self: auto;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-o-field {
+  top: 488px;
+  left: 126px;
+  width: 241px;
+  height: 58px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(28, 92, 255, 0.2800000011920929);
+}
+.team-page-text099 {
+  top: 9px;
+  left: 22px;
+  color: rgba(0, 0, 0, 1);
+  width: 197px;
+  height: auto;
+  position: absolute;
+  font-size: 29.94417381286621px;
+  align-self: auto;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-pts-field {
+  top: 566px;
+  left: 126px;
+  width: 241px;
+  height: 58px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(28, 92, 255, 0.2800000011920929);
+}
+.team-page-text101 {
+  top: 9px;
+  left: 22px;
+  color: rgba(0, 0, 0, 1);
+  width: 197px;
+  height: auto;
+  position: absolute;
+  font-size: 29.94417381286621px;
+  align-self: auto;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.team-page-search-icon {
+  top: 22px;
+  left: 1789px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+}
+.team-page-navlink {
+  display: contents;
+}
+.team-page-account-icon {
+  top: 18px;
+  left: 1731px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  text-decoration: none;
+}
+.team-page-menu-icon {
+  top: 14px;
+  left: 1839px;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+}
+.team-page-post-button {
+  top: 506px;
+  left: 886px;
+  width: 149px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  text-decoration: none;
+}
+.team-page-rectangle12 {
+  top: 0px;
+  left: 0px;
+  width: 149px;
+  height: 40px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 31.746034622192383px;
+}
+.team-page-text103 {
+  top: 5.714311599731445px;
+  left: 40px;
+  color: rgba(255, 255, 255, 1);
+  width: 89px;
+  height: auto;
+  position: absolute;
+  font-size: 22.11982536315918px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-plus-icon {
+  top: 10.521815299987793px;
+  left: 96.88963317871094px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+}
+.team-page-match6 {
+  top: 529px;
+  left: 1523px;
+  width: 311px;
+  height: 130px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.team-page-text105 {
+  top: 35px;
+  left: 194px;
+  color: rgba(0, 0, 0, 1);
+  width: 117px;
+  height: auto;
+  position: absolute;
+  font-size: 20.770954132080078px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-separator {
+  top: 0px;
+  left: 174px;
+  width: 130px;
+  height: 0px;
+  position: absolute;
+}
+.team-page-text110 {
+  top: 89.45550537109375px;
+  left: 68.4345703125px;
+  color: rgba(0, 0, 0, 1);
+  width: 93px;
+  height: auto;
+  position: absolute;
+  font-size: 18.261627197265625px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-away-team-pic {
+  top: 75px;
+  left: 0px;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-text112 {
+  top: 23px;
+  left: 68px;
+  color: rgba(0, 0, 0, 1);
+  width: 64px;
+  height: auto;
+  position: absolute;
+  font-size: 18.261627197265625px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-home-team-pic {
+  top: 9px;
+  left: 0px;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-match4 {
+  top: 702px;
+  left: 1523px;
+  width: 311px;
+  height: 130px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.team-page-text114 {
+  top: 35px;
+  left: 194px;
+  color: rgba(0, 0, 0, 1);
+  width: 117px;
+  height: auto;
+  position: absolute;
+  font-size: 20.770954132080078px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-separator1 {
+  top: 0px;
+  left: 174px;
+  width: 130px;
+  height: 0px;
+  position: absolute;
+}
+.team-page-text119 {
+  top: 89.45550537109375px;
+  left: 68.4345703125px;
+  color: rgba(0, 0, 0, 1);
+  width: 93px;
+  height: auto;
+  position: absolute;
+  font-size: 18.261627197265625px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-away-team-pic1 {
+  top: 75px;
+  left: 0px;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-text121 {
+  top: 23px;
+  left: 68px;
+  color: rgba(0, 0, 0, 1);
+  width: 64px;
+  height: auto;
+  position: absolute;
+  font-size: 18.261627197265625px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-home-team-pic1 {
+  top: 9px;
+  left: 0px;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-match3 {
+  top: 875px;
+  left: 1523px;
+  width: 311px;
+  height: 130px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.team-page-text123 {
+  top: 35px;
+  left: 194px;
+  color: rgba(0, 0, 0, 1);
+  width: 117px;
+  height: auto;
+  position: absolute;
+  font-size: 20.770954132080078px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-separator2 {
+  top: 0px;
+  left: 174px;
+  width: 130px;
+  height: 0px;
+  position: absolute;
+}
+.team-page-text128 {
+  top: 89.45550537109375px;
+  left: 68.4345703125px;
+  color: rgba(0, 0, 0, 1);
+  width: 93px;
+  height: auto;
+  position: absolute;
+  font-size: 18.261627197265625px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-away-team-pic2 {
+  top: 75px;
+  left: 0px;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-text130 {
+  top: 23px;
+  left: 68px;
+  color: rgba(0, 0, 0, 1);
+  width: 64px;
+  height: auto;
+  position: absolute;
+  font-size: 18.261627197265625px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-home-team-pic2 {
+  top: 9px;
+  left: 0px;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-match2 {
+  top: 356px;
+  left: 1523px;
+  width: 311px;
+  height: 130px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.team-page-text132 {
+  top: 35px;
+  left: 194px;
+  color: rgba(0, 0, 0, 1);
+  width: 117px;
+  height: auto;
+  position: absolute;
+  font-size: 20.770954132080078px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-separator3 {
+  top: 0px;
+  left: 174px;
+  width: 130px;
+  height: 0px;
+  position: absolute;
+}
+.team-page-text137 {
+  top: 89.45550537109375px;
+  left: 68.4345703125px;
+  color: rgba(0, 0, 0, 1);
+  width: 93px;
+  height: auto;
+  position: absolute;
+  font-size: 18.261627197265625px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-away-team-pic3 {
+  top: 75px;
+  left: 0px;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-text139 {
+  top: 23px;
+  left: 68px;
+  color: rgba(0, 0, 0, 1);
+  width: 64px;
+  height: auto;
+  position: absolute;
+  font-size: 18.261627197265625px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-home-team-pic3 {
+  top: 9px;
+  left: 0px;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-match1 {
+  top: 183px;
+  left: 1523px;
+  width: 311px;
+  height: 130px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.team-page-text141 {
+  top: 35px;
+  left: 194px;
+  color: rgba(0, 0, 0, 1);
+  width: 117px;
+  height: auto;
+  position: absolute;
+  font-size: 20.770954132080078px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-separator4 {
+  top: 0px;
+  left: 174px;
+  width: 130px;
+  height: 0px;
+  position: absolute;
+}
+.team-page-text146 {
+  top: 89.45550537109375px;
+  left: 68.4345703125px;
+  color: rgba(0, 0, 0, 1);
+  width: 93px;
+  height: auto;
+  position: absolute;
+  font-size: 18.261627197265625px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-away-team-pic4 {
+  top: 75px;
+  left: 0px;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+}
+.team-page-text148 {
+  top: 23px;
+  left: 68px;
+  color: rgba(0, 0, 0, 1);
+  width: 64px;
+  height: auto;
+  position: absolute;
+  font-size: 18.261627197265625px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.team-page-home-team-pic4 {
+  top: 9px;
+  left: 0px;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+}

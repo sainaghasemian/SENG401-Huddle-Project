@@ -32,7 +32,10 @@
   --dl-space-space-fiveunits: 80px;
   --dl-space-space-fourunits: 64px;
   --dl-space-space-threeunits: 48px;
+  --dl-color-primary-huddleblue: #1d5cffff;
   --dl-space-space-oneandhalfunits: 24px;
+  --dl-color-primary-huddlelightblue: #bbceffff;
+  --dl-color-primary-huddlelightlightgrey: #f8faffff;
 }
 .button {
   color: var(--dl-color-gray-black);
