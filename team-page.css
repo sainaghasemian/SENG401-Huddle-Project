@@ -1482,7 +1482,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.team-page--field {
+.team-page-Wfield { /*this is the W field*/
   top: 332px;
   left: 126px;
   width: 241px;
@@ -1504,7 +1504,7 @@
   justify-content: flex-start;
   background-color: rgba(28, 92, 255, 0.2800000011920929);
 }
-.team-page-text089 {
+.team-page-text089 { /*this is the W text*/
   top: 9px;
   left: 22px;
   color: rgba(0, 0, 0, 1);
@@ -1521,7 +1521,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.team-page--field {
+.team-page--field { /*this is the L field*/
   top: 410px;
   left: 126px;
   width: 241px;
@@ -1543,7 +1543,7 @@
   justify-content: flex-start;
   background-color: rgba(28, 92, 255, 0.2800000011920929);
 }
-.team-page-text094 {
+.team-page-text094 { /*this is the L text*/
   top: 9px;
   left: 22px;
   color: rgba(0, 0, 0, 1);
