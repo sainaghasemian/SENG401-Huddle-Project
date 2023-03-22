@@ -1,0 +1,34 @@
+Team 		     :ID
+------------------------------
+Vegas Golden knights : 702
+Dallas Stars : 681
+Los Angeles Kings : 685
+Colorado Avalanche : 679
+Minnesota Wild :687
+Edmonton Oiler 683
+Winnepeg Jets :704
+Seattle Kraken :1436
+Calgary Falmes : 675
+Nashville Predators : 689
+St Louis Blues : 698
+Vancouver Canucks :701
+Arizona Coyotes : 1460
+San Jose Sharks : 697
+Chicago Blackhawks :678
+Anaheim Ducks : 670
+Boston Bruins :673
+Carolina Hurricanes :676
+New Jersey Devils :690
+Toronto Maples : 700
+Tampa Bay Lightning : 699
+New York Rangers : 692
+New York Islander : 691
+Pittsburgh Penguins :696
+Buffalo Sabers : 674
+Detroit Red Wings :682
+Florida Panthers :684
+Washington Capitals :703
+Ottawa Senators :693
+Philadelphia Flyer :695
+Montreal Canadiens :688
+Columbus Blue Jackets :680
