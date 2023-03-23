@@ -203,18 +203,44 @@
           </div>
           <div class="stats-page-seasons-drop-down">
             <span class="stats-page-text25"><span>SEASONS</span></span>
-            <span class="stats-page-text27"><span>2022-23</span></span>
+            <span class="stats-page-text27">
+                
+                <select id="season-select">
+                  <option value="">Select a Year</option>  
+                </select>
+            </span>
+            <!--- TAKING OUT THE BOX MADE THE DROP DOWN WORK
             <img
               alt="Rectangle137441"
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/a0701e45-30f3-405c-9ab8-d0bcae53e432?org_if_sml=1123"
               class="stats-page-rectangle13"
             />
+            
             <img
               alt="Polygon17445"
               src="public/playground_assets/polygon17445-nn6d.svg"
               class="stats-page-polygon1"
-            />
+            />--->
           </div>
+          <script>
+            // Get the current year
+            var currentYear = new Date().getFullYear();
+
+            // Populate the dropdown with options for each year
+            var select = document.getElementById("season-select");
+            for (var i = currentYear; i >= 2000; i--) {
+              var option = document.createElement("option");
+              option.value = i + "-" + (i+1).toString().substring(2);
+              option.text = i + "-" + (i+1).toString().substring(2);
+              select.add(option);
+            }
+             // Add click event listener to the button
+            var button = document.getElementById("season-button");
+            var dropdown = document.getElementById("season-select");
+            button.addEventListener("click", function() {
+              dropdown.classList.toggle("show");
+            });
+          </script>
           <div class="stats-page-game-type-drop-down">
             <span class="stats-page-text29"><span>Regular Season</span></span>
             <span class="stats-page-text31"><span>GAME TYPE</span></span>

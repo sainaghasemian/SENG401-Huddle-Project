@@ -552,7 +552,14 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: transparent;
+  z-index: -1;
+  overflow: visible;
 }
+
+.stats-page-seasons-drop-down select.show {
+  display: block;
+}
+
 .stats-page-text25 {
   color: rgba(0, 0, 0, 1);
   width: 149px;
