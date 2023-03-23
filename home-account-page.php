@@ -111,7 +111,7 @@
               src="public/playground_assets/accounticon7463-gwrkh.svg"
               class="home-account-page-account-icon"
             />
-          </a>
+          <a href="team-page.php" class="home-account-page-navlink">
           <img
             alt="MenuIcon1204"
             src="public/playground_assets/menuicon1204-io2.svg"

@@ -11,7 +11,7 @@
   height: 1193px;
   display: flex;
   overflow: hidden;
-  position: relative;
+  position: fixed;
   align-items: flex-end;
   flex-shrink: 0;
   border-color: transparent;
@@ -21,35 +21,35 @@
 .login-page-top-bar {
   top: 0px;
   left: -1px;
-  width: 1920px;
-  height: 78px;
+  width: 100%;
+  height: 6%;
   position: absolute;
   border-color: transparent;
 }
 .login-page-search-icon {
   top: 22px;
-  left: 1789px;
+  right: 4.5%;
   width: 32px;
   height: 32px;
   position: absolute;
 }
 .login-page-menu-icon {
   top: 14px;
-  left: 1839px;
+  right: 1%;
   width: 48px;
   height: 48px;
   position: absolute;
 }
 .login-page-account-icon {
   top: 18px;
-  left: 1731px;
+  right: 7.5%;
   width: 40px;
   height: 40px;
   position: absolute;
 }
 .login-page-middle-bar {
   top: 78px;
-  left: 492px;
+  left: 26.5%;
   width: 913px;
   height: 1115px;
   position: absolute;
@@ -57,7 +57,7 @@
 }
 .login-page-text { /* This is the "New to Huddle?" text*/
   top: 827px;
-  left: 785px;
+  left: 41%;
   color: rgb(0, 0, 0);
   width: 324px;
   height: auto;
@@ -135,7 +135,7 @@
 }
 .login-page-text09 { /*this is the Huddle Logo text on the top bar*/
   top: 8px;
-  left: 796px;
+  left: 40%;
   color: rgba(255, 255, 255, 1);
   width: 328px;
   height: auto;
@@ -184,7 +184,7 @@
 }
 .login-page-navlink { /* This is for "here" button */
   top: 827px;
-  left: 1043px;
+  left: 54.5%;
   color: var(--dl-color-primary-huddleblue);
   width: 56px;
   height: 30px;
@@ -200,170 +200,4 @@
   padding-bottom: 0px;
   text-decoration: underline;
   background-color: var(--dl-color-primary-huddlelightlightgrey);
-}
-
-@media(max-width: 1200px) {
-  .login-page-top-bar {
-    top: 0px;
-    left: -1px;
-    width: 1200px;
-    height: 78px;
-    position: absolute;
-    border-color: transparent;
-  }
-
-  .login-page-text09 { /*this is the Huddle Logo text on the top bar*/
-    top: 8px;
-    left: 427px;
-    color: rgba(255, 255, 255, 1);
-    width: 328px;
-    height: auto;
-    position: absolute;
-    font-size: 48px;
-    align-self: auto;
-    font-style: ExtraBold;
-    text-align: center;
-    font-family: Work Sans;
-    font-weight: 800;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-  }
-
-  .login-page-search-icon {
-    top: 22px;
-    left: 1065px;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-  }
-  .login-page-menu-icon {
-    top: 14px;
-    left: 1120px;
-    width: 48px;
-    height: 48px;
-    position: absolute;
-  }
-  .login-page-account-icon {
-    top: 18px;
-    left: 1000px;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-  }
-
-  .login-page-middle-bar {
-    top: 78px;
-    left: 140px;
-    width: 913px;
-    height: 1115px;
-    position: absolute;
-    border-color: transparent;
-  }
-
-  .login-page-text01 {  /*this is the Welcome msg */
-    top: 403px;
-    left: 334px;
-    color: rgba(28, 92, 255, 1);
-    width: 489px;
-    height: auto;
-    position: absolute;
-    font-size: 71.60655975341797px;
-    align-self: auto;
-    font-style: ExtraBold;
-    text-align: center;
-    font-family: Work Sans;
-    font-weight: 800;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-  }
-
-  .login-page-password-input {
-    top: 630px;
-    left: 280px;
-    width: 621px;
-    height: 61px;
-    position: absolute;
-    font-size: 20px;
-    font-family: Work Sans;
-    border-style: hidden;
-    background-color: #bbceff;
-    border-top-width: 10px;
-    border-left-width: 20px;
-    border-right-width: 10px;
-    border-bottom-width: 10px;
-  }
-  .login-page-username-input {
-    top: 510px;
-    left: 280px;
-    width: 621px;
-    height: 61px;
-    position: absolute;
-    font-size: 20px;
-    font-family: Work Sans;
-    border-style: hidden;
-    background-color: #bbceff;
-    border-top-width: 10px;
-    border-left-width: 20px;
-    border-right-width: 10px;
-    border-bottom-width: 10px;
-  }
-
-  .login-page-log-in-button { /*this is the Log In button "container" */
-    top: 728px;
-    left: 462px;
-    width: 234px;
-    height: 63px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-color: transparent;
-    text-decoration: none;
-  }
-
-  .login-page-text { /* This is the "New to Huddle?" text*/
-    top: 827px;
-    left: 416px;
-    color: rgb(0, 0, 0);
-    width: 324px;
-    height: auto;
-    position: absolute;
-    font-size: 21.0343px;
-    align-self: auto;
-    font-style: Regular;
-    text-align: left;
-    font-family: Work Sans;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-  }
-
-  .login-page-navlink { /* This is for "here" button */
-    top: 827px;
-    left: 674px;
-    color: var(--dl-color-primary-huddleblue);
-    width: 56px;
-    height: 30px;
-    position: absolute;
-    font-size: 20px;
-    font-style: normal;
-    font-family: Work Sans;
-    font-weight: 600;
-    padding-top: 0px;
-    border-style: hidden;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    text-decoration: underline;
-    background-color: var(--dl-color-primary-huddlelightlightgrey);
-  }
 }
