@@ -1,6 +1,5 @@
 <?php
     session_start();
-    // $_SESSION["message"] = "";
       // Include the database connection file
     include_once("config.php");
 

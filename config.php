@@ -13,7 +13,7 @@ try {
 } 
 catch (Exception $e) {
   error_log($e->getMessage());
-  exit('Unable to connect to database middleware.'); 
+  exit('Unable to connect to PDO.'); 
 }
 
 ?>
