@@ -22,7 +22,7 @@
   top: 0px;
   left: -1px;
   width: 100%;
-  height: 6%;
+  height: 78px;
   position: absolute;
   border-color: transparent;
 }
@@ -131,27 +131,30 @@
 }
 /* .index-search-icon {
   top: 22px;
-  right: 4.5%;
+  right: 87px;
   width: 32px;
   height: 32px;
   position: absolute;
-} */
+  min-width: 16px;
+}
 .index-navlink {
   display: contents;
 }
 .index-account-icon {
   top: 18px;
-  right: 7.5%;
+  right: 138px;
   width: 40px;
   height: 40px;
   position: absolute;
+  min-width: 16px;
 }
 .index-menu-icon {
   top: 14px;
-  right: 1%;
+  right: 24px;
   width: 48px;
   height: 48px;
   position: absolute;
+  min-width: 16px;
 }
 .index-huddle-user {
   top: 184px;

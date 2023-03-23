@@ -62,6 +62,7 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/e976054d-51a3-40db-9f8d-b4cf06b82f1d?org_if_sml=1887"
             class="login-page-top-bar"
           />
+          <!--This is the search button-->
           <img
             alt="SearchIcon7466"
             src="public/playground_assets/searchicon7466-ox4mi.svg"
@@ -113,6 +114,7 @@
           <a href="register-page.php" class="login-page-navlink button">
             here
           </a>
+
         </div>
       </div>
     </div>

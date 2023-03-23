@@ -34,6 +34,7 @@
   height: 32px;
   position: absolute;
 }
+
 .login-page-menu-icon {
   top: 14px;
   right: 1%;
@@ -202,6 +203,8 @@
   border-right-width: 10px;
   border-bottom-width: 10px;
 }
+
+
 .login-page-navlink { /* This is for "here" button */
   top: 827px;
   left: 54.5%;
@@ -221,3 +224,4 @@
   text-decoration: underline;
   background-color: var(--dl-color-primary-huddlelightlightgrey);
 }
+
