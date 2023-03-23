@@ -312,7 +312,7 @@ function getPlayerStats(players) {
                     penaltyMinutes = objectData.stats[0].splits[0].stat.pim;
     
                     output += `<p> ${playerName} </p>`;
-                    output += `<ul>
+                    output += `<ul >
                                             <li> Position: ${position} </li>
                                             <li> Games Played: ${gamesPlayed} </li>
                                             <li> Goals: ${goals} </li>
@@ -320,7 +320,7 @@ function getPlayerStats(players) {
                                             <li> +/-: ${plusMinus} </li>
                                             <li> PIM: ${penaltyMinutes} </li> 
                                         </ul>`;
-                    document.getElementById("playerStats").innerHTML = output;
+                    document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
                 }
 
                 // going to need one for goalie
@@ -331,6 +331,7 @@ function getPlayerStats(players) {
     }
 }
 
+// this is the final version
 
 // league number is 57 for NHL
 // season is 2022 for 2022-2023 season
