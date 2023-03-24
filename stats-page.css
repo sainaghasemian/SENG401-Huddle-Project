@@ -552,12 +552,7 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: transparent;
-  z-index: -1;
-  overflow: visible;
-}
 
-.stats-page-seasons-drop-down select.show {
-  display: block;
 }
 
 .stats-page-text25 {
@@ -574,6 +569,7 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
+  
 }
 .stats-page-text27 {
   top: 39px;
