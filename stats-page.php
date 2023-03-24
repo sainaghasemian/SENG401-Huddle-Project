@@ -5,6 +5,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!---api--->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API testing</title>
+    <script src="script.js"></script>
+
     <title>StatsPage - Huddle</title>
     <meta property="og:title" content="StatsPage - Huddle" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -317,6 +324,7 @@
                 <option value="washington-capitals">Washington Capitals</option>
                 <option value="winnipeg-jets">Winnipeg Jets</option>
               </select>
+              
             </span>
             <!---
             <img
@@ -339,6 +347,7 @@
               const selectedValue = franchiseTypeSelect.value;
               console.log(`Selected franchise type: ${selectedValue}`);
             });
+            
           ></script>
 
 
