@@ -1,5 +1,8 @@
 <?php
     session_start();
+
+    // Include the database connection file
+    include_once("config.php");
 ?>
 
 <!DOCTYPE html>
@@ -97,18 +100,34 @@
             src="public/playground_assets/menuicon1225-ehcb.svg"
             class="index-menu-icon"
           />
-          <div class="index-huddle-user">
-            <span class="index-text08"><span>@Huddle</span></span>
-            <span class="index-text10"><span>Calgary, AB</span></span>
-            <div class="index-huddle-pic">
-              <img
-                alt="Ellipse61225"
-                src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c8594294-f92f-40ef-b97c-8dcb35bb78d1?org_if_sml=11247"
-                class="index-ellipse6"
-              />
-              <span class="index-text12">H</span>
+          <?php
+          echo "TEST";
+            $result = $pdo->query("SELECT * FROM  team");
+            $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
+
+            foreach($teams as $team)
+            {
+              echo $team["Name"];
+              ?>
+              
+              <html>
+              <div class='index-huddle-user'>
+              <span class='index-text08'><span><?php $team['Name']?></span></span>
+              <span class='index-text10'><span>Calgary, AB</span></span>
+              <div class='index-huddle-pic'>
+                <img
+                  alt='Ellipse61225'
+                  src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c8594294-f92f-40ef-b97c-8dcb35bb78d1?org_if_sml=11247'
+                  class='index-ellipse6'
+                />
+                <span class='index-text12'>H</span>
+              </div>
             </div>
-          </div>
+            </html>
+            <?php
+            }
+            $pdo = null;
+          ?>
         </div>
       </div>
     </div>
