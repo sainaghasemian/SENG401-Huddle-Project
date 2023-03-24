@@ -1,5 +1,6 @@
 .login-page-container {
   width: 100%;
+  height: 100%;
   display: flex;
   overflow: auto;
   min-height: 100vh;
@@ -75,6 +76,25 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.login-page-message { /* This is the "Incorrect username or password" text*/
+  top: 827px;
+  left: 41%;
+  color: rgb(0, 0, 0);
+  width: 324px;
+  height: auto;
+  position: absolute;
+  font-size: 21.0343px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
 .login-page-text01 {  /*this is the Welcome msg */
   top: 403px;
   left: 703px;
@@ -95,7 +115,7 @@
   text-decoration: none;
 }
 .login-page-log-in-button { /*this is the Log In button "container" */
-  top: 728px;
+  top: 100px;
   left: 831px;
   width: 234px;
   height: 63px;

@@ -1,18 +1,19 @@
 <?php
     session_start();
+
+    //Set global message variable
     $_SESSION["message"] = "";
+
     // Include the database connection file
     include_once("config.php");
 
-    //Get username and password from login page
+    //Verify username and password from login page
     if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]))
     {
       $username = $_POST["username"];
       $password = $_POST["password"];
       
       $result = $pdo->query("SELECT 1 FROM User WHERE UserID = '$username' AND Password = '$password'");
-      echo $username;
-      echo $password;
       $success = $result->fetch(PDO::FETCH_ASSOC);
       if($success == null)
       {

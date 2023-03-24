@@ -11,10 +11,11 @@
   height: 1193px;
   display: flex;
   overflow: hidden;
-  position: relative;
-  align-items: flex-start;
+  position: fixed;
+  align-items: flex-end;
   flex-shrink: 0;
   border-color: transparent;
+  justify-content: flex-start;
   background-color: rgba(255, 255, 255, 1);
 }
 .index-top-bar {
@@ -128,7 +129,7 @@
   margin-bottom: 0;
   text-decoration: none;
 }
-.index-search-icon {
+/* .index-search-icon {
   top: 22px;
   right: 87px;
   width: 32px;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2023 at 04:35 AM
+-- Generation Time: Mar 24, 2023 at 07:28 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -18,9 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `huddle`
+-- Database: `huddledatabase`
 --
-
 DROP DATABASE IF EXISTS huddledatabase;
 CREATE DATABASE huddledatabase;
 USE huddledatabase;
@@ -31,7 +30,7 @@ USE huddledatabase;
 --
 
 CREATE TABLE `post` (
-  `PostID` int NOT NULL,
+  `PostID` int(11) NOT NULL,
   `Content` varchar(2000) DEFAULT NULL,
   `NumberOfLikes` int(11) DEFAULT 0,
   `User_UserID` varchar(11) NOT NULL,
@@ -57,9 +56,9 @@ INSERT INTO `post` (`PostID`, `Content`, `NumberOfLikes`, `User_UserID`, `Team_T
 --
 
 CREATE TABLE `team` (
-  `TeamID` int NOT NULL,
+  `TeamID` int(11) NOT NULL,
   `Name` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `team`
@@ -150,25 +149,6 @@ ALTER TABLE `usersubscribtion`
   ADD PRIMARY KEY (`User_UserID`,`Team_TeamID`),
   ADD KEY `fk_User_has_Team_Team1_idx` (`Team_TeamID`),
   ADD KEY `fk_User_has_Team_User1_idx` (`User_UserID`);
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `post`
---
-ALTER TABLE `post`
-  ADD CONSTRAINT `fk_Post_Post1` FOREIGN KEY (`Post_PostID`) REFERENCES `post` (`PostID`),
-  ADD CONSTRAINT `fk_Post_Team1` FOREIGN KEY (`Team_TeamID`) REFERENCES `team` (`TeamID`),
-  ADD CONSTRAINT `fk_Post_User1` FOREIGN KEY (`User_UserID`) REFERENCES `user` (`UserID`);
-
---
--- Constraints for table `usersubscribtion`
---
-ALTER TABLE `usersubscribtion`
-  ADD CONSTRAINT `fk_User_has_Team_Team1` FOREIGN KEY (`Team_TeamID`) REFERENCES `team` (`TeamID`),
-  ADD CONSTRAINT `fk_User_has_Team_User1` FOREIGN KEY (`User_UserID`) REFERENCES `user` (`UserID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
