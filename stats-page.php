@@ -201,13 +201,15 @@
             />
             <span class="stats-page-text23"><span>Search Players</span></span>
           </div>
+          
           <div class="stats-page-seasons-drop-down">
             <span class="stats-page-text25"><span>SEASONS</span></span>
             <span class="stats-page-text27">
-                
-                <select id="season-select">
-                  <option value="">Select a Year</option>  
-                </select>
+             
+              <select id="season-select">
+                <option value="">Select a Year</option>  
+              </select>
+
             </span>
             <!--- TAKING OUT THE BOX MADE THE DROP DOWN WORK
             <img
@@ -234,16 +236,27 @@
               option.text = i + "-" + (i+1).toString().substring(2);
               select.add(option);
             }
-             // Add click event listener to the button
-            var button = document.getElementById("season-button");
+
+            // Add change event listener to the select element
             var dropdown = document.getElementById("season-select");
-            button.addEventListener("click", function() {
-              dropdown.classList.toggle("show");
+            dropdown.addEventListener("change", function() {
+              var selectedValue = dropdown.value;
+              console.log(`Selected year: ${selectedValue}`);
             });
           </script>
+          
           <div class="stats-page-game-type-drop-down">
-            <span class="stats-page-text29"><span>Regular Season</span></span>
             <span class="stats-page-text31"><span>GAME TYPE</span></span>
+            <span class="stats-page-text29">
+              <select id="gametype-select">
+                  <option value="">Select a Game Type</option>  
+                  <option value="regular-season">Regular Season</option>
+                  <option value="pre-season">Pre Season</option>
+                  <option value="playoffs">Playoffs</option>
+              </select>
+            </span>
+            
+            <!--- TAKING OUT THE BOX MADE THE DROP DOWN WORK
             <img
               alt="Rectangle147441"
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/6c92c04b-2e03-499a-ba6b-e6f1a29f3843?org_if_sml=1123"
@@ -254,10 +267,58 @@
               src="public/playground_assets/polygon27445-lncw.svg"
               class="stats-page-polygon2"
             />
+            --->
           </div>
+          <script>
+            // Add change event listener to the select element
+            const gameTypeSelect = document.getElementById("gametype-select");
+
+            gameTypeSelect.addEventListener("change", function() {
+              const selectedValue = gameTypeSelect.value;
+              console.log(`Selected game type: ${selectedValue}`);
+            });
+          ></script>
+
           <div class="stats-page-franchise-drop-down">
-            <span class="stats-page-text33"><span>All Franchises</span></span>
             <span class="stats-page-text35"><span>FRANCHISE</span></span>
+            <span class="stats-page-text33">
+              <select id="franchise-select">
+                <option value="">All Franchises</option>  
+                <option value="anaheim-ducks">Anaheim Ducks</option>
+                <option value="arizona-coyotes">Arizona Coyotes</option>
+                <option value="boston-bruins">Boston Bruins</option>
+                <option value="buffalo-sabres">Buffalo Sabres</option>
+                <option value="calgary-flames">Calgary Flames</option>
+                <option value="carolina-hurricanes">Carolina Hurricanes</option>
+                <option value="chicago-blackhawks">Chicago Blackhawks</option>
+                <option value="colorado-avalanche">Colorado Avalanche</option>
+                <option value="columbus-blue-jackets">Columbus Blue Jackets</option>
+                <option value="dallas-stars">Dallas Stars</option>
+                <option value="detroit-red-wings">Detroit Red Wings</option>
+                <option value="edmonton-oilers">Edmonton Oilers</option>
+                <option value="florida-panthers">Florida Panthers</option>
+                <option value="los-angeles-kings">Los Angeles Kings</option>
+                <option value="minnesota-wild">Minnesota Wild</option>
+                <option value="montreal-canadiens">Montreal Canadiens</option>
+                <option value="nashville-predators">Nashville Predators</option>
+                <option value="new-jersey-devils">New Jersey Devils</option>
+                <option value="new-york-islanders">New York Islanders</option>
+                <option value="new-york-rangers">New York Rangers</option>
+                <option value="ottawa-senators">Ottawa Senators</option>
+                <option value="philadelphia-flyers">Philadelphia Flyers</option>
+                <option value="pittsburgh-penguins">Pittsburgh Penguins</option>
+                <option value="san-jose-sharks">San Jose Sharks</option>
+                <option value="seattle-kraken">Seattle Kraken</option>
+                <option value="st-louis-blues">St. Louis Blues</option>
+                <option value="tampa-bay-lightning">Tampa Bay Lightning</option>
+                <option value="toronto-maple-leafs">Toronto Maple Leafs</option>
+                <option value="vancouver-canucks">Vancouver Canucks</option>
+                <option value="vegas-golden-knights">Vegas Golden Knights</option>
+                <option value="washington-capitals">Washington Capitals</option>
+                <option value="winnipeg-jets">Winnipeg Jets</option>
+              </select>
+            </span>
+            <!---
             <img
               alt="Rectangle157442"
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/84eb97ec-399d-4297-a3ec-cc431647232f?org_if_sml=1123"
@@ -268,10 +329,33 @@
               src="public/playground_assets/polygon37445-xlnd.svg"
               class="stats-page-polygon3"
             />
+            --->
           </div>
+          <script>
+            // Add change event listener to the select element
+            const franchiseTypeSelect = document.getElementById("franchise-select");
+
+            franchiseTypeSelect.addEventListener("change", function() {
+              const selectedValue = franchiseTypeSelect.value;
+              console.log(`Selected franchise type: ${selectedValue}`);
+            });
+          ></script>
+
+
           <div class="stats-page-position-drop-down">
-            <span class="stats-page-text37"><span>All Skaters</span></span>
             <span class="stats-page-text39"><span>POSITION</span></span>
+            <span class="stats-page-text37">
+              <select id="position-select">
+                <option value="">All Skaters</option>  
+                <option value="center-position">Center</option>  
+                <option value="left-wing">Left Wing</option>  
+                <option value="right-wing">Right Wing</option>  
+                <option value="left-defense">Left Defense</option>  
+                <option value="right-defense">Right Defense</option>  
+                <option value="goaltenders-position">Goaltenders</option>  
+                </select>
+            </span>
+            <!---
             <img
               alt="Rectangle167442"
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/e03cc5ed-fcc3-4695-a931-37f268ea4073?org_if_sml=1123"
@@ -282,10 +366,26 @@
               src="public/playground_assets/polygon47445-8g1e.svg"
               class="stats-page-polygon4"
             />
+            --->
           </div>
+          <script>
+            // Add change event listener to the select element
+            const positionTypeSelect = document.getElementById("position-select");
+
+            positionTypeSelect.addEventListener("change", function() {
+              const selectedValue = positionTypeSelect.value;
+              console.log(`Selected position type: ${selectedValue}`);
+            });
+          ></script>
+
           <div class="stats-page-report-drop-down">
-            <span class="stats-page-text41"><span>Summary</span></span>
             <span class="stats-page-text43"><span>REPORT</span></span>
+            <span class="stats-page-text41">
+              <select id="position-select">
+                  <option value="">Summary</option>  
+              </select>
+            </span>
+            <!---
             <img
               alt="Rectangle177443"
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/4c8973ae-93e9-46ca-b685-4c376bcb4e29?org_if_sml=1123"
@@ -296,6 +396,7 @@
               src="public/playground_assets/polygon57445-wvuc.svg"
               class="stats-page-polygon5"
             />
+            --->
           </div>
           <img
             alt="TopBar7469"
@@ -323,7 +424,8 @@
         </div>
       </div>
     </div>
-    <script
+    <script>
+
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
