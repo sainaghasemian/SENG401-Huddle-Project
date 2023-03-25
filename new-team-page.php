@@ -84,101 +84,50 @@
             class="new-team-page-menu-icon"
           />
           <span class="new-team-page-teams-drop-down-title">TEAMS</span>
-          <select class="new-team-page-teams-drop-down">
+          <select class="new-team-page-teams-drop-down" id="team-select">
             <option value="">All Teams</option>
-            <option value="anaheim-ducks">Anaheim Ducks</option>
-                <option value="arizona-coyotes">Arizona Coyotes</option>
-                <option value="boston-bruins">Boston Bruins</option>
-                <option value="buffalo-sabres">Buffalo Sabres</option>
-                <option value="calgary-flames">Calgary Flames</option>
-                <option value="carolina-hurricanes">Carolina Hurricanes</option>
-                <option value="chicago-blackhawks">Chicago Blackhawks</option>
-                <option value="colorado-avalanche">Colorado Avalanche</option>
-                <option value="columbus-blue-jackets">Columbus Blue Jackets</option>
-                <option value="dallas-stars">Dallas Stars</option>
-                <option value="detroit-red-wings">Detroit Red Wings</option>
-                <option value="edmonton-oilers">Edmonton Oilers</option>
-                <option value="florida-panthers">Florida Panthers</option>
-                <option value="los-angeles-kings">Los Angeles Kings</option>
-                <option value="minnesota-wild">Minnesota Wild</option>
-                <option value="montreal-canadiens">Montreal Canadiens</option>
-                <option value="nashville-predators">Nashville Predators</option>
-                <option value="new-jersey-devils">New Jersey Devils</option>
-                <option value="new-york-islanders">New York Islanders</option>
-                <option value="new-york-rangers">New York Rangers</option>
-                <option value="ottawa-senators">Ottawa Senators</option>
-                <option value="philadelphia-flyers">Philadelphia Flyers</option>
-                <option value="pittsburgh-penguins">Pittsburgh Penguins</option>
-                <option value="san-jose-sharks">San Jose Sharks</option>
-                <option value="seattle-kraken">Seattle Kraken</option>
-                <option value="st-louis-blues">St. Louis Blues</option>
-                <option value="tampa-bay-lightning">Tampa Bay Lightning</option>
-                <option value="toronto-maple-leafs">Toronto Maple Leafs</option>
-                <option value="vancouver-canucks">Vancouver Canucks</option>
-                <option value="vegas-golden-knights">Vegas Golden Knights</option>
-                <option value="washington-capitals">Washington Capitals</option>
-                <option value="winnipeg-jets">Winnipeg Jets</option>
+            <option value="Anaheim Ducks">Anaheim Ducks</option>
+            <option value="Arizona Coyotes">Arizona Coyotes</option>
+            <option value="Boston Bruins">Boston Bruins</option>
+            <option value="Buffalo Sabres">Buffalo Sabres</option>
+            <option value="Calgary Flames">Calgary Flames</option>
+            <option value="Carolina Hurricanes">Carolina Hurricanes</option>
+            <option value="Chicago Blackhawks">Chicago Blackhawks</option>
+            <option value="Colorado Avalanche">Colorado Avalanche</option>
+            <option value="Columbus Blue Jackets">Columbus Blue Jackets</option>
+            <option value="Dallas Stars">Dallas Stars</option>
+            <option value="Detroit Red Wings">Detroit Red Wings</option>
+            <option value="Edmonton Oilers">Edmonton Oilers</option>
+            <option value="Florida Panthers">Florida Panthers</option>
+            <option value="Los Angeles Kings">Los Angeles Kings</option>
+            <option value="Minnesota Wild">Minnesota Wild</option>
+            <option value="Montreal Canadiens">Montreal Canadiens</option>
+            <option value="Nashville Predators">Nashville Predators</option>
+            <option value="New Jersey Devils">New Jersey Devils</option>
+            <option value="New York Islanders">New York Islanders</option>
+            <option value="New York Rangers">New York Rangers</option>
+            <option value="Ottawa Senators">Ottawa Senators</option>
+            <option value="Philadelphia Flyers">Philadelphia Flyers</option>
+            <option value="Pittsburgh Penguins">Pittsburgh Penguins</option>
+            <option value="San Jose Sharks">San Jose Sharks</option>
+            <option value="Seattle Kraken">Seattle Kraken</option>
+            <option value="St. Louis Blues">St. Louis Blues</option>
+            <option value="Tampa Bay Lightning">Tampa Bay Lightning</option>
+            <option value="Toronto Maple Leafs">Toronto Maple Leafs</option>
+            <option value="Vancouver Canucks">Vancouver Canucks</option>
+            <option value="Vegas Golden Knights">Vegas Golden Knights</option>
+            <option value="Washington Capitals">Washington Capitals</option>
+            <option value="Winnipeg Jets">Winnipeg Jets</option>
           </select>
-          <table class="new-team-page-table"></span>
-            <thead></thead>
-              <tr>
-                <th>Team </th>
-                <th></th>
-                <th>Standing</th>
-                <th>GP</th>
-                <th>W</th>
-                <th>L</th>
-                <th>OT</th>
-                <th>Pts</th>
-                <th></th>
-              </tr>
-            <tbody>
-              <tr>
-                <td><img src="ProfilePic.png" height="50" width="50" class="center"></td>
-                <td>Team Name</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>Post Button</td>
-              </tr>
-              <tr>
-                <td><img src="ProfilePic.png" height="50" width="50" class="center"></td>
-                <td>Team Name</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>Post Button</td>
-              </tr>
-              <tr>
-                <td><img src="ProfilePic.png" height="50" width="50" class="center"></td>
-                <td>Team Name</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>Post Button</td>
-              </tr>
-              <tr>
-                <td><img src="ProfilePic.png" height="50" width="50" class="center"></td>
-                <td>Team Name</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>Post Button</td>
-              </tr>
-            </tbody>
-          </table>
+          <button class="new-team-pages-get-teams-button">
+            <img
+              alt="Rectangle126633"
+              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/32875c77-5163-45b7-b5c6-8ec1403e308b?org_if_sml=11235"
+              class="new-team-page-rectangle12"
+            />
+            <span onclick="getStandings()" class="new-team-pages-get-teams-buttontext"><span>Get Teams</span></span>
+            <div id="standings"></div>     
+          </button>
         </div>
       </div>
     </div>

@@ -124,11 +124,11 @@
   border-width: 2.5px;
 }
 .new-team-page-table {
-  width: 94%;
+  width: 1200px;
   border-collapse: collapse;
   margin: 25px 0;
   margin-top: 400px;
-  margin-left: 55px;
+  margin-left: 5px;
   font-size:large;
   min-width: 400px;
   font-family: Work Sans;
@@ -138,7 +138,7 @@
 
 .new-team-page-table thead tr {
   background-color: #1D5CFF;
-  color: #1D5CFF;
+  color: #FFFFFF;
   text-align: center;
   font-weight: bold;
 }
@@ -167,6 +167,38 @@
   margin-left: auto;
   margin-right: auto;
   width: 35%;
+}
+
+.new-team-pages-get-teams-buttontext {
+  top: 13px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  width: 181px;
+  height: auto;
+  position: absolute;
+  font-size: 27.606220245361328px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.new-team-pages-get-teams-button {
+  top: 300px;
+  left: 330px;
+  width: 234px;
+  height: 63px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
 }
 
 

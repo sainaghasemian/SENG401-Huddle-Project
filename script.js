@@ -166,7 +166,7 @@ function getGame() {
 }
 
 function getStandings() {
-
+    selectedTeam = document.querySelector("#team-select").value;
     fetch('https://api-hockey.p.rapidapi.com/standings/?league=57&season=2022', options)
         .then((data) => {
             // console.log(data);   // this is json format
@@ -176,8 +176,21 @@ function getStandings() {
             console.log(objectData);
             // length of array that contains games 
             let objectLength = objectData.response.length;
-            let output;
-
+            let output = `<table class="new-team-page-table">
+                            <thead>
+                            <tr>
+                                <th>Team </th>
+                                <th></th>
+                                <th>Standing</th>
+                                <th>GP</th>
+                                <th>W</th>
+                                <th>L</th>
+                                <th>OT</th>
+                                <th>Pts</th>
+                            </tr>
+                            </thead>
+                            <div id="standings"></div>
+                        </table>`;
             let teamName;
             let gamesPlayed;
             let numWins;
@@ -186,23 +199,51 @@ function getStandings() {
             let points;
             // loop that goes through response array and find games that are being played today
             // western conference loop
+            if(selectedTeam === ""){
 
-            for (let i = 0; i < 16; i++) {
-                teamName = objectData.response[0][i].team.name;
-                gamesPlayed = objectData.response[0][i].games.played;
-                numWins = objectData.response[0][i].games.win.total + objectData.response[0][i].games.win_overtime.total;
-                numLosses = objectData.response[0][i].games.lose.total;
-                numOTLosses = objectData.response[0][i].games.lose_overtime.total;
-                points = objectData.response[0][i].points;
-                output += `<p> ${teamName} </p>`;
-                output += `<ul>
-                                        <li> Games Played: ${gamesPlayed} </li>
-                                        <li> Wins: ${numWins} </li>
-                                        <li> Losses: ${numLosses} </li>
-                                        <li> OT Losses ${numOTLosses} </li>
-                                        <li> Points ${points} </li>
-                                    </ul>`;
-                document.getElementById("standings").innerHTML = output;
+                for (let i = 0; i < 32; i++) {
+                    teamName = objectData.response[0][i].team.name;
+                    gamesPlayed = objectData.response[0][i].games.played;
+                    numWins = objectData.response[0][i].games.win.total + objectData.response[0][i].games.win_overtime.total;
+                    numLosses = objectData.response[0][i].games.lose.total;
+                    numOTLosses = objectData.response[0][i].games.lose_overtime.total;
+                    points = objectData.response[0][i].points;
+                    output += `<tbody> 
+                                <tr>
+                                    <td>${teamName}</td>
+                                    <td>${gamesPlayed}</td>
+                                    <td>${numWins}</td>
+                                    <td>${numLosses}</td>
+                                    <td>${numOTLosses}</td>
+                                    <td>${points}</td>
+                                <tr>
+                            </tbody>`;
+                    document.getElementById("standings").innerHTML = output;
+                }
+            } else{
+                for (let i = 0; i < 32; i++) {
+                    teamName = objectData.response[0][i].team.name;
+                    if(selectedTeam === teamName){
+
+                        gamesPlayed = objectData.response[0][i].games.played;
+                        numWins = objectData.response[0][i].games.win.total + objectData.response[0][i].games.win_overtime.total;
+                        numLosses = objectData.response[0][i].games.lose.total;
+                        numOTLosses = objectData.response[0][i].games.lose_overtime.total;
+                        points = objectData.response[0][i].points;
+                        output += `<tbody> 
+                                    <tr>
+                                        <td>${teamName}</td>
+                                        <td>${gamesPlayed}</td>
+                                        <td>${numWins}</td>
+                                        <td>${numLosses}</td>
+                                        <td>${numOTLosses}</td>
+                                        <td>${points}</td>
+                                    <tr>
+                                </tbody>`;
+                        document.getElementById("standings").innerHTML = output;
+                        break;
+                    }
+                }
             }
         })
         .catch(error => console.log(error));
