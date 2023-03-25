@@ -8,7 +8,6 @@ const options = {
 };
 
 function getGame() {
-    // alert(1);
     let homeTeam;  // home team name
     let homeLogo;   // url for home team logo
     let awayTeam; // away team name
@@ -215,7 +214,7 @@ function getStandings() {
 
 // finding the team ID using user input team name with stats API
 function findTeamID() {
-    let userInput = document.querySelector("#userInput").value.toLowerCase();
+    let userInput = document.querySelector("#franchise-select").value.toLowerCase();
     if (userInput === "") {
         console.log("user input was empty");
         return -1;
@@ -310,16 +309,33 @@ function getPlayerStats(players) {
                     points = objectData.stats[0].splits[0].stat.points;
                     plusMinus = objectData.stats[0].splits[0].stat.plusMinus;
                     penaltyMinutes = objectData.stats[0].splits[0].stat.pim;
-    
-                    output += `<p> ${playerName} </p>`;
-                    output += `<ul >
-                                            <li> Position: ${position} </li>
-                                            <li> Games Played: ${gamesPlayed} </li>
-                                            <li> Goals: ${goals} </li>
-                                            <li> Points: ${points} </li>
-                                            <li> +/-: ${plusMinus} </li>
-                                            <li> PIM: ${penaltyMinutes} </li> 
-                                        </ul>`;
+                    
+                    output += `<table>
+                                <tr>
+                                    <th>Player</th>
+                                    <th>Season</th>
+                                    <th>Team</th>
+                                    <th>Position</th>
+                                    <th>Games Played</th>
+                                    <th>Goals</th>
+                                    <th>Points</th>
+                                    <th>+/-</th>
+                                    <th>PIM</th>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>${playerName}</td>
+                                    
+                                    <td>${position}</td>
+                                    <td>${gamesPlayed}</td>
+                                    <td>${goals}</td>
+                                    <td>${points}</td>
+                                    <td>${plusMinus}</td>
+                                    <td>${penaltyMinutes}</td>
+                                </tr>
+                            </table>`;
+
+
                     document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
                 }
 
