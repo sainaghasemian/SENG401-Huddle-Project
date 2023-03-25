@@ -1,0 +1,172 @@
+.new-team-page-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.new-team-page-full-page-template {
+  width: 100%;
+  height: 1193px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.new-team-page-teams-text {
+  top: 126px;
+  left: 56px;
+  color: rgba(0, 0, 0, 1);
+  width: 384px;
+  height: auto;
+  position: absolute;
+  font-size: 74.95890808105469px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.new-team-page-separator {
+  top: 240px;
+  left: 56px;
+  width: 94%;
+  height: 0px;
+  position: absolute;
+  border-color: var(--dl-color-primary-huddleblue);
+  border-width: 2px;
+}
+.new-team-page-top-bar {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 78px;
+  position: absolute;
+  border-color: transparent;
+}
+.new-team-page-search-icon {
+  top: 22px;
+  right: 87px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  min-width: var(--dl-size-size-xsmall);
+}
+.new-team-page-account-icon {
+  top: 18px;
+  right: 138px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  min-width: var(--dl-size-size-xsmall);
+}
+.new-team-page-huddle-top-logo {
+  top: 8px;
+  left: 797px;
+  color: rgba(255, 255, 255, 1);
+  width: 328px;
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.new-team-page-menu-icon {
+  top: 14px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  min-width: var(--dl-size-size-xsmall);
+}
+.new-team-page-teams-drop-down-title {
+  top: 281px;
+  left: 59px;
+  color: rgb(0, 0, 0);
+  width: 149px;
+  height: auto;
+  position: absolute;
+  font-size: 18.6003px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.new-team-page-teams-drop-down {
+  top: 307px;
+  left: 58px;
+  width: 232px;
+  height: 49px;
+  position: absolute;
+  border-color: var(--dl-color-primary-huddleblue);
+  border-width: 2.5px;
+}
+.new-team-page-table {
+  width: 94%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  margin-top: 400px;
+  margin-left: 55px;
+  font-size:large;
+  min-width: 400px;
+  font-family: Work Sans;
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+}
+
+.new-team-page-table thead tr {
+  background-color: #1D5CFF;
+  color: #1D5CFF;
+  text-align: center;
+  font-weight: bold;
+}
+
+.new-team-page-table th,
+.new-team-page-table td {
+  text-align: center;
+  
+  padding: 12px 15px;
+}
+
+.new-team-page-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.new-team-page-table tbody tr:nth-of-type(even) {
+  background-color: #C0D2FF;
+}
+
+.new-team-page-table tbody tr:last-of-type {
+  border-bottom: 3px solid #1D5CFF;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+
