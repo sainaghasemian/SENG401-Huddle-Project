@@ -323,7 +323,7 @@ function getPlayerStats(players) {
     console.log(players);
 
     let output = `<table class="table-chart">
-                    <thread>
+                    <thead>
                         <tr>
                             <th>Player</th>
                             <th>Position</th>
@@ -334,7 +334,7 @@ function getPlayerStats(players) {
                             <th>+/-</th>
                             <th>PIM</th>
                         </tr>
-                    </thread>
+                    </thead>
                 </table>`;
 
     let playerName;
@@ -364,12 +364,18 @@ function getPlayerStats(players) {
                         plusMinus = objectData.stats[0].splits[0].stat.plusMinus;
                         penaltyMinutes = objectData.stats[0].splits[0].stat.pim;
                         
-                        output += `<tbody>
-                                    <ul class="list">
-                                        <li>${playerName} ${position} ${gamesPlayed} ${goals} ${assist} ${points} ${plusMinus} ${penaltyMinutes}</li>
+                        output += `
+                                    <tr>
+                                        <td>${playerName}</td>
+                                        <td>${position}</td>
+                                        <td>${gamesPlayed}</td>
+                                        <td>${goals}</td> 
+                                        <td>${assist}</td>
+                                        <td>${points}</td>
+                                        <td>${plusMinus}</td>
+                                        <td>${penaltyMinutes}</td>
                     
-                                    </ul>
-                                </tbody>`;
+                                    </tr>`;
     
     
                         document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
