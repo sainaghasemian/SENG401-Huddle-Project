@@ -214,7 +214,7 @@ function getStandings() {
 
 // finding the team ID using user input team name with stats API
 function findTeamID() {
-    let userInput = document.querySelector("#franchise-select").value.toLowerCase();
+    let userInput = document.querySelector("#franchise-select").value;
     if (userInput === "") {
         console.log("user input was empty");
         return -1;
@@ -230,7 +230,7 @@ function findTeamID() {
             let objectLength = objectData.teams.length;
             // let playerIDs = [];
             for (let i = 0; i < objectLength - 1; i++) {  // loop that runs through list of teams to find ID
-                if (objectData.teams[i].name.toLowerCase().includes(userInput)) {
+                if (objectData.teams[i].name === userInput) {
                     console.log(`Full team name: ${objectData.teams[i].name}, ID: ${objectData.teams[i].id} `);
                     getRoster(objectData.teams[i].id);
 
@@ -276,11 +276,25 @@ function getRoster(teamID) {
 }
 
 function getPlayerStats(players) {
-    console.log("currently inside of getplayerstats");
-    let season = 20222023;  // will change this to a user input after
+    // let season = 20222023;  // will change this to a user input after
+    let season = document.querySelector("#season-select").value;  // will change this to a user input after
+    let positionSelect = document.querySelector("#position-select").value;
     console.log(players);
 
-    let output;
+    let output = `<table class="table-chart">
+                    <thread>
+                        <tr>
+                            <th>Player</th>
+                            <th>Position</th>
+                            <th>Games Played</th>
+                            <th>Goals</th>
+                            <th>Assists</th>
+                            <th>Points</th>
+                            <th>+/-</th>
+                            <th>PIM</th>
+                        </tr>
+                    </thread>
+                </table>`;
 
     let playerName;
     let position;
@@ -291,60 +305,79 @@ function getPlayerStats(players) {
     let plusMinus;
     let penaltyMinutes;
 
-
-
-    for (let i = 0; i < players.length; i++) {
-        fetch(`https://statsapi.web.nhl.com/api/v1/people/${players[i].id}/stats?stats=statsSingleSeason&season=${season}`)
-            .then((data) => {
-                return data.json(); // convert to object 
-            })
-            .then((objectData) => {
-                console.log(objectData);
-                playerName = players[i].fullName;
-                position = players[i].position;
-                gamesPlayed = objectData.stats[0].splits[0].stat.games;
-                if(position !== "G"){
-                    goals = objectData.stats[0].splits[0].stat.goals;
-                    assist = objectData.stats[0].splits[0].stat.assists;
-                    points = objectData.stats[0].splits[0].stat.points;
-                    plusMinus = objectData.stats[0].splits[0].stat.plusMinus;
-                    penaltyMinutes = objectData.stats[0].splits[0].stat.pim;
+    if(positionSelect === "All Skaters"){
+        for (let i = 0; i < players.length; i++) {
+            fetch(`https://statsapi.web.nhl.com/api/v1/people/${players[i].id}/stats?stats=statsSingleSeason&season=${season}`)
+                .then((data) => {
+                    return data.json(); // convert to object 
+                })
+                .then((objectData) => {
+                    console.log(objectData);
+                    playerName = players[i].fullName;
+                    position = players[i].position;
+                    gamesPlayed = objectData.stats[0].splits[0].stat.games;
+                    if(position !== "G"){
+                        goals = objectData.stats[0].splits[0].stat.goals;
+                        assist = objectData.stats[0].splits[0].stat.assists;
+                        points = objectData.stats[0].splits[0].stat.points;
+                        plusMinus = objectData.stats[0].splits[0].stat.plusMinus;
+                        penaltyMinutes = objectData.stats[0].splits[0].stat.pim;
+                        
+                        output += `<tbody>
+                                    <ul class="list">
+                                        <li>${playerName} ${position} ${gamesPlayed} ${goals} ${assist} ${points} ${plusMinus} ${penaltyMinutes}</li>
                     
-                    output += `<table>
-                                <tr>
-                                    <th>Player</th>
-                                    <th>Season</th>
-                                    <th>Team</th>
-                                    <th>Position</th>
-                                    <th>Games Played</th>
-                                    <th>Goals</th>
-                                    <th>Points</th>
-                                    <th>+/-</th>
-                                    <th>PIM</th>
-                                </tr>
-                                <tr>
-                                    
-                                    <td>${playerName}</td>
-                                    
-                                    <td>${position}</td>
-                                    <td>${gamesPlayed}</td>
-                                    <td>${goals}</td>
-                                    <td>${points}</td>
-                                    <td>${plusMinus}</td>
-                                    <td>${penaltyMinutes}</td>
-                                </tr>
-                            </table>`;
+                                    </ul>
+                                </tbody>`;
+    
+    
+                        document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
+                    }
+    
+                    // going to need one for goalie
+    
+                })
+                .catch(error => console.log(error));
+    
+        }
 
-
-                    document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
-                }
-
-                // going to need one for goalie
-
-            })
-            .catch(error => console.log(error));
-
+    }else{
+        for (let i = 0; i < players.length; i++) {
+            fetch(`https://statsapi.web.nhl.com/api/v1/people/${players[i].id}/stats?stats=statsSingleSeason&season=${season}`)
+                .then((data) => {
+                    return data.json(); // convert to object 
+                })
+                .then((objectData) => {
+                    console.log(objectData);
+                    playerName = players[i].fullName;
+                    position = players[i].position;
+                    gamesPlayed = objectData.stats[0].splits[0].stat.games;
+                    if(position !== "G" && positionSelect === position){
+                        goals = objectData.stats[0].splits[0].stat.goals;
+                        assist = objectData.stats[0].splits[0].stat.assists;
+                        points = objectData.stats[0].splits[0].stat.points;
+                        plusMinus = objectData.stats[0].splits[0].stat.plusMinus;
+                        penaltyMinutes = objectData.stats[0].splits[0].stat.pim;
+                        
+                        output += `<tbody>
+                                    <ul class="list">
+                                    <li>${playerName} ${position} ${gamesPlayed} ${goals} ${assist} ${points} ${plusMinus} ${penaltyMinutes}</li>
+                                    </ul>
+                                </tbody>`;
+    
+    
+                        document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
+                    }
+    
+                    // going to need one for goalie
+    
+                })
+                .catch(error => console.log(error));
+    
+        }
     }
+
+
 }
 
 // this is the final version
