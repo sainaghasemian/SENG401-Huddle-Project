@@ -36,7 +36,6 @@
 }
 .index-middle-bar {
   top: 0px;
-  left: 502px;
   width: 913px;
   height: 983px;
   position: absolute;
@@ -45,7 +44,6 @@
 } 
  .index-left-bar {
   top: 0px;
-  left: 66px;
   width: 367px;
   height: 983px;
   position: absolute;
@@ -180,7 +178,7 @@
 } */
 
 .index-huddle-user {
-  top: 184px;
+  /* top: 184px; */
   left: 98px; 
   width: 363px;
   height: auto;
@@ -200,7 +198,7 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: transparent;
-}
+} 
 .index-text08 {
   left: 82px;
   color: rgba(0, 0, 0, 1);
