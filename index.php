@@ -74,11 +74,43 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/62e3b6c0-216b-4f2b-9101-7bff224e0d07?org_if_sml=16661"
             class="index-middle-bar"
           />
-          <img
-            alt="LeftBar1224"
-            src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/37134d5d-04b3-4a0c-a6d4-fd1a05284852?org_if_sml=14699"
-            class="index-left-bar"
-          />
+          <div class = "index-left-bar-container">
+            <img
+              alt="LeftBar1224"
+              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/37134d5d-04b3-4a0c-a6d4-fd1a05284852?org_if_sml=14699"
+              class="index-left-bar"
+            />
+              <ul class ="list">
+              <?php
+              $result = $pdo->query("SELECT * FROM  team LIMIT 5");
+              $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
+
+              foreach($teams as $team)
+              {
+              ?>
+              
+              <html>
+              <li>
+                <div class='index-huddle-user'>
+                  <span class='index-text08'><span><?php echo $team['Name']?></span></span>
+                  <div class='index-huddle-pic'>
+                    <img
+                      alt='Ellipse61225'
+                      src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c8594294-f92f-40ef-b97c-8dcb35bb78d1?org_if_sml=11247'
+                      class='index-ellipse6'
+                    />
+                    <span class='index-text12'>H</span>
+                  </div>
+                </div>
+              </li>
+              </html>
+
+              <?php
+              }
+              $pdo = null;
+            ?>
+            </ul>
+          </div>
           <span class="index-text"><span>Huddle</span></span>
           <span class="index-text02"><span>Upcoming Matches</span></span>
           <span class="index-text04"><span>Feed</span></span>
@@ -100,33 +132,6 @@
             src="public/playground_assets/menuicon1225-ehcb.svg"
             class="index-menu-icon"
           />
-          <?php
-          echo "TEST";
-            $result = $pdo->query("SELECT 5 FROM  team");
-            $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
-
-            foreach($teams as $team)
-            {
-              ?>
-              
-              <html>
-              <div class='index-huddle-user'>
-              <span class='index-text08'><span><?php echo $team['Name']?></span></span>
-              <div class='index-huddle-pic'>
-                <img
-                  alt='Ellipse61225'
-                  src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c8594294-f92f-40ef-b97c-8dcb35bb78d1?org_if_sml=11247'
-                  class='index-ellipse6'
-                />
-                <span class='index-text12'>H</span>
-              </div>
-            </div>
-            </html>
-
-            <?php
-            }
-            $pdo = null;
-          ?>
         </div>
       </div>
     </div>
@@ -134,6 +139,17 @@
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
+
+    <script>
+      function offsetTeam() 
+      {
+        var cols = document.getElementsByClassName('index-text08');
+        for(i = 0; i < cols.length; i++) 
+        {
+          cols[i].style.backgroundColor = 'blue';
+        }
+      }
+    </script>
   </body>
 </html>
 
