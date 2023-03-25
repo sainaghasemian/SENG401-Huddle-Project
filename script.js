@@ -178,19 +178,18 @@ function getStandings() {
             let objectLength = objectData.response.length;
             let output = `<table class="new-team-page-table">
                             <thead>
-                            <tr>
-                                <th>Team </th>
-                                <th></th>
-                                <th>Standing</th>
-                                <th>GP</th>
-                                <th>W</th>
-                                <th>L</th>
-                                <th>OT</th>
-                                <th>Pts</th>
-                            </tr>
+                                <tr>
+                                    <th>Team </th>
+                                    <th></th>
+                                    <th>Standing</th>
+                                    <th>GP</th>
+                                    <th>W</th>
+                                    <th>L</th>
+                                    <th>OT</th>
+                                    <th>Pts</th>
+                                </tr>
                             </thead>
-                            <div id="standings"></div>
-                        </table>`;
+                            <tbody>`;
             let teamName;
             let gamesPlayed;
             let numWins;
@@ -208,7 +207,7 @@ function getStandings() {
                     numLosses = objectData.response[0][i].games.lose.total;
                     numOTLosses = objectData.response[0][i].games.lose_overtime.total;
                     points = objectData.response[0][i].points;
-                    output += `<tbody> 
+                    output += `
                                 <tr>
                                     <td>${teamName}</td>
                                     <td>${gamesPlayed}</td>
@@ -216,9 +215,9 @@ function getStandings() {
                                     <td>${numLosses}</td>
                                     <td>${numOTLosses}</td>
                                     <td>${points}</td>
-                                <tr>
-                            </tbody>`;
+                                <tr>`;
                     document.getElementById("standings").innerHTML = output;
+                    
                 }
             } else{
                 for (let i = 0; i < 32; i++) {
@@ -230,7 +229,7 @@ function getStandings() {
                         numLosses = objectData.response[0][i].games.lose.total;
                         numOTLosses = objectData.response[0][i].games.lose_overtime.total;
                         points = objectData.response[0][i].points;
-                        output += `<tbody> 
+                        output += `
                                     <tr>
                                         <td>${teamName}</td>
                                         <td>${gamesPlayed}</td>
@@ -239,7 +238,8 @@ function getStandings() {
                                         <td>${numOTLosses}</td>
                                         <td>${points}</td>
                                     <tr>
-                                </tbody>`;
+                                </tbody>
+                                </table>`;
                         document.getElementById("standings").innerHTML = output;
                         break;
                     }

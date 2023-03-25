@@ -123,11 +123,12 @@
   border-color: var(--dl-color-primary-huddleblue);
   border-width: 2.5px;
 }
+
 .new-team-page-table {
   width: 1200px;
   border-collapse: collapse;
-  margin: 25px 0;
-  margin-top: 400px;
+  /* margin: 25px 0; */
+  margin-top: 100px;
   margin-left: 5px;
   font-size:large;
   min-width: 400px;
