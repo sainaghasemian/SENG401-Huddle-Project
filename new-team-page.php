@@ -125,11 +125,13 @@
               class="new-team-page-rectangle12"
             />
             <span onclick="getStandings()" class="new-team-pages-get-teams-buttontext"><span>Get Teams</span></span>
-            <div id="standings"></div>     
+             
           </button>
         </div>
       </div>
     </div>
+
+    <div id="standings"></div>    
 
     <script src="script.js"></script>
 

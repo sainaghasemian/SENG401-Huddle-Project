@@ -1,4 +1,4 @@
-.new-team-page-container {
+/* .new-team-page-container {
   width: 100%;
   display: flex;
   overflow: auto;
@@ -17,7 +17,7 @@
   flex-shrink: 0;
   border-color: transparent;
   background-color: rgba(255, 255, 255, 1);
-}
+} */
 .new-team-page-teams-text {
   top: 126px;
   left: 56px;
@@ -124,52 +124,6 @@
   border-width: 2.5px;
 }
 
-.new-team-page-table {
-  width: 1200px;
-  border-collapse: collapse;
-  /* margin: 25px 0; */
-  margin-top: 100px;
-  margin-left: 5px;
-  font-size:large;
-  min-width: 400px;
-  font-family: Work Sans;
-  border-radius: 5px 5px 5px 5px;
-  overflow: hidden;
-}
-
-.new-team-page-table thead tr {
-  background-color: #1D5CFF;
-  color: #FFFFFF;
-  text-align: center;
-  font-weight: bold;
-}
-
-.new-team-page-table th,
-.new-team-page-table td {
-  text-align: center;
-  
-  padding: 12px 15px;
-}
-
-.new-team-page-table tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
-
-.new-team-page-table tbody tr:nth-of-type(even) {
-  background-color: #C0D2FF;
-}
-
-.new-team-page-table tbody tr:last-of-type {
-  border-bottom: 3px solid #1D5CFF;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 35%;
-}
-
 .new-team-pages-get-teams-buttontext {
   top: 13px;
   left: 27px;
@@ -202,4 +156,48 @@
   border-color: transparent;
 }
 
+.new-team-page-table {
+  width: 94%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  margin-top: 400px;
+  margin-left: 55px;
+  font-size:large;
+  min-width: 400px;
+  font-family: Work Sans;
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+}
 
+.new-team-page-table thead tr {
+  background-color: #1D5CFF;
+  color: #FFFFFF;
+  text-align: left;
+  font-weight: bold;
+}
+
+.new-team-page-table th,
+.new-team-page-table td {
+  text-align: left;
+  
+  padding: 12px 15px;
+}
+
+.new-team-page-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.new-team-page-table tbody tr:nth-of-type(even) {
+  background-color: #C0D2FF;
+}
+
+.new-team-page-table tbody tr:last-of-type {
+  border-bottom: 3px solid #1D5CFF;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
