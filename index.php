@@ -69,11 +69,46 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/0b229d4d-325e-407f-b8c5-ba6cf0523929?org_if_sml=14699"
             class="index-right-bar"
           />
+
+          <div class = "index-middle-bar-container">
           <img
             alt="MiddleBar1224"
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/62e3b6c0-216b-4f2b-9101-7bff224e0d07?org_if_sml=16661"
             class="index-middle-bar"
           />
+          <ul class ="list">
+              <?php
+              $result = $pdo->query("SELECT * FROM  post LIMIT 20");
+              $posts = $result->fetchAll(PDO::FETCH_DEFAULT);
+
+              foreach($posts as $post)
+              {
+              ?>
+              
+              <html>
+              <li>
+                <div class='index-huddle-user'>
+                  <span class='index-text08'><span><?php echo $post['Title']?></span></span>
+                  <span class="index-text10"><span><?php echo $post['Content']?></span></span>
+                  <div class='index-huddle-pic'>
+                    <img
+                      alt='Ellipse61225'
+                      src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c8594294-f92f-40ef-b97c-8dcb35bb78d1?org_if_sml=11247'
+                      class='index-ellipse6'
+                    />
+                    <span class='index-text12'><?php echo $post['User_UserID'][0]?></span>
+                  </div>
+                </div>
+              </li>
+              </html>
+
+              <?php
+              }
+              // $pdo = null;
+            ?>
+            </ul>
+          </div>
+
           <div class = "index-left-bar-container">
             <img
               alt="LeftBar1224"
@@ -99,7 +134,7 @@
                       src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c8594294-f92f-40ef-b97c-8dcb35bb78d1?org_if_sml=11247'
                       class='index-ellipse6'
                     />
-                    <span class='index-text12'>H</span>
+                    <span class='index-text12'><?php echo $team['Name'][0]?></span>
                   </div>
                 </div>
               </li>
