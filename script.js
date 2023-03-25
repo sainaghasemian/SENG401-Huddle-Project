@@ -180,8 +180,6 @@ function getStandings() {
                             <thead>
                                 <tr>
                                     <th>Team </th>
-                                    <th></th>
-                                    <th>Standing</th>
                                     <th>GP</th>
                                     <th>W</th>
                                     <th>L</th>
@@ -217,8 +215,8 @@ function getStandings() {
                                     <td>${points}</td>
                                 <tr>`;
                     document.getElementById("standings").innerHTML = output;
-                    
                 }
+                output += `</tbody></table>`;
             } else{
                 for (let i = 0; i < 32; i++) {
                     teamName = objectData.response[0][i].team.name;
