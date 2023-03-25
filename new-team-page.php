@@ -9,7 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API testing</title>
-    <script src="script.js"></script>
 
     <title>StatsPage - Huddle</title>
     <meta property="og:title" content="StatsPage - Huddle" />
@@ -132,13 +131,7 @@
       </div>
     </div>
 
-    <!-- API SCRIPT -->
-
-    <script>
-      
-    </script>
-
-
+    <script src="script.js"></script>
 
   </body>
 </html>
