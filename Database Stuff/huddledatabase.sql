@@ -67,7 +67,37 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`TeamID`, `Name`) VALUES
-(0, 'Calgary Flames');
+(0, 'Calgary Flames'),
+(1, 'Carolina Hurricanes'),
+(2, 'Columbus Blue Jackets'),
+(3, 'New Jersey Devils'),
+(4, 'New York Islanders'),
+(5, 'New York Rangers'),
+(6, 'Philadelphia Flyers'),
+(7, 'Washington Capitals'),
+(8, 'Boston Bruins'),
+(9, 'Buffalo Sabres'),
+(10, 'Detroit Red Wings'),
+(11, 'Florida Panthers'),
+(12, 'Montréal Canadiens'),
+(13, 'Ottawa SEnators'),
+(14, 'Tampa Bay Lightning'),
+(15, 'Toronto Maple Leafs'),
+(16, 'Arizona Coyotes'),
+(17, 'Chicago Blackhawks'),
+(18, 'Colorado Avalanche'),
+(19, 'Dallas Stars'),
+(20, 'Minnesota Wild'),
+(21, 'Nashville Predators'),
+(22, 'St. Louis Blues'),
+(23, 'Winnipeg Jets'),
+(24, 'Anaheim Ducks'),
+(25, 'Edmonton Oilers'),
+(26, 'Los Angeles Kings'),
+(27, 'San Jose Sharks'),
+(28, 'Seattle Kraken'),
+(29, 'Vancouver Canucks'),
+(30, 'Vegas Golden Knights');
 
 -- --------------------------------------------------------
 
