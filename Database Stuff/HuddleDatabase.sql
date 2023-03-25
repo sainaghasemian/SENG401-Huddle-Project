@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2023 at 04:47 PM
+-- Generation Time: Mar 25, 2023 at 05:16 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -23,7 +23,6 @@ SET time_zone = "+00:00";
 DROP DATABASE IF EXISTS huddledatabase;
 CREATE DATABASE huddledatabase;
 USE huddledatabase;
-
 -- --------------------------------------------------------
 
 --
@@ -37,19 +36,20 @@ CREATE TABLE `post` (
   `User_UserID` varchar(11) NOT NULL,
   `Team_TeamID` int(11) NOT NULL,
   `Post_PostID` int(11) DEFAULT NULL,
-  `DatePosted` date DEFAULT NULL
+  `DatePosted` date DEFAULT NULL,
+  `Title` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `post`
 --
 
-INSERT INTO `post` (`PostID`, `Content`, `NumberOfLikes`, `User_UserID`, `Team_TeamID`, `Post_PostID`, `DatePosted`) VALUES
-(1, 'This team sucks', 1, 'tommydinh', 25, NULL, NULL),
-(2, 'Nashville is cool', 20, 'johnydo', 21, NULL, NULL),
-(3, 'a post can only be 2000 characters i wonder if this is big enough or not', 22222222, 'tommydinh', 26, NULL, NULL),
-(4, 'How do you take one of the most iconic jerseys/logos of all time, and come up with that orange/gold/black monstrosity?', 13, 'tommydinh', 24, NULL, NULL),
-(5, 'Iginla was the a top 5 captain in all of NHL history', 99, 'johnydo', 0, NULL, NULL);
+INSERT INTO `post` (`PostID`, `Content`, `NumberOfLikes`, `User_UserID`, `Team_TeamID`, `Post_PostID`, `DatePosted`, `Title`) VALUES
+(1, 'This team sucks', 1, 'tommydinh', 25, NULL, NULL, ''),
+(2, 'Nashville is cool', 20, 'johnydo', 21, NULL, NULL, ''),
+(3, 'a post can only be 2000 characters i wonder if this is big enough or not', 22222222, 'tommydinh', 26, NULL, NULL, ''),
+(4, 'How do you take one of the most iconic jerseys/logos of all time, and come up with that orange/gold/black monstrosity?', 13, 'tommydinh', 24, NULL, NULL, ''),
+(5, 'Iginla was the a top 5 captain in all of NHL history', 99, 'johnydo', 0, NULL, NULL, '');
 
 -- --------------------------------------------------------
 
