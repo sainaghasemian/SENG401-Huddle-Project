@@ -1,5 +1,10 @@
 <?php
     session_start();
+      // Include the database connection file
+    include_once("config.php");
+
+    echo $_SESSION["message"];
+    $_SESSION["message"] = "";
 ?>
 
 <!DOCTYPE html>
@@ -67,15 +72,38 @@
             src="public/playground_assets/posticon7446-bmli.svg"
             class="post-page-post-icon"
           />
-          <textarea
-            placeholder="Your text goes here..."
-            class="post-page-body-post-input textarea"
-          ></textarea>
-          <input
-            type="text"
-            placeholder="Title / Subject"
-            class="post-page-title-subject-input input"
-          />
+          <form id = post action = "post-verification.php" method="post">
+            <input
+              type="text"
+              placeholder="Your text goes here..."
+              class="post-page-body-post-input input"
+              name="body"
+            />
+            <input
+              type="text"
+              placeholder="Title / Subject"
+              class="post-page-title-subject-input input"
+              name="title"
+            />
+
+            <!-- <button class="post-page-post-button">
+            <img
+              alt="PostRec7449"
+              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/b56aae9d-329c-4c8c-bea9-0aec0240743e?org_if_sml=11434"
+              class="post-page-post-rec"
+            />
+            <span class="post-page-text09"><span>POST</span></span>
+          </button> -->
+            <a href="javascript: post.submit();" class="post-page-post-button">
+              <img
+                alt="PostRec7449"
+                src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/b56aae9d-329c-4c8c-bea9-0aec0240743e?org_if_sml=11434"
+                class="post-page-post-rec"
+              />
+              <span class="post-page-text09"><span>POST</span></span>
+            </a>
+          </form>
+
           <img
             alt="ImageIcon7446"
             src="public/playground_assets/imageicon7446-9yt.svg"
@@ -121,14 +149,15 @@
               class="post-page-right-separator"
             />
           </div>
-          <button class="post-page-post-button">
+          <!-- button is here -->
+          <!-- <button class="post-page-post-button">
             <img
               alt="PostRec7449"
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/b56aae9d-329c-4c8c-bea9-0aec0240743e?org_if_sml=11434"
               class="post-page-post-rec"
             />
             <span class="post-page-text09"><span>POST</span></span>
-          </button>
+          </button> -->
           <img
             alt="TopBar7467"
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/e446f15a-987e-4129-89ab-284a2ac1ea9d?org_if_sml=1886"
