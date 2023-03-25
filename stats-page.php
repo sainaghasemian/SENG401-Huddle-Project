@@ -186,10 +186,10 @@
         class="stats-page-menu-icon"
     />
 
-    <div class= "table-filler">
-        <div id="playerStats"></div>
+    
+    <div id="playerStats"></div>
 
-    </div>
+   
     
 
 

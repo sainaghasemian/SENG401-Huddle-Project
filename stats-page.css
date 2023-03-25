@@ -427,6 +427,8 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
+
 .table-chart {
     width: 94%;
     border-collapse: collapse;
@@ -438,60 +440,36 @@
     font-family: Work Sans;
     border-radius: 5px 5px 5px 5px;
     overflow: hidden;
-  }
+}
+
 .table-chart thead tr{
     background-color: #1D5CFF;
     color: white;
     text-align: left;
+   
     
 }
+
 .table-chart th,
 .table-chart td {
     text-align: left;
+    
+  padding: 6px;
   
-  padding: 12px 15px;
-  background-color :#33b5e5;
 }
 
 .table-chart tbody tr {
-    background-color: #1D5CFF;
+    background-color: #d8f8f6;
     border-bottom: 1px solid #dddddd;
 }
 
 .table-chart tbody tr:nth-of-type(even) {
   background-color: #C0D2FF;
+  background-color :#33b5e5;
 }
 
 .table-chart tbody tr:last-of-type {
   border-bottom: 3px solid #1D5CFF;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 35%;
-}
 
-.table-filler {
-    text-align: left;
-    width: 94%;
-    border-collapse: collapse;
-    margin: 25px 0;
-    margin-top: 20px;
-    margin-left: 55px;
-    font-size:large;
-    min-width: 400px;
-    font-family: Work Sans;
-    border-radius: 5px 5px 5px 5px;
-    overflow: hidden;
-    
-}
-
-.list li
-{
-    text-align: left;
-    word-spacing: 9em;
-    padding: 40px;
-
-}
