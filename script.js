@@ -334,8 +334,8 @@ function getPlayerStats(players) {
                             <th>+/-</th>
                             <th>PIM</th>
                         </tr>
-                    </thead>
-                </table>`;
+                </thead>
+                </tbody>`;
 
     let playerName;
     let position;
@@ -375,7 +375,7 @@ function getPlayerStats(players) {
                                         <td>${plusMinus}</td>
                                         <td>${penaltyMinutes}</td>
                     
-                                    </tr>`;
+                                    </tr> `;
     
     
                         document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
@@ -406,11 +406,20 @@ function getPlayerStats(players) {
                         plusMinus = objectData.stats[0].splits[0].stat.plusMinus;
                         penaltyMinutes = objectData.stats[0].splits[0].stat.pim;
                         
-                        output += `<tbody>
-                                    <ul class="list">
-                                    <li>${playerName} ${position} ${gamesPlayed} ${goals} ${assist} ${points} ${plusMinus} ${penaltyMinutes}</li>
-                                    </ul>
-                                </tbody>`;
+                        output += `<tr>
+                                        <td>${playerName}</td>
+                                        <td>${position}</td>
+                                        <td>${gamesPlayed}</td>
+                                        <td>${goals}</td> 
+                                        <td>${assist}</td>
+                                        <td>${points}</td>
+                                        <td>${plusMinus}</td>
+                                        <td>${penaltyMinutes}</td>
+                    
+                                    </tr> 
+                                </tbody>
+                                `;
+    
     
     
                         document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
