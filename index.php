@@ -102,18 +102,16 @@
           />
           <?php
           echo "TEST";
-            $result = $pdo->query("SELECT * FROM  team");
+            $result = $pdo->query("SELECT 5 FROM  team");
             $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
 
             foreach($teams as $team)
             {
-              echo $team["Name"];
               ?>
               
               <html>
               <div class='index-huddle-user'>
-              <span class='index-text08'><span><?php $team['Name']?></span></span>
-              <span class='index-text10'><span>Calgary, AB</span></span>
+              <span class='index-text08'><span><?php echo $team['Name']?></span></span>
               <div class='index-huddle-pic'>
                 <img
                   alt='Ellipse61225'
@@ -124,6 +122,7 @@
               </div>
             </div>
             </html>
+
             <?php
             }
             $pdo = null;
