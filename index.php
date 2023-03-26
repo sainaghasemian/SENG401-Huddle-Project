@@ -129,7 +129,7 @@
             />
               <ul class ="list">
               <?php
-              $result = $pdo->query("SELECT * FROM  team LIMIT 5");
+              $result = $pdo->query("SELECT * FROM team LIMIT 5");
               $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
 
               foreach($teams as $team)

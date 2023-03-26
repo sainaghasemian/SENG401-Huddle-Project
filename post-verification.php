@@ -90,10 +90,13 @@
         else if ($team == "Vegas Golden Knights"){ $teamID = 702; }
         else if ($team == "Washington Capitals"){ $teamID = 703; }
         else if ($team == "Winnipeg Jets"){ $teamID = 704; }
+
+        $bodyText = '"' . $body . '"';
+        $titleText = '"' . $title . '"';
         
 
         $pdo->query("INSERT INTO `post` (`Content`, `User_UserID`, `Team_TeamID`, `Team_Name`, `Post_PostID`, `DatePosted`, `Title`) VALUES
-        ('$body', 'tommydinh', $teamID, '$team', NULL, '$date', '$title')");
+        ($bodyText, 'tommydinh', $teamID, '$team', NULL, '$date', $titleText)");
         
         header("Location: index.php");
     }

@@ -35,7 +35,7 @@ CREATE TABLE `post` (
   `NumberOfLikes` int(11) DEFAULT 0,
   `User_UserID` varchar(11) NOT NULL,
   `Team_TeamID` int(11) NOT NULL,
-  `Team_Name` varchar(30) DEFAULT NULL,
+  `Team_Name` varchar(30) NOT NULL,
   `Post_PostID` int(11) DEFAULT NULL,
   `DatePosted` datetime DEFAULT NULL,
   `Title` varchar(50) NOT NULL
@@ -45,12 +45,12 @@ CREATE TABLE `post` (
 -- Dumping data for table `post`
 --
 
-INSERT INTO `post` (`PostID`, `Content`, `NumberOfLikes`, `User_UserID`, `Team_TeamID`, `Post_PostID`, `DatePosted`, `Title`) VALUES
-(1, 'This team sucks', 1, 'tommydinh', 25, NULL, NULL, ''),
-(2, 'Nashville is cool', 20, 'johnydo', 21, NULL, NULL, ''),
-(3, 'a post can only be 2000 characters i wonder if this is big enough or not', 22222222, 'tommydinh', 26, NULL, NULL, ''),
-(4, 'How do you take one of the most iconic jerseys/logos of all time, and come up with that orange/gold/black monstrosity?', 13, 'tommydinh', 24, NULL, NULL, ''),
-(5, 'Iginla was the a top 5 captain in all of NHL history', 99, 'johnydo', 0, NULL, NULL, '');
+INSERT INTO `post` (`PostID`, `Content`, `NumberOfLikes`, `User_UserID`, `Team_TeamID`, `Team_Name`, `Post_PostID`, `DatePosted`, `Title`) VALUES
+(1, "This team is useless. They can't get out of their own zone, and even when they do, they get one low quality shot and then it's right back to defending...", 75, 'tommydinh', 670, 'Anaheim Ducks', NULL, NULL, 'This team sucks'),
+(2, "Pekka Rinne was always my favorite player and I'm beyond happy they did him the honour of retiring his jersey.", 20, 'johnydo', 689, 'Nashville Predators', NULL, NULL, 'Goated Goalie'),
+(3, 'A post can only be 2000 characters. I wonder if would even be able to say that much about the Sens', 106, 'tommydinh', 693, 'Ottawa Senators', NULL, NULL, '2000 Characters is too long'),
+(4, 'How do you take one of the most iconic jerseys/logos of all time, and come up with that orange/gold/black monstrosity?', 13, 'tommydinh', 675, 'Calgary Flames', NULL, NULL, 'Blasty travesty'),
+(5, "Iginla was the a top 5 captain in all of NHL history. That's all", 99, 'johnydo', 675, 'Calgary Flames', NULL, NULL, 'Iggy is him');
 
 -- --------------------------------------------------------
 
