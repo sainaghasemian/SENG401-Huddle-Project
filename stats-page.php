@@ -62,17 +62,13 @@
         <span onclick="findTeamID()" class="stats-page-text19"><span>Get Stats</span></span>
     </button>
     
-
-    <button class="stats-page-clear-filters-button">
-    <img
-        alt="Rectangle12I744"
-        src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c39129d5-2966-43b5-9aeb-272375884d42?org_if_sml=11235"
-        class="stats-page-rectangle121"
-    />
-    <span class="stats-page-text21"><span>Clear Filters</span></span>
+<!---CLEAR FILTERS BUTTON--->
     </button>
-    <div class="stats-page-search-players-bar">
-    </div>
+        <button class="stats-page-clear-filters-button" onclick="clearFilters()">
+        <img alt="Rectangle12I744" src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c39129d5-2966-43b5-9aeb-272375884d42?org_if_sml=11235" class="stats-page-rectangle121" />
+        <span class="stats-page-text21"><span>Clear Filters</span></span>
+    </button>
+ 
     <div class="stats-page-seasons-drop-down">
         <span class="stats-page-text25"><span>SEASON</span></span>
         <span class="stats-page-text27">
@@ -193,7 +189,24 @@
     
 
 
-
+    <script>
+        function clearFilters() {
+        // Reset the values of the filters
+        // Clear the season drop down
+        document.getElementById("season-select").selectedIndex = 0;
+        // Clear the franchise drop down
+        document.getElementById("franchise-select").selectedIndex = 0;
+        // Clear the year drop down
+        document.getElementById("gametype-select").selectedIndex = 0;
+        // Clear the position drop down
+        document.getElementById("position-select").selectedIndex = 0;
+        // Reset the report drop down to its original preset
+        document.getElementById("report-select").selectedIndex = 0;
+        // Refresh the page to apply the filter changes
+        location.reload();
+        
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 
