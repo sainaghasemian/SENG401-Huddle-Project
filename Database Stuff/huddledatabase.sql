@@ -35,6 +35,7 @@ CREATE TABLE `post` (
   `NumberOfLikes` int(11) DEFAULT 0,
   `User_UserID` varchar(11) NOT NULL,
   `Team_TeamID` int(11) NOT NULL,
+  `Team_Name` varchar(30) DEFAULT NULL,
   `Post_PostID` int(11) DEFAULT NULL,
   `DatePosted` datetime DEFAULT NULL,
   `Title` varchar(50) NOT NULL

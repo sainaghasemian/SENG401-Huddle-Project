@@ -61,7 +61,7 @@
         if ($team == "Anaheim Ducks"){ $teamID = 670; }
         else if ($team == "Arizona Coyotes"){ $teamID = 1460; }
         else if ($team == "Boston Bruins"){ $teamID = 673; }
-        else if ($team == "Buffalo Sabers"){ $teamID = 674; }
+        else if ($team == "Buffalo Sabres"){ $teamID = 674; }
         else if ($team == "Calgary Flames"){ $teamID = 675; }
         else if ($team == "Carolina Hurricanes"){ $teamID = 676; }
         else if ($team == "Chicago Blackhawks"){ $teamID = 678; }
@@ -92,8 +92,8 @@
         else if ($team == "Winnipeg Jets"){ $teamID = 704; }
         
 
-        $pdo->query("INSERT INTO `post` (`Content`, `User_UserID`, `Team_TeamID`, `Post_PostID`, `DatePosted`, `Title`) VALUES
-        ('$body', 'tommydinh', $teamID, NULL, '$date', '$title')");
+        $pdo->query("INSERT INTO `post` (`Content`, `User_UserID`, `Team_TeamID`, `Team_Name`, `Post_PostID`, `DatePosted`, `Title`) VALUES
+        ('$body', 'tommydinh', $teamID, '$team', NULL, '$date', '$title')");
         
         header("Location: index.php");
     }
