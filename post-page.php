@@ -67,33 +67,54 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/d01543fd-cbaa-4d88-8067-b10faf880eb1?org_if_sml=11943"
             class="post-page-post-bar"
           />
-          <img
+          <!-- <img
             alt="PostIcon7446"
             src="public/playground_assets/posticon7446-bmli.svg"
-            class="post-page-post-icon"
+            class="post-page-post-icon" -->
           />
           <form id = post action = "post-verification.php" method="post">
-            <input
-              type="text"
-              placeholder="Your text goes here..."
-              class="post-page-body-post-input input"
-              name="body"
-            />
+            <select class = "post-page-teams" name = "team">
+              <option value="">Select Related Team</option>
+              <option value="Anaheim Ducks">Anaheim Ducks</option>
+              <option value="Arizona Coyotes">Arizona Coyotes</option>
+              <option value="Boston Bruins">Boston Bruins</option>
+              <option value="Buffalo Sabres">Buffalo Sabres</option>
+              <option value="Calgary Flames">Calgary Flames</option>
+              <option value="Carolina Hurricanes">Carolina Hurricanes</option>
+              <option value="Chicago Blackhawks">Chicago Blackhawks</option>
+              <option value="Colorado Avalanche">Colorado Avalanche</option>
+              <option value="Columbus Blue Jackets">Columbus Blue Jackets</option>
+              <option value="Dallas Stars">Dallas Stars</option>
+              <option value="Detroit Red Wings">Detroit Red Wings</option>
+              <option value="Edmonton Oilers">Edmonton Oilers</option>
+              <option value="Florida Panthers">Florida Panthers</option>
+              <option value="Los Angeles Kings">Los Angeles Kings</option>
+              <option value="Minnesota Wild">Minnesota Wild</option>
+              <option value="Montreal Canadiens">Montreal Canadiens</option>
+              <option value="Nashville Predators">Nashville Predators</option>
+              <option value="New Jersey Devils">New Jersey Devils</option>
+              <option value="New York Islanders">New York Islanders</option>
+              <option value="New York Rangers">New York Rangers</option>
+              <option value="Ottawa Senators">Ottawa Senators</option>
+              <option value="Philadelphia Flyers">Philadelphia Flyers</option>
+              <option value="Pittsburgh Penguins">Pittsburgh Penguins</option>
+              <option value="San Jose Sharks">San Jose Sharks</option>
+              <option value="Seattle Kraken">Seattle Kraken</option>
+              <option value="St. Louis Blues">St. Louis Blues</option>
+              <option value="Tampa Bay Lightning">Tampa Bay Lightning</option>
+              <option value="Toronto Maple Leafs">Toronto Maple Leafs</option>
+              <option value="Vancouver Canucks">Vancouver Canucks</option>
+              <option value="Vegas Golden Knights">Vegas Golden Knights</option>
+              <option value="Washington Capitals">Washington Capitals</option>
+              <option value="Winnipeg Jets">Winnipeg Jets</option>
+            </select>
+            <textarea type="text" cols = "40" rows = "10" class="post-page-body-post-input input" name="body" placeholder="Your text goes here..."></textarea>
             <input
               type="text"
               placeholder="Title / Subject"
               class="post-page-title-subject-input input"
               name="title"
             />
-
-            <!-- <button class="post-page-post-button">
-            <img
-              alt="PostRec7449"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/b56aae9d-329c-4c8c-bea9-0aec0240743e?org_if_sml=11434"
-              class="post-page-post-rec"
-            />
-            <span class="post-page-text09"><span>POST</span></span>
-          </button> -->
             <a href="javascript: post.submit();" class="post-page-post-button">
               <img
                 alt="PostRec7449"
@@ -103,20 +124,6 @@
               <span class="post-page-text09"><span>POST</span></span>
             </a>
           </form>
-
-          <img
-            alt="ImageIcon7446"
-            src="public/playground_assets/imageicon7446-9yt.svg"
-            class="post-page-image-icon"
-          />
-          <img
-            alt="LinkIcon7447"
-            src="public/playground_assets/linkicon7447-r0fh.svg"
-            class="post-page-link-icon"
-          />
-          <span class="post-page-text"><span>Post</span></span>
-          <span class="post-page-text02"><span>Link</span></span>
-          <span class="post-page-text04"><span>Image &amp; Video</span></span>
           <img
             alt="Line17447"
             src="public/playground_assets/line17447-sy7k.svg"
@@ -149,15 +156,6 @@
               class="post-page-right-separator"
             />
           </div>
-          <!-- button is here -->
-          <!-- <button class="post-page-post-button">
-            <img
-              alt="PostRec7449"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/b56aae9d-329c-4c8c-bea9-0aec0240743e?org_if_sml=11434"
-              class="post-page-post-rec"
-            />
-            <span class="post-page-text09"><span>POST</span></span>
-          </button> -->
           <img
             alt="TopBar7467"
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/e446f15a-987e-4129-89ab-284a2ac1ea9d?org_if_sml=1886"
@@ -176,14 +174,6 @@
             />
           </a>
           <span class="post-page-text11"><span>Huddle</span></span>
-          <button class="post-page-save-as-draft-button">
-            <img
-              alt="Rectangle127470"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/30bfdc84-0ca7-41b7-9b9b-978f1cb8de45?org_if_sml=1123"
-              class="post-page-rectangle12"
-            />
-            <span class="post-page-text13"><span>Save as Draft</span></span>
-          </button>
           <span class="post-page-text15"><span>Create Post</span></span>
           <img
             alt="MenuIcon1205"

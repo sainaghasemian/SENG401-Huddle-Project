@@ -27,7 +27,7 @@
   border-color: transparent;
   border-radius: 41.75089645385742px;
 }
-.post-page-post-bar {
+/* .post-page-post-bar {
   top: 251.71536254882812px;
   left: 176.46112060546875px;
   width: 1582px;
@@ -35,7 +35,7 @@
   position: absolute;
   border-color: transparent;
   border-radius: 38.95621109008789px;
-}
+} */
 .post-page-post-icon {
   top: 274px;
   left: 321px;
@@ -349,7 +349,7 @@
   margin-bottom: 0;
   text-decoration: none;
 }
-.post-page-save-as-draft-button {
+/* .post-page-save-as-draft-button {
   top: 1039.2880859375px;
   left: 1066.021728515625px;
   width: 391px;
@@ -359,7 +359,7 @@
   align-items: flex-start;
   flex-shrink: 0;
   border-color: transparent;
-}
+} */
 .post-page-rectangle12 {
   top: 0px;
   left: 0px;
@@ -415,4 +415,16 @@
   width: 48px;
   height: 48px;
   position: absolute;
+}
+.post-page-teams {
+  top: 251px;
+  left: 176px;
+  width: 1582px;
+  height: 99px;
+  position: absolute;
+  font-size: 23px;
+  font-family: Work Sans;
+  border-color: var(--dl-color-primary-huddleblue);
+  border-width: 2.5px;
+  border-radius: 12px;
 }
