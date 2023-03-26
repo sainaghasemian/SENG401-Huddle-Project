@@ -2,7 +2,7 @@
   top: 126px;
   left: 56px;
   color: rgba(0, 0, 0, 1);
-  width: 384px;
+  width: 80%;
   height: auto;
   position: absolute;
   font-size: 74.95890808105469px;
@@ -19,7 +19,8 @@
 }
 .new-team-page-separator {
   top: 240px;
-  left: 56px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 94%;
   height: 0px;
   position: absolute;
