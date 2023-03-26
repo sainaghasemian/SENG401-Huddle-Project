@@ -77,7 +77,6 @@
               class="index-middle-bar"
             />
           </div>
-          <!-- <ul class ="list"> -->
           <div class = "scrollable-list">
             <ul>
               <?php
@@ -87,6 +86,7 @@
               foreach($posts as $post)
               {
                 echo "<li>
+                        <span class='posted-by'>Posted by: " . $post['User_UserID'] . "</span>
                         <h2>" . $post['Title'] . "</h2>
                         <p>" . $post['Content'] . "</p>
                         <div class='likes'>
@@ -100,24 +100,6 @@
                       </li>";
               }
               ?>
-
-              <!-- <html>
-              <li>
-                <div class='index-huddle-user'>
-                  <span class='index-text08'><span><?php echo $post['Title']?></span></span>
-                  <span class="index-text10"><span><?php echo $post['Content']?></span></span>
-                  <div class='index-huddle-pic'>
-                    <img
-                      alt='Ellipse61225'
-                      src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c8594294-f92f-40ef-b97c-8dcb35bb78d1?org_if_sml=11247'
-                      class='index-ellipse6'
-                    />
-                    <span class='index-text12'><?php echo $post['User_UserID'][0]?></span>
-                  </div>
-                </div>
-              </li>
-              </html> -->
-
             </ul>
           </div>
 
