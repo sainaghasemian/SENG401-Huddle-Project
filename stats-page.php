@@ -59,6 +59,30 @@
         alt="Separator1354"
         class="stats-page-separator"
     />
+    <img
+        alt="TopBar4512"
+        src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/4d12000b-744e-4b7e-ac43-d7493314f2d9?org_if_sml=1887"
+        class="stats-page-top-bar"
+    />
+
+    <img
+        alt="SearchIcon1351"
+        src="public/playground_assets/searchicon7464-hrlj.svg"
+        class="stats-page-search-icon"
+    />
+    <img
+        alt="AccountIcon1351"
+        src="public/playground_assets/accounticon7464-cogs.svg"
+        class="stats-page-account-icon"
+    />
+
+    <img
+        alt="MenuIcon1205"
+        src="public/playground_assets/menuicon1205-aai.svg"
+        class="stats-page-menu-icon"
+    />
+
+    <span class="stats-page-huddle-top-logo"><span>Huddle</span></span>
 
     <!---GET STATS BUTTON--->
     <button class="stats-page-get-stats-button">
@@ -77,92 +101,69 @@
         <span class="stats-page-text21"><span>Clear Filters</span></span>
     </button>
  
-    <div class="stats-page-seasons-drop-down">
-        <span class="stats-page-text25"><span>SEASON</span></span>
-        <span class="stats-page-text27">
-            
-            <select id="season-select">
+    <span class="stats-page-text25"><span>SEASON</span></span>
+    <select class = "stats-page-seasons-drop-down" id="season-select">
             <option value="">The Current Season</option>
             <option value="20222023">2022-23</option>
-            </select>
-        
-        </span>
-    </div>
+    </select>
 
-    <div class="stats-page-game-type-drop-down">
-        <span class="stats-page-text31"><span>GAME TYPE</span></span>
-        <span class="stats-page-text29">
-            <select id="gametype-select">
-                <option value="">Select a Game Type</option>  
-                <option value="regular-season">Regular Season</option>
-                <option value="playoffs">Playoffs</option>
-            </select>
-        </span>
-    </div>
+    <span class="stats-page-text31"><span>GAME TYPE</span></span>
+    <select class = "stats-page-game-type-drop-down" id="gametype-select">
+        <option value="">Select a Game Type</option>  
+        <option value="regular-season">Regular Season</option>
+        <option value="playoffs">Playoffs</option>
+    </select>
 
-    <div class="stats-page-franchise-drop-down">
-        <span class="stats-page-text35"><span>FRANCHISE</span></span>
-        <span class="stats-page-text33">
-            <select id="franchise-select">
-            <option value="">All Franchises</option>  
-            <option value="Anaheim Ducks">Anaheim Ducks</option>
-            <option value="Arizona Coyotes">Arizona Coyotes</option>
-            <option value="Boston Bruins">Boston Bruins</option>
-            <option value="Buffalo Sabres">Buffalo Sabres</option>
-            <option value="Calgary Flames">Calgary Flames</option>
-            <option value="Carolina Hurricanes">Carolina Hurricanes</option>
-            <option value="Chicago Blackhawks">Chicago Blackhawks</option>
-            <option value="Colorado Avalanche">Colorado Avalanche</option>
-            <option value="Columbus Blue Jackets">Columbus Blue Jackets</option>
-            <option value="Dallas Stars">Dallas Stars</option>
-            <option value="Detroit Red Wings">Detroit Red Wings</option>
-            <option value="Edmonton Oilers">Edmonton Oilers</option>
-            <option value="Florida Panthers">Florida Panthers</option>
-            <option value="Los Angeles Kings">Los Angeles Kings</option>
-            <option value="Minnesota Wild">Minnesota Wild</option>
-            <option value="Montreal Canadiens">Montreal Canadiens</option>
-            <option value="Nashville Predators">Nashville Predators</option>
-            <option value="New Jersey Devils">New Jersey Devils</option>
-            <option value="New York Islanders">New York Islanders</option>
-            <option value="New York Rangers">New York Rangers</option>
-            <option value="Ottawa Senators">Ottawa Senators</option>
-            <option value="Philadelphia Flyers">Philadelphia Flyers</option>
-            <option value="Pittsburgh Penguins">Pittsburgh Penguins</option>
-            <option value="San Jose Sharks">San Jose Sharks</option>
-            <option value="Seattle Kraken">Seattle Kraken</option>
-            <option value="St. Louis Blues">St. Louis Blues</option>
-            <option value="Tampa Bay Lightning">Tampa Bay Lightning</option>
-            <option value="Toronto Maple Leafs">Toronto Maple Leafs</option>
-            <option value="Vancouver Canucks">Vancouver Canucks</option>
-            <option value="Vegas Golden Knights">Vegas Golden Knights</option>
-            <option value="Washington Capitals">Washington Capitals</option>
-            <option value="Winnipeg Jets">Winnipeg Jets</option>
-            </select>
-            <button class="stats-page-button">
-        </span>
-    </div>
+    <span class="stats-page-text35"><span>FRANCHISE</span></span>
+    <select class = "stats-page-franchise-drop-down" id="franchise-select">
+        <option value="">All Franchises</option>  
+        <option value="Anaheim Ducks">Anaheim Ducks</option>
+        <option value="Arizona Coyotes">Arizona Coyotes</option>
+        <option value="Boston Bruins">Boston Bruins</option>
+        <option value="Buffalo Sabres">Buffalo Sabres</option>
+        <option value="Calgary Flames">Calgary Flames</option>
+        <option value="Carolina Hurricanes">Carolina Hurricanes</option>
+        <option value="Chicago Blackhawks">Chicago Blackhawks</option>
+        <option value="Colorado Avalanche">Colorado Avalanche</option>
+        <option value="Columbus Blue Jackets">Columbus Blue Jackets</option>
+        <option value="Dallas Stars">Dallas Stars</option>
+        <option value="Detroit Red Wings">Detroit Red Wings</option>
+        <option value="Edmonton Oilers">Edmonton Oilers</option>
+        <option value="Florida Panthers">Florida Panthers</option>
+        <option value="Los Angeles Kings">Los Angeles Kings</option>
+        <option value="Minnesota Wild">Minnesota Wild</option>
+        <option value="Montreal Canadiens">Montreal Canadiens</option>
+        <option value="Nashville Predators">Nashville Predators</option>
+        <option value="New Jersey Devils">New Jersey Devils</option>
+        <option value="New York Islanders">New York Islanders</option>
+        <option value="New York Rangers">New York Rangers</option>
+        <option value="Ottawa Senators">Ottawa Senators</option>
+        <option value="Philadelphia Flyers">Philadelphia Flyers</option>
+        <option value="Pittsburgh Penguins">Pittsburgh Penguins</option>
+        <option value="San Jose Sharks">San Jose Sharks</option>
+        <option value="Seattle Kraken">Seattle Kraken</option>
+        <option value="St. Louis Blues">St. Louis Blues</option>
+        <option value="Tampa Bay Lightning">Tampa Bay Lightning</option>
+        <option value="Toronto Maple Leafs">Toronto Maple Leafs</option>
+        <option value="Vancouver Canucks">Vancouver Canucks</option>
+        <option value="Vegas Golden Knights">Vegas Golden Knights</option>
+        <option value="Washington Capitals">Washington Capitals</option>
+        <option value="Winnipeg Jets">Winnipeg Jets</option>
+    </select>
 
-    <div class="stats-page-position-drop-down">
-        <span class="stats-page-text39"><span>POSITION</span></span>
-        <span class="stats-page-text37">
-            <select id="position-select">
-            <option value="All Skaters">All Skaters</option>  
-            <option value="C">Center</option>  
-            <option value="L">Left Wing</option>  
-            <option value="R">Right Wing</option>  
-            <option value="D">Defense</option>  
-            </select>
-        </span>
-    </div>
+    <span class="stats-page-text39"><span>POSITION</span></span>
+    <select class = "stats-page-position-drop-down" id="position-select">
+        <option value="All Skaters">All Skaters</option>  
+        <option value="C">Center</option>  
+        <option value="L">Left Wing</option>  
+        <option value="R">Right Wing</option>  
+        <option value="D">Defense</option>  
+    </select>
 
-    <div class="stats-page-report-drop-down">
-        <span class="stats-page-text43"><span>REPORT</span></span>
-        <span class="stats-page-text41">
-            <select id="report-select">
+    <span class="stats-page-text43"><span>REPORT</span></span>
+    <select class="stats-page-report-drop-down" id="report-select">
                 <option value="">Summary</option>  
             </select>
-        </span>
-    </div>
     
       <!---
     <img
@@ -182,10 +183,6 @@
             class="stats-page-account-icon"
         />
         </a>--->
-        <div class="blue-bar"></div>
-            <span class="stats-page-text45"><span>Huddle</span></span>
-        </div>
-
     
     <div id="playerStats"></div>
 
