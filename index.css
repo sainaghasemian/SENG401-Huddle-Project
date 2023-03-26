@@ -83,6 +83,7 @@ ul {
 }
 
 li {
+  position: relative;
   padding: 25px 10px 25px 50px;
   border-bottom: 1px solid #ccc;
 }
@@ -125,7 +126,6 @@ li h2, li p {
   /* background-color: #f1f1f1; */
   /* border-bottom: 1px solid #ddd; */
   padding: 50px;
-  overflow: scroll;
   text-align: center;
 }
 
