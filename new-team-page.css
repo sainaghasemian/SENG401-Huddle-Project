@@ -120,7 +120,7 @@
   width: 232px;
   height: 49px;
   position: absolute;
-  border-color: var(--dl-color-primary-huddleblue);
+  border-color: #1D5CFF;
   border-width: 2.5px;
 }
 
@@ -154,6 +154,10 @@
   align-items: flex-start;
   flex-shrink: 0;
   border-color: transparent;
+}
+
+.new-team-pages-get-teams-buttontext:active {
+  color: #1D5CFF;
 }
 
 .new-team-page-table {
