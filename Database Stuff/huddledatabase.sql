@@ -68,7 +68,38 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`TeamID`, `Name`) VALUES
-(0, 'Calgary Flames');
+(702, 'Vegas Golden Knights'),
+(681, 'Dallas Stars'),
+(685, 'Los Angeles Kings'),
+(679, 'Colorado Avalanche'),
+(687, 'Minnesota Wild'),
+(683, 'Edmonton Oilers'),
+(704, 'Winnipeg Jets'),
+(1436, 'Seattle Kraken'),
+(675, 'Calgary Flames'),
+(689, 'Nashville Predators'),
+(698, 'St. Louis Blues'),
+(701, 'Vancouver Canucks'),
+(1460, 'Arizona Coyotes'),
+(697, 'San Jose Sharks'),
+(678, 'Chicago Blackhawks'),
+(670, 'Anaheim Ducks'),
+(673, 'Boston Bruins'),
+(676, 'Carolina Hurricanes'),
+(690, 'New Jersey Devils'),
+(700, 'Toronto Maple Leafs'),
+(699, 'Tampa Bay Lightning'),
+(692, 'New York Rangers'),
+(691, 'New York Islanders'),
+(696, 'Pittsburgh Penguins'),
+(674, 'Buffalo Sabres'),
+(682, 'Detroit Red Wings'),
+(684, 'Florida Panthers'),
+(703, 'Washington Capitals'),
+(693, 'Ottawa Senators'),
+(695, 'Philadelphia Flyers'),
+(688, 'Montreal Canadiens'),
+(680, 'Columbus Blue Jackets');
 
 -- --------------------------------------------------------
 
