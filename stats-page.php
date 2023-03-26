@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>StatsPage - Huddle</title>
+    <title>Stats Page - Huddle</title>
     <meta property="og:title" content="StatsPage - Huddle" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -53,7 +53,12 @@
 
 <body>
     <link href="./stats-page.css" rel="stylesheet" />
-    <span class="stats-page-text"><span>Stats</span></span>
+    <span class="stats-page-text"><span>Team Stats</span></span>
+    <img
+        src="public/playground_assets/separator1354-6i6.svg"
+        alt="Separator1354"
+        class="stats-page-separator"
+    />
 
     <!---GET STATS BUTTON--->
     <button class="stats-page-get-stats-button">
@@ -90,7 +95,6 @@
             <select id="gametype-select">
                 <option value="">Select a Game Type</option>  
                 <option value="regular-season">Regular Season</option>
-                <option value="pre-season">Pre Season</option>
                 <option value="playoffs">Playoffs</option>
             </select>
         </span>
@@ -134,6 +138,7 @@
             <option value="Washington Capitals">Washington Capitals</option>
             <option value="Winnipeg Jets">Winnipeg Jets</option>
             </select>
+            <button class="stats-page-button">
         </span>
     </div>
 
