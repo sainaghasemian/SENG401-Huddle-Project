@@ -3,16 +3,62 @@
     display: flex;
     justify-content: space-between;
     width: 100%; /* Set the width to 100% so it adjusts to the page size */
-  }
-  
-.blue-bar {
-    background-color: #1D5CFF;
-    height: 7%; /* adjust the height to your desired size */
-    width: 100%; /* set the width to 100% so it spans the entire width of the page */
-    position: fixed; /* set the position to fixed so the bar stays at the top of the page */
-    top: 0; /* set the top position to 0 to position the bar at the top of the page */
-    left: 0; /* set the left position to 0 to position the bar at the left edge of the page */
 }
+
+.stats-page-top-bar {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 78px;
+    position: absolute;
+    border-color: transparent;
+}
+
+.stats-page-menu-icon {
+    top: 14px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    min-width: 16px;
+}
+.stats-page-search-icon {
+    top: 22px;
+    right: 87px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    min-width: 16px;
+}
+.stats-page-account-icon {
+    top: 18px;
+    right: 138px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    min-width: 16px;
+}
+
+.stats-page-huddle-top-logo {
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 1);
+    width: 328px;
+    height: auto;
+    position: absolute;
+    font-size: 48px;
+    font-style: ExtraBold;
+    text-align: center;
+    font-family: Work Sans;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+
 .stats-page-text {
     top: 126px;
     left: 56px;
@@ -129,30 +175,32 @@
 }
 
 .stats-page-seasons-drop-down {
-    top: 261px;
-    left: 56px;
+    top: 290px;
+    left: 58px;
     width: 234px;
-    height: 79px;
-    display: flex;
-    padding: 0;
+    height: 49px;
+    /* display: flex; */
+    /* padding: 0; */
     position: absolute;
-    align-self: auto;
-    box-sizing: border-box;
-    align-items: flex-start;
-    flex-shrink: 1;
-    border-color: transparent;
-    border-style: none;
-    border-width: 0;
-    margin-right: 0;
-    border-radius: 0px 0px 0px 0px;
-    margin-bottom: 0;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: transparent;
+    /* align-self: auto; */
+    /* box-sizing: border-box; */
+    /* align-items: flex-start; */
+    /* flex-shrink: 1; */
+    border-color: #1D5CFF;
+    /* border-style: none; */
+    border-width: 2.5px;
+    /* margin-right: 0; */
+    /* border-radius: 0px 0px 0px 0px; */
+    /* margin-bottom: 0; */
+    /* flex-direction: row; */
+    /* justify-content: flex-start; */
+    /* background-color: transparent; */
   
 }
 
-.stats-page-text25 {
+.stats-page-text25 { /* title for season drop down */
+    top: 268px;
+    left: 59px;
     color: rgba(0, 0, 0, 1);
     width: 149px;
     height: auto;
@@ -188,26 +236,26 @@
 }
 
 .stats-page-game-type-drop-down {
-    top: 261px;
+    top: 290px;
     left: 334px;
     width: 234px;
-    height: 79px;
-    display: flex;
-    padding: 0;
+    height: 49px;
+    /* display: flex;
+    padding: 0; */
     position: absolute;
-    align-self: auto;
+    /* align-self: auto;
     box-sizing: border-box;
     align-items: flex-start;
-    flex-shrink: 1;
-    border-color: transparent;
-    border-style: none;
-    border-width: 0;
-    margin-right: 0;
+    flex-shrink: 1; */
+    border-color: #1D5CFF;
+    /* border-style: none; */
+    border-width: 2.5px;
+    /* margin-right: 0;
     border-radius: 0px 0px 0px 0px;
     margin-bottom: 0;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: transparent;
+    background-color: transparent; */
 }
 
 .stats-page-text29 {
@@ -228,7 +276,9 @@
     text-decoration: none;
 }
 
-.stats-page-text31 {
+.stats-page-text31 { /* title for game type drop down */
+    top: 268px;
+    left: 334px;
     color: rgba(0, 0, 0, 1);
     width: 149px;
     height: auto;
@@ -245,26 +295,26 @@
 }
 
 .stats-page-franchise-drop-down {
-    top: 261px;
+    top: 290px;
     left: 612px;
     width: 234px;
-    height: 79px;
-    display: flex;
-    padding: 0;
+    height: 49px;
+    /* display: flex;
+    padding: 0; */
     position: absolute;
-    align-self: auto;
+    /* align-self: auto;
     box-sizing: border-box;
     align-items: flex-start;
-    flex-shrink: 1;
-    border-color: transparent;
-    border-style: none;
-    border-width: 0;
-    margin-right: 0;
+    flex-shrink: 1; */
+    border-color: #1D5CFF;
+    /* border-style: none; */
+    border-width: 2.5px;
+    /* margin-right: 0;
     border-radius: 0px 0px 0px 0px;
     margin-bottom: 0;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: transparent;
+    background-color: transparent; */
 }
 
 .stats-page-text33 {
@@ -285,9 +335,11 @@
     text-decoration: none;
 }
 
-.stats-page-text35 {
+.stats-page-text35 { /* title for franchise drop down */
     color: rgba(0, 0, 0, 1);
     width: 149px;
+    left: 612px;
+    top: 268px;
     height: auto;
     position: absolute;
     font-size: 18.600318908691406px;
@@ -303,26 +355,26 @@
 
 
 .stats-page-position-drop-down {
-    top: 261px;
+    top: 290px;
     left: 890px;
     width: 234px;
-    height: 79px;
-    display: flex;
-    padding: 0;
+    height: 49px;
+    /* display: flex;
+    padding: 0; */
     position: absolute;
-    align-self: auto;
+    /* align-self: auto;
     box-sizing: border-box;
     align-items: flex-start;
-    flex-shrink: 1;
-    border-color: transparent;
-    border-style: none;
-    border-width: 0;
-    margin-right: 0;
+    flex-shrink: 1; */
+    border-color: #1D5CFF;
+    /* border-style: none; */
+    border-width: 2.5px;
+    /* margin-right: 0;
     border-radius: 0px 0px 0px 0px;
     margin-bottom: 0;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: transparent;
+    background-color: transparent; */
 }
 
 .stats-page-text37 {
@@ -343,9 +395,11 @@
     text-decoration: none;
 }
 
-.stats-page-text39 {
+.stats-page-text39 { /* title for position drop down */
     color: rgba(0, 0, 0, 1);
     width: 149px;
+    top: 268px;
+    left: 890px;
     height: auto;
     position: absolute;
     font-size: 18.600318908691406px;
@@ -360,26 +414,26 @@
 }
 
 .stats-page-report-drop-down {
-    top: 261px;
+    top: 290px;
     left: 1168px;
     width: 234px;
-    height: 79px;
-    display: flex;
-    padding: 0;
+    height: 49px;
+    /* display: flex;
+    padding: 0; */
     position: absolute;
-    align-self: auto;
+    /* align-self: auto;
     box-sizing: border-box;
     align-items: flex-start;
-    flex-shrink: 1;
-    border-color: transparent;
-    border-style: none;
-    border-width: 0;
-    margin-right: 0;
+    flex-shrink: 1; */
+    border-color: #1D5CFF;
+    /* border-style: none; */
+    border-width: 2.5px;
+    /* margin-right: 0;
     border-radius: 0px 0px 0px 0px;
     margin-bottom: 0;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: transparent;
+    background-color: transparent; */
 }
 
 .stats-page-text41 {
@@ -400,9 +454,11 @@
     text-decoration: none;
 }
 
-.stats-page-text43 {
+.stats-page-text43 { /* title for report drop down */
     color: rgba(0, 0, 0, 1);
     width: 149px;
+    left: 1168px;
+    top: 268px;
     height: auto;
     position: absolute;
     font-size: 18.600318908691406px;
@@ -415,26 +471,6 @@
     font-stretch: normal;
     text-decoration: none;
 } 
-
-.stats-page-text45 {
-    top: 8px;
-    left: 797px;
-    color: rgba(255, 255, 255, 1);
-    width: 328px;
-    height: auto;
-    position: absolute;
-    font-size: 48px;
-    align-self: auto;
-    font-style: ExtraBold;
-    text-align: center;
-    font-family: Work Sans;
-    font-weight: 800;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-}
 
 .stats-page-text06 {
   top: 500px;
@@ -459,7 +495,7 @@
     width: 94%;
     border-collapse: collapse;
     margin: 25px 0;
-    margin-top: 400px;
+    margin-top: 470px;
     margin-left: 55px;
     font-size:large;
     min-width: 400px;
