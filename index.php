@@ -71,21 +71,37 @@
           />
 
           <div class = "index-middle-bar-container">
-          <img
-            alt="MiddleBar1224"
-            src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/62e3b6c0-216b-4f2b-9101-7bff224e0d07?org_if_sml=16661"
-            class="index-middle-bar"
-          />
-          <ul class ="list">
+            <img
+              alt="MiddleBar1224"
+              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/62e3b6c0-216b-4f2b-9101-7bff224e0d07?org_if_sml=16661"
+              class="index-middle-bar"
+            />
+          </div>
+          <!-- <ul class ="list"> -->
+          <div class = "scrollable-list">
+            <ul>
               <?php
-              $result = $pdo->query("SELECT * FROM  post LIMIT 20");
+              $result = $pdo->query("SELECT * FROM  post ORDER BY DatePosted DESC LIMIT 20;");
               $posts = $result->fetchAll(PDO::FETCH_DEFAULT);
 
               foreach($posts as $post)
               {
+                echo "<li>
+                        <h2>" . $post['Title'] . "</h2>
+                        <p>" . $post['Content'] . "</p>
+                        <div class='likes'>
+                          <form method='POST' action='increment-likes.php'>
+                            <input type='hidden' name='post_id' value='" . $post['PostID'] . "'>
+                            <button class='like-btn'>Like</button>
+                          </form>
+                          <span class='like-count'>" . $post['NumberOfLikes'] . "</span>
+                        </div>
+                        <span class='team-label'>" . $post['Team_Name'] . "</span>
+                      </li>";
+              }
               ?>
-              
-              <html>
+
+              <!-- <html>
               <li>
                 <div class='index-huddle-user'>
                   <span class='index-text08'><span><?php echo $post['Title']?></span></span>
@@ -100,12 +116,8 @@
                   </div>
                 </div>
               </li>
-              </html>
+              </html> -->
 
-              <?php
-              }
-              // $pdo = null;
-            ?>
             </ul>
           </div>
 
@@ -117,7 +129,7 @@
             />
               <ul class ="list">
               <?php
-              $result = $pdo->query("SELECT * FROM  team LIMIT 5");
+              $result = $pdo->query("SELECT * FROM team LIMIT 5");
               $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
 
               foreach($teams as $team)
