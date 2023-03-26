@@ -88,6 +88,7 @@
               {
                 ?>
                 <li>
+                  <span class='posted-by'>Posted by: " . $post['User_UserID'] . "</span>
                   <h2> <?php echo $post['Title'] ?></h2>
                   <p><?php echo $post['Content'] ?></p>
                   <div class='likes'>
@@ -131,7 +132,13 @@
             />
               <ul class ="list">
               <?php
-              $result = $pdo->query("SELECT * FROM team LIMIT 5");
+              $result = $pdo->query("SELECT usersubscription.Team_TeamID, COUNT(usersubscription.User_UserID) AS count_subscribers
+                                      FROM table1
+                                      JOIN table2 ON table1.common_id = table2.common_id
+                                      GROUP BY table1.attribute
+                                      ORDER BY count_attribute DESC
+                                      LIMIT 5;");
+
               $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
 
               foreach($teams as $team)

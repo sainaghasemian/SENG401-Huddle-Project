@@ -98,7 +98,8 @@ INSERT INTO `team` (`TeamID`, `Name`) VALUES
 (27, 'San Jose Sharks'),
 (28, 'Seattle Kraken'),
 (29, 'Vancouver Canucks'),
-(30, 'Vegas Golden Knights');
+(30, 'Vegas Golden Knights'),
+(31, 'Pittsburgh Penguins');
 
 -- --------------------------------------------------------
 
