@@ -1,3 +1,18 @@
+.stats-page-button-container {
+    position: relative; /* Set the container to be relatively positioned */
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Set the width to 100% so it adjusts to the page size */
+  }
+  
+.blue-bar {
+    background-color: #1D5CFF;
+    height: 7%; /* adjust the height to your desired size */
+    width: 100%; /* set the width to 100% so it spans the entire width of the page */
+    position: fixed; /* set the position to fixed so the bar stays at the top of the page */
+    top: 0; /* set the top position to 0 to position the bar at the top of the page */
+    left: 0; /* set the left position to 0 to position the bar at the left edge of the page */
+}
 .stats-page-text {
     top: 126px;
     left: 56px;
@@ -433,7 +448,7 @@
     width: 94%;
     border-collapse: collapse;
     margin: 25px 0;
-    margin-top: 360px;
+    margin-top: 400px;
     margin-left: 55px;
     font-size:large;
     min-width: 400px;

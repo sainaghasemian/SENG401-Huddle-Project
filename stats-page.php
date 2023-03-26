@@ -22,6 +22,8 @@
       }
 
       body {
+        margin: 0;
+		padding: 0;
         font-weight: 400;
         font-style:normal;
         text-decoration: none;
@@ -30,8 +32,8 @@
         line-height: 1.15;
         color: var(--dl-color-gray-black);
         background-color: var(--dl-color-gray-white);
-
       }
+      
     </style>
     <link
       rel="stylesheet"
@@ -52,6 +54,7 @@
 <body>
     <link href="./stats-page.css" rel="stylesheet" />
     <span class="stats-page-text"><span>Stats</span></span>
+
     <!---GET STATS BUTTON--->
     <button class="stats-page-get-stats-button">
         <img
@@ -62,7 +65,7 @@
         <span onclick="findTeamID()" class="stats-page-text19"><span>Get Stats</span></span>
     </button>
     
-<!---CLEAR FILTERS BUTTON--->
+    <!---CLEAR FILTERS BUTTON--->
     </button>
         <button class="stats-page-clear-filters-button" onclick="clearFilters()">
         <img alt="Rectangle12I744" src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c39129d5-2966-43b5-9aeb-272375884d42?org_if_sml=11235" class="stats-page-rectangle121" />
@@ -150,13 +153,13 @@
     <div class="stats-page-report-drop-down">
         <span class="stats-page-text43"><span>REPORT</span></span>
         <span class="stats-page-text41">
-            <select id="position-select">
+            <select id="report-select">
                 <option value="">Summary</option>  
             </select>
         </span>
     </div>
     
-
+      <!---
     <img
         alt="TopBar7469"
         src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5558e828-1413-409e-a900-f1b5f91841f1?org_if_sml=1886"
@@ -173,25 +176,19 @@
             src="public/playground_assets/accounticon7469-slwj.svg"
             class="stats-page-account-icon"
         />
-        </a>
-        
-        <span class="stats-page-text45"><span>Huddle</span></span>
-        <img
-        alt="MenuIcon1206"
-        src="public/playground_assets/menuicon1206-xy5.svg"
-        class="stats-page-menu-icon"
-    />
+        </a>--->
+        <div class="blue-bar"></div>
+            <span class="stats-page-text45"><span>Huddle</span></span>
+        </div>
 
     
     <div id="playerStats"></div>
 
-   
-    
-
 
     <script>
-        function clearFilters() {
         // Reset the values of the filters
+        function clearFilters() 
+        {
         // Clear the season drop down
         document.getElementById("season-select").selectedIndex = 0;
         // Clear the franchise drop down
@@ -204,9 +201,9 @@
         document.getElementById("report-select").selectedIndex = 0;
         // Refresh the page to apply the filter changes
         location.reload();
-        
         }
     </script>
+
     <script src="script.js"></script>
 </body>
 
