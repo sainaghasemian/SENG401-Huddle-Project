@@ -180,6 +180,7 @@ function getStandings() {
                             <thead>
                                 <tr>
                                     <th>Team </th>
+                                    <th></th>
                                     <th>GP</th>
                                     <th>W</th>
                                     <th>L</th>
@@ -188,6 +189,7 @@ function getStandings() {
                                 </tr>
                             </thead>
                             <tbody>`;
+            let teamLogo;
             let teamName;
             let gamesPlayed;
             let numWins;
@@ -199,6 +201,7 @@ function getStandings() {
             if(selectedTeam === ""){
 
                 for (let i = 0; i < 32; i++) {
+                    teamLogo = objectData.response[0][i].team.logo;
                     teamName = objectData.response[0][i].team.name;
                     gamesPlayed = objectData.response[0][i].games.played;
                     numWins = objectData.response[0][i].games.win.total + objectData.response[0][i].games.win_overtime.total;
@@ -207,6 +210,7 @@ function getStandings() {
                     points = objectData.response[0][i].points;
                     output += `
                                 <tr>
+                                    <td><img src= ${teamLogo} height="50" width="50"></td>
                                     <td>${teamName}</td>
                                     <td>${gamesPlayed}</td>
                                     <td>${numWins}</td>
@@ -219,6 +223,7 @@ function getStandings() {
                 output += `</tbody></table>`;
             } else{
                 for (let i = 0; i < 32; i++) {
+                    teamLogo = objectData.response[0][i].team.logo;
                     teamName = objectData.response[0][i].team.name;
                     if(selectedTeam === teamName){
 
@@ -229,6 +234,7 @@ function getStandings() {
                         points = objectData.response[0][i].points;
                         output += `
                                     <tr>
+                                        <td><img src= ${teamLogo} height="50" width="50"></td>
                                         <td>${teamName}</td>
                                         <td>${gamesPlayed}</td>
                                         <td>${numWins}</td>
