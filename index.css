@@ -73,15 +73,17 @@
   padding: 50px;
   text-align: center;
 }
+
+/* this is the huddle logo at the top */
 .index-text {
-  top: 12px;
-  left: 784px;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 1);
   width: 328px;
   height: auto;
   position: absolute;
   font-size: 48px;
-  align-self: auto;
   font-style: ExtraBold;
   text-align: center;
   font-family: Work Sans;
