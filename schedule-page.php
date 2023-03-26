@@ -5,7 +5,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SchedulePage - Huddle</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Page - Huddle</title>
+
     <meta property="og:title" content="SchedulePage - Huddle" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -47,111 +51,111 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div>
-      <link href="./schedule-page.css" rel="stylesheet" />
+    <link href="./schedule-page.css" rel="stylesheet" />
+    <span class="schedule-page-text"><span>Game Schedules</span></span>
+    <img
+      alt="Separator1354"
+      class="schedule-page-separator"
+    />
+    <img
+        alt="TopBar4512"
+        src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/4d12000b-744e-4b7e-ac43-d7493314f2d9?org_if_sml=1887"
+        class="schedule-page-top-bar"
+      />
+      <img
+        alt="SearchIcon1351"
+        src="public/playground_assets/searchicon7464-hrlj.svg"
+        class="schedule-page-search-icon"
+      />
+      <img
+        alt="AccountIcon1351"
+        src="public/playground_assets/accounticon7464-cogs.svg"
+        class="schedule-page-account-icon"
+      />
+      <span class="schedule-page-huddle-top-logo"><span>Huddle</span></span>
+      <img
+        alt="MenuIcon1205"
+        src="public/playground_assets/menuicon1205-aai.svg"
+        class="schedule-page-menu-icon"
+      />
 
-      <div class="schedule-page-container">
-        <div class="schedule-page-full-page-template">
-          <div class="schedule-page-first-schedule-table">
-            <img
-              alt="Rectangle116656"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/e17f0e3c-709b-496a-884e-60471994cf1b?org_if_sml=14366"
-              class="schedule-page-rectangle11"
-            />
-            <img
-              alt="Rectangle106654"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/46280a91-2cd4-49c1-80d5-5c4152b5c027?org_if_sml=11375"
-              class="schedule-page-rectangle10"
-            />
-            <img
-              alt="Line26662"
-              src="public/playground_assets/line26662-lvbj.svg"
-              class="schedule-page-line2"
-            />
-            <img
-              alt="Line36663"
-              src="public/playground_assets/line36663-nn5.svg"
-              class="schedule-page-line3"
-            />
-            <img
-              alt="Line46664"
-              src="public/playground_assets/line46664-44n.svg"
-              class="schedule-page-line4"
-            />
-            <img
-              alt="Line56665"
-              src="public/playground_assets/line56665-gbzw.svg"
-              class="schedule-page-line5"
-            />
-            <span class="schedule-page-text"><span>Matchup</span></span>
-            <span class="schedule-page-text02"><span>Time</span></span>
-            <span class="schedule-page-text04"><span>Networks</span></span>
-          </div>
-          <span class="schedule-page-text06"><span>Schedule</span></span>
-          <span class="schedule-page-text08"><span>Date</span></span>
-          <img
-            alt="Separator6645"
-            src="public/playground_assets/separator6645-yji4.svg"
-            class="schedule-page-separator"
-          />
-          <button class="schedule-page-select-team-button">
-            <img
-              alt="Rectangle126650"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/06fa1261-2387-44ba-9610-e5147933c0a5?org_if_sml=11235"
-              class="schedule-page-rectangle12"
-            />
-            <span class="schedule-page-text10"><span>Select Team</span></span>
-            <img
-              alt="Polygon16652"
-              src="public/playground_assets/polygon16652-pzcb.svg"
-              class="schedule-page-polygon1"
-            />
-          </button>
-          <span class="schedule-page-text12">Date</span>
-          <div class="schedule-page-second-schedule-table">
-            <img
-              alt="Rectangle136611"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/46dbe902-32fb-41ba-a04b-02fc20f75c06?org_if_sml=11375"
-              class="schedule-page-rectangle13"
-            />
-            <img
-              alt="Rectangle126611"
-              src="public/playground_assets/rectangle126611-fsef-200h.png"
-              class="schedule-page-rectangle121"
-            />
-            <span class="schedule-page-text13"><span>Matchup</span></span>
-            <span class="schedule-page-text15"><span>Time</span></span>
-            <span class="schedule-page-text17"><span>Networks</span></span>
-          </div>
-          <img
-            alt="TopBar7468"
-            src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/2cd18f47-7237-4b4f-9e67-e38cbb971201?org_if_sml=1886"
-            class="schedule-page-top-bar"
-          />
-          <img
-            alt="SearchBar7468"
-            src="public/playground_assets/searchbar7468-l9i.svg"
-            class="schedule-page-search-bar"
-          />
-          <a href="home-account-page.php" class="schedule-page-navlink">
-            <img
-              alt="AccountIcon7469"
-              src="public/playground_assets/accounticon7469-3mjm.svg"
-              class="schedule-page-account-icon"
-            />
-          </a>
-          <span class="schedule-page-text19"><span>Huddle</span></span>
-          <img
-            alt="MenuIcon1206"
-            src="public/playground_assets/menuicon1206-29e7.svg"
-            class="schedule-page-menu-icon"
-          />
-        </div>
-      </div>
-    </div>
-    <script
-      data-section-id="navbar"
-      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
-    ></script>
+      <span class="schedule-page-teams-drop-down-title">SELECT TEAM</span>
+      <select class="schedule-page-teams-drop-down" id="franchise-select">
+        <option value="">All Teams</option>
+        <option value="Anaheim Ducks">Anaheim Ducks</option>
+        <option value="Arizona Coyotes">Arizona Coyotes</option>
+        <option value="Boston Bruins">Boston Bruins</option>
+        <option value="Buffalo Sabres">Buffalo Sabres</option>
+        <option value="Calgary Flames">Calgary Flames</option>
+        <option value="Carolina Hurricanes">Carolina Hurricanes</option>
+        <option value="Chicago Blackhawks">Chicago Blackhawks</option>
+        <option value="Colorado Avalanche">Colorado Avalanche</option>
+        <option value="Columbus Blue Jackets">Columbus Blue Jackets</option>
+        <option value="Dallas Stars">Dallas Stars</option>
+        <option value="Detroit Red Wings">Detroit Red Wings</option>
+        <option value="Edmonton Oilers">Edmonton Oilers</option>
+        <option value="Florida Panthers">Florida Panthers</option>
+        <option value="Los Angeles Kings">Los Angeles Kings</option>
+        <option value="Minnesota Wild">Minnesota Wild</option>
+        <option value="Montreal Canadiens">Montreal Canadiens</option>
+        <option value="Nashville Predators">Nashville Predators</option>
+        <option value="New Jersey Devils">New Jersey Devils</option>
+        <option value="New York Islanders">New York Islanders</option>
+        <option value="New York Rangers">New York Rangers</option>
+        <option value="Ottawa Senators">Ottawa Senators</option>
+        <option value="Philadelphia Flyers">Philadelphia Flyers</option>
+        <option value="Pittsburgh Penguins">Pittsburgh Penguins</option>
+        <option value="San Jose Sharks">San Jose Sharks</option>
+        <option value="Seattle Kraken">Seattle Kraken</option>
+        <option value="St. Louis Blues">St. Louis Blues</option>
+        <option value="Tampa Bay Lightning">Tampa Bay Lightning</option>
+        <option value="Toronto Maple Leafs">Toronto Maple Leafs</option>
+        <option value="Vancouver Canucks">Vancouver Canucks</option>
+        <option value="Vegas Golden Knights">Vegas Golden Knights</option>
+        <option value="Washington Capitals">Washington Capitals</option>
+        <option value="Winnipeg Jets">Winnipeg Jets</option>
+      </select>
+
+      <span class="schedule-page-dates-drop-down-title">SELCT DATE</span>
+      <select class="schedule-page-dates-drop-down" id="date-select">
+        <option value="">All Upcoming Games</option>
+        <option value="2023-03-26">Sunday, March 26</option>  
+        <option value="2023-03-27">Monday, March 27</option>  
+        <option value="2023-03-28">Tuesday, March 28</option>  
+        <option value="2023-03-29">Wednesday, March 29</option>
+        <option value="2023-03-30">Thursday, March 30</option>
+        <option value="2023-03-31">Friday, March 31</option>
+        <option value="2023-04-01">Saturday, April 1</option>
+        <option value="2023-04-02">Sunday, April 2</option>
+        <option value="2023-04-03">Monday, April 3</option> 
+        <option value="2023-04-04">Tuesday, April 4</option>
+        <option value="2023-04-05">Wednesday, April 5</option>
+        <option value="2023-04-06">Thursday, April 6</option>
+        <option value="2023-04-07">Friday, April 7</option>
+        <option value="2023-04-08">Saturday, April 8</option>
+        <option value="2023-04-09">Sunday, April 9</option>
+        <option value="2023-04-10">Monday, April 10</option>
+        <option value="2023-04-11">Tuesday, April 11</option>
+        <option value="2023-04-12">Wednesday, April 12</option>
+        <option value="2023-04-13">Thursday, April 13</option>
+        <option value="2023-04-14">Friday, April 14</option>
+      </select>
+
+      <button class="schedule-page-get-schedule-button">
+        <img
+          alt="Rectangle126633"
+          src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/32875c77-5163-45b7-b5c6-8ec1403e308b?org_if_sml=11235"
+          class="new-team-page-rectangle12"
+        />
+        <span onclick="getGame()" class="schedule-page-get-games-buttontext"><span>Get Games</span></span>
+          
+      </button>
+      
+
+
+
+
+    <div id="div"></div>
+    <script src="script.js"></script>
   </body>
 </html>
