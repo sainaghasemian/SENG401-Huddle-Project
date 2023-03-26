@@ -86,18 +86,20 @@
 
               foreach($posts as $post)
               {
-                echo "<li>
-                        <h2>" . $post['Title'] . "</h2>
-                        <p>" . $post['Content'] . "</p>
-                        <div class='likes'>
-                          <form method='POST' action='increment-likes.php'>
-                            <input type='hidden' name='post_id' value='" . $post['PostID'] . "'>
-                            <button class='like-btn'>Like</button>
-                          </form>
-                          <span class='like-count'>" . $post['NumberOfLikes'] . "</span>
-                        </div>
-                        <span class='team-label'>" . $post['Team_Name'] . "</span>
-                      </li>";
+                ?>
+                <li>
+                  <h2> <?php echo $post['Title'] ?></h2>
+                  <p><?php echo $post['Content'] ?></p>
+                  <div class='likes'>
+                    <form method='POST' action='increment-likes.php'>
+                      <input type='hidden' name='post_id' value=" . $post['PostID'] . ">
+                      <button class='like-btn'>Like</button>
+                    </form>
+                    <span class='like-count'><?php echo $post['NumberOfLikes'] ?></span>
+                  </div>
+                  <span class='team-label'><?php echo $post['Team_Name'] ?></span>
+                </li>
+              <?php
               }
               ?>
 
