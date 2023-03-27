@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2023 at 05:16 PM
+-- Generation Time: Mar 27, 2023 at 04:24 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `huddledatabase`
 --
+
 DROP DATABASE IF EXISTS huddledatabase;
 CREATE DATABASE huddledatabase;
 USE huddledatabase;
@@ -30,7 +31,7 @@ USE huddledatabase;
 --
 
 CREATE TABLE `post` (
-  `PostID` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `PostID` int(11) NOT NULL,
   `Content` varchar(2000) DEFAULT NULL,
   `NumberOfLikes` int(11) DEFAULT 0,
   `User_UserID` varchar(11) NOT NULL,
@@ -98,8 +99,7 @@ INSERT INTO `team` (`TeamID`, `Name`) VALUES
 (27, 'San Jose Sharks'),
 (28, 'Seattle Kraken'),
 (29, 'Vancouver Canucks'),
-(30, 'Vegas Golden Knights'),
-(31, 'Pittsburgh Penguins');
+(30, 'Vegas Golden Knights');
 
 -- --------------------------------------------------------
 
@@ -124,19 +124,19 @@ INSERT INTO `user` (`UserID`, `Name`, `Password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usersubscribtion`
+-- Table structure for table `usersubscription`
 --
 
-CREATE TABLE `usersubscribtion` (
+CREATE TABLE `usersubscription` (
   `User_UserID` varchar(11) NOT NULL,
   `Team_TeamID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `usersubscribtion`
+-- Dumping data for table `usersubscription`
 --
 
-INSERT INTO `usersubscribtion` (`User_UserID`, `Team_TeamID`) VALUES
+INSERT INTO `usersubscription` (`User_UserID`, `Team_TeamID`) VALUES
 ('johnydo', 12),
 ('johnydo', 15),
 ('johnydo', 16),
@@ -155,12 +155,8 @@ INSERT INTO `usersubscribtion` (`User_UserID`, `Team_TeamID`) VALUES
 --
 -- Indexes for table `post`
 --
--- ALTER TABLE `post`
---   ADD PRIMARY KEY (`PostID`,`User_UserID`,`Team_TeamID`),
---   ADD UNIQUE KEY `PostID_UNIQUE` (`PostID`),
---   ADD KEY `fk_Post_User1_idx` (`User_UserID`),
---   ADD KEY `fk_Post_Team1_idx` (`Team_TeamID`),
---   ADD KEY `fk_Post_Post1` (`Post_PostID`);
+ALTER TABLE `post`
+  ADD PRIMARY KEY (`PostID`);
 
 --
 -- Indexes for table `team`
@@ -177,12 +173,22 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `UserID_UNIQUE` (`UserID`);
 
 --
--- Indexes for table `usersubscribtion`
+-- Indexes for table `usersubscription`
 --
-ALTER TABLE `usersubscribtion`
+ALTER TABLE `usersubscription`
   ADD PRIMARY KEY (`User_UserID`,`Team_TeamID`),
   ADD KEY `fk_User_has_Team_Team1_idx` (`Team_TeamID`),
   ADD KEY `fk_User_has_Team_User1_idx` (`User_UserID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `post`
+--
+ALTER TABLE `post`
+  MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
