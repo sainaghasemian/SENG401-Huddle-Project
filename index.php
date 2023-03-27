@@ -217,13 +217,14 @@
               class="index-account-icon"
             />
           </a>
+          <a href="new-team-page.php" class="home-account-page-navlink">
           <img
             alt="MenuIcon1225"
             src="public/playground_assets/menuicon1225-ehcb.svg"
             class="index-menu-icon"
           />
           <?php
-            if (isset($_SESSION["username_logged"])){
+            if (!$_SESSION["authenticated_username"] == ""){
               
               echo "<form action='post-page.php' method='get'>
                       <button class='index-page-post-icon' type='submit'>
