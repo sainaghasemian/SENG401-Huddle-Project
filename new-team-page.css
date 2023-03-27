@@ -35,32 +35,22 @@
   position: absolute;
   border-color: transparent;
 }
-.new-team-page-menu-icon {
-  top: 14px;
-  right: 24px;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  min-width: 16px;
-}
-.new-team-page-search-icon {
-  top: 22px;
-  right: 87px;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  min-width: 16px;
-}
-.new-team-page-account-icon {
+.hamburger-drop-down {
   top: 18px;
-  right: 138px;
-  width: 40px;
+  right: 44px;
+  width: 90px;
   height: 40px;
   position: absolute;
-  min-width: 16px;
+  font-style: ExtraBold;
+  background-color: #1D5CFF;
+  border-color: whitesmoke;
+  border-width: 2.5px;
 }
+
+
+
 .new-team-page-huddle-top-logo {
-  top: 4%;
+  top: 40px;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 1);

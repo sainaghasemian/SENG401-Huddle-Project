@@ -66,16 +66,12 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/4d12000b-744e-4b7e-ac43-d7493314f2d9?org_if_sml=1887"
             class="new-team-page-top-bar"
           />
-          <img
-            alt="SearchIcon1351"
-            src="public/playground_assets/searchicon7464-hrlj.svg"
-            class="new-team-page-search-icon"
-          />
-          <img
-            alt="AccountIcon1351"
-            src="public/playground_assets/accounticon7464-cogs.svg"
-            class="new-team-page-account-icon"
-          />
+          <select class="hamburger-drop-down" id="go-to-pg">
+            <option value="">MENU</option>
+            <option value="./schedule-page.php">Schedule Page</option>
+            <option value="./stats-page.php">Stats Page</option>
+            <option value="./new-team-page.php">Team Page</option>
+          </select>
           <?php
             if (isset($_SESSION["username_logged"])){
               
@@ -89,11 +85,6 @@
             }
           ?>
           <span class="new-team-page-huddle-top-logo"><span>Huddle</span></span>
-          <img
-            alt="MenuIcon1205"
-            src="public/playground_assets/menuicon1205-aai.svg"
-            class="new-team-page-menu-icon"
-          />
           <span class="new-team-page-teams-drop-down-title">TEAMS</span>
           <select class="new-team-page-teams-drop-down" id="team-select">
             <option value="">All Teams</option>
