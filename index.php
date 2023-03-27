@@ -208,6 +208,18 @@
             src="public/playground_assets/menuicon1225-ehcb.svg"
             class="index-menu-icon"
           />
+          <?php
+            if (isset($_SESSION["username_logged"])){
+              
+              echo "<form action='post-page.php' method='get'>
+                      <button class='index-page-post-icon' type='submit'>
+                        <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                          Post
+                        </span>
+                      </button>
+                    </form>";
+            }
+          ?>
         </div>
       </div>
     </div>

@@ -20,6 +20,12 @@
         $_SESSION["message"] = "The username or password is incorrect. Please try again.";
         header("Location: login-page.php");
       }
+      else{
+        if (!isset($_SESSION["username_logged"])){
+          $_SESSION["username_logged"] = $username;
+        }
+        header("Location: index.php");
+      }
       $pdo = null;
     }
     
@@ -118,6 +124,14 @@
             src="public/playground_assets/menuicon1204-io2.svg"
             class="home-account-page-menu-icon"
           />
+          <?php
+          if (isset($_SESSION["username_logged"])){
+            
+            echo "<form action='post-page.php' method='get'>
+              <button class='home-account-page-post-icon' type='submit'>Post</button>
+            </form>";
+          }
+          ?>
         </div>
       </div>
     </div>
