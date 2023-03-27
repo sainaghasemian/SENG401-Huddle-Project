@@ -84,48 +84,70 @@
             class="login-page-middle-bar"
           />
           <?php
-            if (isset($_SESSION["username_logged"])){
-              
-              echo "<form action='post-page.php' method='get'>
-                      <button class='login-page-post-icon' type='submit'>
-                        <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
-                          Post
-                        </span>
-                      </button>
-                    </form>";
+            if (!isset($_SESSION["authenticated_username"])){
+              ?>
+                <span class='login-page-text'>New to Huddle? Sign up</span>
+                <span class='login-page-text01'><span>Welcome!</span></span>
+
+                <form id = login action='index.php' method='post'>
+                  <input
+                    type='text'
+                    placeholder='Password'
+                    class='login-page-password-input input'
+                    name = 'password'
+                  />
+                  <input
+                    type='text'
+                    placeholder='Username'
+                    class='login-page-username-input input'
+                    name = 'username'
+                  />
+                  <a href='javascript: login.submit();' class='login-page-log-in-button'>
+                    <img
+                      alt='Rectangle126044'
+                      src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
+                      class='login-page-rectangle12'
+                    />
+                    <span class='login-page-text07'><span>Log In</span></span>
+                  </a>"
+                </form>
+
+            <?php
+            }
+            else{
+            ?>
+              <form action='post-page.php' method='get'>
+                <button class='login-page-post-icon' type='submit'>
+                  <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                    Post
+                  </span>
+                </button>
+              </form>
+              <span class="login-page-text10">Currently signed in as: <?php echo $_SESSION["authenticated_username"]?></span>
+        
+              <form action="logout.php" method="submit">
+                <button type="submit" class="login-page-logout-button">
+                  <img
+                    alt="LogOutButton6065"
+                    src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/14c8e075-cf54-4ffc-b115-8db824213d04?org_if_sml=11235"
+                    class="login-page-logout-button1"
+                  />
+                  <span class="login-page-text11"><span>Logout</span></span>
+                </button>;
+              </form>
+            <?php
             }
           ?>
-          <span class="login-page-text">New to Huddle? Sign up</span>
-          <span class="login-page-text01"><span>Welcome!</span></span>
-
-
-          <form id = login action="index.php" method="post">
-            <input
-              type="text"
-              placeholder="Password"
-              class="login-page-password-input input"
-              name = "password"
-            />
-            <input
-              type="text"
-              placeholder="Username"
-              class="login-page-username-input input"
-              name = "username"
-            />
-            <a href="javascript: login.submit();" class="login-page-log-in-button">
-              <img
-                alt="Rectangle126044"
-                src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235"
-                class="login-page-rectangle12"
-              />
-              <span class="login-page-text07"><span>Log In</span></span>
-            </a>
-          </form>
 
           <span class="login-page-text09"><span>Huddle</span></span>
-          <a href="register-page.php" class="login-page-navlink button">
-            here
-          </a>
+
+          <?php
+            if (!isset($_SESSION["authenticated_username"])){
+              echo "<a href='register-page.php' class='login-page-navlink button'>
+                here
+              </a>";
+            }
+          ?>
 
         </div>
       </div>
