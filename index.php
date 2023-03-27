@@ -97,7 +97,6 @@
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/62e3b6c0-216b-4f2b-9101-7bff224e0d07?org_if_sml=16661"
               class="index-middle-bar"
             />
-            <!-- <ul class ="list"> -->
             <div class = "scrollable-list">
               <ul>
                 <?php
