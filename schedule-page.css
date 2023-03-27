@@ -166,3 +166,17 @@
   border-width: 2.5px;
 }
 
+
+.data-container {
+  width: 94%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  margin-top: 470px;
+  margin-left: 55px;
+  background-color: skyblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
