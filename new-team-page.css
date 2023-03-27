@@ -24,7 +24,7 @@
   width: 94%;
   height: 0px;
   position: absolute;
-  border-color: var(--dl-color-primary-huddleblue);
+  border-color: #1D5CFF;
   border-width: 2px;
 }
 .new-team-page-top-bar {
@@ -45,9 +45,8 @@
   background-color: #1D5CFF;
   border-color: whitesmoke;
   border-width: 2.5px;
+  border-radius: 10%;
 }
-
-
 
 .new-team-page-huddle-top-logo {
   top: 40px;
@@ -179,7 +178,7 @@
 
 .new-team-page-post-icon {
   top: 18px;
-  right: 200px;
+  right: 265px;
   width: 85px;
   height: 40px;
   position: absolute;
@@ -187,5 +186,16 @@
   background-color: #FFFFFF;
   border: none;
   cursor: pointer;
+}
 
+.new-team-page-log-icon {
+  top: 18px;
+  right: 150px;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
 }

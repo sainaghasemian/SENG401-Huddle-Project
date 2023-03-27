@@ -58,7 +58,6 @@
           <span class="new-team-page-teams-text"><span>Teams</span></span>
           <img
             src="public/playground_assets/separator1354-6i6.svg"
-            alt="Separator1354"
             class="new-team-page-separator"
           />
           <img
@@ -82,6 +81,21 @@
                         </span>
                       </button>
                     </form>";
+              echo "<form action='login-page.php' method='get'>
+              <button class='new-team-page-log-icon' type='submit'>
+                <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                  Log Out
+                </span>
+              </button>
+            </form>";
+            } else {
+              echo "<form action='login-page.php' method='get'>
+              <button class='new-team-page-log-icon' type='submit'>
+                <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                  Log In
+                </span>
+              </button>
+            </form>";
             }
           ?>
           <span class="new-team-page-huddle-top-logo"><span>Huddle</span></span>
