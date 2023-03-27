@@ -71,6 +71,19 @@
             <option value="./stats-page.php">Stats Page</option>
             <option value="./new-team-page.php">Team Page</option>
           </select>
+
+          <script> 
+            const menuIcon = document.querySelector('.hamburger-drop-down');
+            const selectElement = document.querySelector('#go-to-pg');
+
+            menuIcon.addEventListener('change', () => {
+              const selectedValue = selectElement.value;
+              if (selectedValue !== '') {
+                window.location.href = selectedValue;
+              }
+            });
+          </script>
+
           <?php
             if (!$_SESSION["authenticated_username"] == ""){
               

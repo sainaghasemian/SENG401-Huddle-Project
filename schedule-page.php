@@ -68,7 +68,7 @@
         class="schedule-page-account-icon"
       />
       <?php
-            if (isset($_SESSION["username_logged"])){
+            if (!$_SESSION["authenticated_username"] == "")){
               
               echo "<form action='post-page.php' method='get'>
                       <button class='schedule-page-post-icon' type='submit'>
