@@ -66,7 +66,8 @@
             class="new-team-page-top-bar"
           />
           <select class="hamburger-drop-down" id="go-to-pg">
-            <option value="">MENU</option>
+            <option value="">Menu</option>
+            <option value="./index.php">Home Page</option>
             <option value="./schedule-page.php">Schedule Page</option>
             <option value="./stats-page.php">Stats Page</option>
             <option value="./new-team-page.php">Team Page</option>

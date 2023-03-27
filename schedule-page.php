@@ -62,14 +62,8 @@
         src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/4d12000b-744e-4b7e-ac43-d7493314f2d9?org_if_sml=1887"
         class="schedule-page-top-bar"
       />
-      <img
-        alt="AccountIcon1351"
-        src="public/playground_assets/accounticon7464-cogs.svg"
-        class="schedule-page-account-icon"
-      />
       <?php
             if (!$_SESSION["authenticated_username"] == ""){
-              
               echo "<form action='post-page.php' method='get'>
                       <button class='schedule-page-post-icon' type='submit'>
                         <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
@@ -77,6 +71,21 @@
                         </span>
                       </button>
                     </form>";
+              echo "<form action='login-page.php' method='get'>
+                <button class='schedule-page-log-icon' type='submit'>
+                  <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                    Log Out
+                  </span>
+                </button>
+              </form>";
+            } else {
+              echo "<form action='login-page.php' method='get'>
+              <button class='schedule-page-log-icon' type='submit'>
+                <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                  Log In
+                </span>
+              </button>
+            </form>";
             }
           ?>
       <span class="schedule-page-huddle-top-logo"><span>Huddle</span></span>
@@ -154,7 +163,8 @@
       
 
       <select class="hamburger-drop-down" id="go-to-pg">
-        <option value="">MENU</option>
+        <option value="">Menu</option>
+        <option value="./index.php">Home Page</option>
         <option value="./schedule-page.php">Schedule Page</option>
         <option value="./stats-page.php">Stats Page</option>
         <option value="./new-team-page.php">Team Page</option>

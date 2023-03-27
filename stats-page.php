@@ -69,26 +69,28 @@
         class="stats-page-top-bar"
     />
 
-    <img
-        alt="SearchIcon1351"
-        src="public/playground_assets/searchicon7464-hrlj.svg"
-        class="stats-page-search-icon"
-    />
-    <img
-        alt="AccountIcon1351"
-        src="public/playground_assets/accounticon7464-cogs.svg"
-        class="stats-page-account-icon"
-    />
+    <select class="hamburger-drop-down" id="go-to-pg">
+      <option value="">Menu</option>
+      <option value="./index.php">Home Page</option>
+      <option value="./schedule-page.php">Schedule Page</option>
+      <option value="./stats-page.php">Stats Page</option>
+      <option value="./new-team-page.php">Team Page</option>
+    </select>
 
-    <img
-        alt="MenuIcon1205"
-        src="public/playground_assets/menuicon1205-aai.svg"
-        class="stats-page-menu-icon"
-    />
+    <script> 
+      const menuIcon = document.querySelector('.hamburger-drop-down');
+      const selectElement = document.querySelector('#go-to-pg');
+
+      menuIcon.addEventListener('change', () => {
+        const selectedValue = selectElement.value;
+        if (selectedValue !== '') {
+          window.location.href = selectedValue;
+        }
+      });
+    </script>
 
     <?php
-            if (isset($_SESSION["username_logged"])){
-              
+             if (!$_SESSION["authenticated_username"] == ""){
               echo "<form action='post-page.php' method='get'>
                       <button class='stats-page-post-icon' type='submit'>
                         <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
@@ -96,6 +98,21 @@
                         </span>
                       </button>
                     </form>";
+                    echo "<form action='login-page.php' method='get'>
+                    <button class='stats-page-log-icon' type='submit'>
+                    <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                      Log Out
+                    </span>
+                    </button>
+                </form>";
+            } else {
+              echo "<form action='login-page.php' method='get'>
+                <button class='stats-page-log-icon' type='submit'>
+                <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                  Log In
+                </span>
+                </button>
+              </form>";
             }
           ?>
 
