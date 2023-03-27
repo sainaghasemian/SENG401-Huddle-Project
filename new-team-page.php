@@ -130,7 +130,7 @@
             <option value="Florida Panthers">Florida Panthers</option>
             <option value="Los Angeles Kings">Los Angeles Kings</option>
             <option value="Minnesota Wild">Minnesota Wild</option>
-            <option value="Montreal Canadiens">Montreal Canadiens</option>
+            <option value="Montréal Canadiens">Montréal Canadiens</option>
             <option value="Nashville Predators">Nashville Predators</option>
             <option value="New Jersey Devils">New Jersey Devils</option>
             <option value="New York Islanders">New York Islanders</option>

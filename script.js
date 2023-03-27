@@ -18,6 +18,7 @@ function getGame() {
     let awayScore; // score of away team
     let gameStatus;   // status of the game (what period)
     let startGameTime;// start time of game (currently in MST)
+    
 
     let userInput = document.querySelector("#franchise-select").value;
     let userDate = document.querySelector("#date-select").value;  // saina change it here
@@ -78,17 +79,24 @@ function getGame() {
                         if (homeScore === null) {
                             homeScore = 0;
                             awayScore = 0;
-                            gameStatus = "Game has not started."
+                            gameStatus = "Game has not started"
                         }
-                        output += `<p> ${awayTeam} @ ${homeTeam} </p>`;
-                        output += `<ul>
-                                        <img src=${homeLogo}>
-                                        <img src=${awayLogo}>
-                                        <li> Game Start Time: ${startGameTime} MST </li>
-                                        <li> ${homeTeam} : ${homeScore} </li>
-                                        <li> ${awayTeam} : ${awayScore} </li>
-                                        <li> Game Status: ${gameStatus} </li>
-                                    </ul>`;
+                        output += `<div class="blue-container">
+                                        <div class="team-names">
+                                            <p> ${awayTeam} @ ${homeTeam} </p>
+                                            <div class="logos">
+                                                <img src=${homeLogo}>
+                                                <img src=${awayLogo}>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li> Game Date: ${gameDate} </li>
+                                            <li> Game Start Time: ${startGameTime} MST </li>
+                                            <li> ${homeTeam} : ${homeScore} </li>
+                                            <li> ${awayTeam} : ${awayScore} </li>
+                                            <li> Game Status: ${gameStatus} </li>
+                                        </ul>
+                                    </div>`;
                         document.getElementById("div").innerHTML = output;
 
                     // }
@@ -152,21 +160,24 @@ function getGame() {
                             if (homeScore === null) {
                                 homeScore = 0;
                                 awayScore = 0;
-                                gameStatus = "Game has not started."
+                                gameStatus = "Game has not started"
                             }
-                            output += `<p> ${awayTeam} @ ${homeTeam} </p>`;
-                            output += `<table class="data-container">
-                                        <ul>
-                                        <img src=${homeLogo}>
-                                        <img src=${awayLogo}>
-                                        <li> Game Date: ${gameDate} </li>
-                                        <li> Game Start Time: ${startGameTime} MST </li>
-                                        <li> ${homeTeam} : ${homeScore} </li>
-                                        <li> ${awayTeam} : ${awayScore} </li>
-                                        <li> Game Status: ${gameStatus} </li>
-
-                                    </ul>
-                                    </table`;
+                            output += `<div class="blue-container">
+                                            <div class="team-names">
+                                                <p> ${awayTeam} @ ${homeTeam} </p>
+                                                <div class="logos">
+                                                    <img src=${homeLogo}>
+                                                    <img src=${awayLogo}>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li> Game Date: ${gameDate} </li>
+                                                <li> Game Start Time: ${startGameTime} MST </li>
+                                                <li> ${homeTeam} : ${homeScore} </li>
+                                                <li> ${awayTeam} : ${awayScore} </li>
+                                                <li> Game Status: ${gameStatus} </li>
+                                            </ul>
+                                        </div>`;
                             document.getElementById("div").innerHTML = output;
                         }
                     }
@@ -186,10 +197,6 @@ function getGame() {
     // 'https://api-hockey.p.rapidapi.com/games/?date=2023-02-27&league=57&season=2022&timezone=America%2FEdmonton'
 
 }
-
-
-
-
 
 
 
@@ -348,11 +355,12 @@ function getRoster(teamID) {
         .catch(error => console.log(error));
 }
 
+
 function getPlayerStats(players) {
-    // let season = 20222023;  // will change this to a user input after
-    let season = document.querySelector("#season-select").value;  // will change this to a user input after
+    let season = 20222023;  // will change this to a user input after
     let positionSelect = document.querySelector("#position-select").value;
-    console.log(players);
+    let playoffSelect = document.querySelector("#gametype-select").value;
+    // console.log(playoffSelect);
 
     let output = `<table class="table-chart">
                     <thead>
@@ -368,34 +376,35 @@ function getPlayerStats(players) {
                         </tr>
                 </thead>
                 </tbody>`;
-    
-    let playerName;
-    let position;
-    let gamesPlayed;
-    let goals;
-    let assist;
-    let points;
-    let plusMinus;
-    let penaltyMinutes;
+    let counter = 0;
 
-    if(positionSelect === "All Skaters"){
-        for (let i = 0; i < players.length; i++) {
-            fetch(`https://statsapi.web.nhl.com/api/v1/people/${players[i].id}/stats?stats=statsSingleSeason&season=${season}`)
+    if (positionSelect === "All Skaters") {
+        Promise.all(players.map(player => {
+            return fetch(`https://statsapi.web.nhl.com/api/v1/people/${player.id}/stats?stats=${playoffSelect}&season=${season}`)
+                // fetch(`https://statsapi.web.nhl.com/api/v1/statTypes`)
                 .then((data) => {
                     return data.json(); // convert to object 
                 })
                 .then((objectData) => {
+                    const playerName = player.fullName;
+                    const position = player.position;
+                    console.log("before the if");
                     console.log(objectData);
-                    playerName = players[i].fullName;
-                    position = players[i].position;
-                    gamesPlayed = objectData.stats[0].splits[0].stat.games;
-                    if(position !== "G"){
-                        goals = objectData.stats[0].splits[0].stat.goals;
-                        assist = objectData.stats[0].splits[0].stat.assists;
-                        points = objectData.stats[0].splits[0].stat.points;
-                        plusMinus = objectData.stats[0].splits[0].stat.plusMinus;
-                        penaltyMinutes = objectData.stats[0].splits[0].stat.pim;
+                    console.log(objectData.stats[0].splits.length);
+                    if (position !== "G" && objectData.stats[0].splits.length > 0) {
+                        console.log("i am here");
+                        ++counter;
+
                         
+                        const statObject = objectData.stats[0].splits[0].stat;
+                        console.log(statObject);
+                        const gamesPlayed = statObject.games;
+                        const goals = statObject.goals;
+                        const assist = statObject.assists;
+                        const points = statObject.points;
+                        const plusMinus = statObject.plusMinus;
+                        const penaltyMinutes = statObject.pim;
+
                         output += `
                                     <tr>
                                         <td>${playerName}</td>
@@ -408,37 +417,49 @@ function getPlayerStats(players) {
                                         <td>${penaltyMinutes}</td>
                     
                                     </tr> `;
-    
-                            
-                        document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
+                        //document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
                     }
-    
+                    // console.log(output);
+
+
                     // going to need one for goalie
-    
+
                 })
                 .catch(error => console.log(error));
-    
-        }
+        })).then(() => {
+            if (counter === 0) {
+                console.log(counter);
+                output = "<p>Playoffs have not started yet. </p>"; //ADD CLASS TO STYLE
+                
+            }
+            document.getElementById("playerStats").innerHTML = output;
+        })
+    } else {
 
-    }else{
-        for (let i = 0; i < players.length; i++) {
-            fetch(`https://statsapi.web.nhl.com/api/v1/people/${players[i].id}/stats?stats=statsSingleSeason&season=${season}`)
+        Promise.all(players.map(player => {
+            return fetch(`https://statsapi.web.nhl.com/api/v1/people/${player.id}/stats?stats=${playoffSelect}&season=${season}`)
+                // fetch(`https://statsapi.web.nhl.com/api/v1/statTypes`)
                 .then((data) => {
                     return data.json(); // convert to object 
                 })
                 .then((objectData) => {
-                    console.log(objectData);
-                    playerName = players[i].fullName;
-                    position = players[i].position;
-                    gamesPlayed = objectData.stats[0].splits[0].stat.games;
-                    if(position !== "G" && positionSelect === position){
-                        goals = objectData.stats[0].splits[0].stat.goals;
-                        assist = objectData.stats[0].splits[0].stat.assists;
-                        points = objectData.stats[0].splits[0].stat.points;
-                        plusMinus = objectData.stats[0].splits[0].stat.plusMinus;
-                        penaltyMinutes = objectData.stats[0].splits[0].stat.pim;
-                        
-                        output += `<tr>
+                    const playerName = player.fullName;
+                    const position = player.position;
+                    if (position !== "G" && positionSelect === position && objectData.stats[0].splits.length > 0) {
+                        console.log(objectData);
+                        ++counter;
+
+                        console.log(counter);
+                        const statObject = objectData.stats[0].splits[0].stat;
+                        const gamesPlayed = statObject.games;
+                        const goals = statObject.goals;
+                        const assist = statObject.assists;
+                        const points = statObject.points;
+                        const plusMinus = statObject.plusMinus;
+                        const penaltyMinutes = statObject.pim;
+
+                        output += `
+                                    <tr>
                                         <td>${playerName}</td>
                                         <td>${position}</td>
                                         <td>${gamesPlayed}</td>
@@ -448,23 +469,25 @@ function getPlayerStats(players) {
                                         <td>${plusMinus}</td>
                                         <td>${penaltyMinutes}</td>
                     
-                                    </tr> 
-                                </tbody>
-                                `;
-    
-    
-    
-                        document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
+                                    </tr> `;
+                        //document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
                     }
-    
+                    // console.log(output);
+
+
                     // going to need one for goalie
-    
+
                 })
                 .catch(error => console.log(error));
-    
-        }
+        })).then(() => {
+            if (counter === 0) {
+                console.log(counter);
+                output = "<p>Playoffs have not started yet. </p>";
+                
+            }
+            document.getElementById("playerStats").innerHTML = output;
+        })
     }
-
 
 }
 

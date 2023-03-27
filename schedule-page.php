@@ -54,7 +54,6 @@
     <link href="./schedule-page.css" rel="stylesheet" />
     <span class="schedule-page-text"><span>Game Schedules</span></span>
     <img
-      alt="Separator1354"
       class="schedule-page-separator"
     />
     <img
@@ -99,7 +98,7 @@
         <option value="Florida Panthers">Florida Panthers</option>
         <option value="Los Angeles Kings">Los Angeles Kings</option>
         <option value="Minnesota Wild">Minnesota Wild</option>
-        <option value="Montreal Canadiens">Montreal Canadiens</option>
+        <option value="Montréal Canadiens">Montréal Canadiens</option>
         <option value="Nashville Predators">Nashville Predators</option>
         <option value="New Jersey Devils">New Jersey Devils</option>
         <option value="New York Islanders">New York Islanders</option>
