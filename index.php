@@ -3,6 +3,25 @@
 
     // Include the database connection file
     include_once("config.php");
+
+    //Verify username and password from login page
+    if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]))
+    {
+      $username = $_POST["username"];
+      $password = $_POST["password"];
+      
+      $result = $pdo->query("SELECT 1 FROM User WHERE UserID = '$username' AND Password = '$password'");
+      $success = $result->fetch(PDO::FETCH_ASSOC);
+      if($success == null)
+      {
+        $_SESSION["message"] = "The username or password is incorrect. Please try again.";
+        header("Location: login-page.php");
+      }
+      else
+      {
+        $_SESSION["authenticated_username"] = $username;
+      }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -88,7 +107,7 @@
               {
                 ?>
                 <li>
-                  <span class='posted-by'>Posted by: " . $post['User_UserID'] . "</span>
+                  <span class='posted-by'>Posted by: <?php echo $post['User_UserID']?></span>
                   <h2> <?php echo $post['Title'] ?></h2>
                   <p><?php echo $post['Content'] ?></p>
                   <div class='likes'>
@@ -132,11 +151,12 @@
             />
               <ul class ="list">
               <?php
-              $result = $pdo->query("SELECT usersubscription.Team_TeamID, COUNT(usersubscription.User_UserID) AS count_subscribers
-                                      FROM table1
-                                      JOIN table2 ON table1.common_id = table2.common_id
-                                      GROUP BY table1.attribute
-                                      ORDER BY count_attribute DESC
+              //Get the top 5 teams in Huddle based on subscriber count
+              $result = $pdo->query("SELECT *, COUNT(usersubscription.User_UserID) AS count_subscribers
+                                      FROM team
+                                      JOIN usersubscription ON team.TeamID = usersubscription.Team_TeamID
+                                      GROUP BY team.TeamID
+                                      ORDER BY count_subscribers DESC
                                       LIMIT 5;");
 
               $teams = $result->fetchAll(PDO::FETCH_DEFAULT);

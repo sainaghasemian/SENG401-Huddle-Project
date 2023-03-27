@@ -87,7 +87,7 @@
           <span class="login-page-text01"><span>Welcome!</span></span>
 
 
-          <form id = login action="home-account-page.php" method="post">
+          <form id = login action="index.php" method="post">
             <input
               type="text"
               placeholder="Password"
