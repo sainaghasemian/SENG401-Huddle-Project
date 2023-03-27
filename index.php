@@ -121,8 +121,8 @@
                     <p><?php echo $post['Content'] ?></p>
                     <div class='likes'>
                       <form method='POST' action='increment-likes.php'>
-                        <input type='hidden' name='post_id' value=" . $post['PostID'] . ">
-                        <button class='like-btn'>Like</button>
+                        <input type='hidden' name='post_id' value='<?php echo $post['PostID'] ?>'>
+                        <button class='like-button'>Like</button>
                       </form>
                       <span class='like-count'><?php echo $post['NumberOfLikes'] ?></span>
                     </div>
@@ -176,7 +176,6 @@
                       src='logos/<?php $str = str_replace(' ','',$team['Name']); echo $str . ".png"?>'
                       class='index-ellipse6'
                     />
-                    <!-- <span class='index-text12'><?php echo $team['Name'][0]?></span> -->
                   </div>
                 </div>
               </li>
@@ -203,6 +202,10 @@
               ?>
                 <span class="index-text04"><span>My Feed</span></span>
                 <span class="index-text06"><span>My Teams</span></span>
+                <div class="index-add-new-teams-button-container">
+                  <a href="add-new-teams.php" class="index-add-new-teams-button">Add New Teams</a>
+                </div>
+
               <?php
               }
               ?>

@@ -45,7 +45,7 @@
 } 
 
 .index-left-bar-container {
-  top: 151px;
+  top: 250px;
   left: 4%;
   position: absolute;
   width: 25%;
@@ -132,7 +132,7 @@ li h2, li p {
 }
 
 .list li {
-  padding: 50px;
+  padding: 10px 10px 75px 10px;
   text-align: center;
 }
 
@@ -157,17 +157,17 @@ li h2, li p {
 }
 .index-text02 {
   top: 126px;
-  right: 10%;
-  color: rgba(0, 0, 0, 1);
-  width: 241px;
+  right: 5%;
+  color: rgb(0, 0, 0);
+  width: 315px;
   height: auto;
   position: absolute;
-  font-size: 19.082178115844727px;
+  font-size: 30px;
   align-self: auto;
-  font-style: Regular;
+  font-style: ExtraBold;
   text-align: left;
   font-family: Work Sans;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
   font-stretch: normal;
   margin-right: 0;
@@ -181,12 +181,12 @@ li h2, li p {
   width: 241px;
   height: auto;
   position: absolute;
-  font-size: 19.082178115844727px;
+  font-size: 30px;
+  font-weight: 600;
   align-self: auto;
-  font-style: Regular;
+  font-style: ExtraBold;
   text-align: left;
   font-family: Work Sans;
-  font-weight: 400;
   line-height: normal;
   font-stretch: normal;
   margin-right: 0;
@@ -196,16 +196,16 @@ li h2, li p {
 .index-text06 {
   top: 126px;
   left: 5%;
-  color: rgba(0, 0, 0, 1);
-  width: 241px;
+  color: rgb(0, 0, 0);
+  width: 300px;
   height: auto;
   position: absolute;
-  font-size: 19.082178115844727px;
+  font-size: 30px;
   align-self: auto;
-  font-style: Regular;
+  font-style: ExtraBold;
   text-align: left;
   font-family: Work Sans;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
   font-stretch: normal;
   margin-right: 0;
@@ -264,7 +264,7 @@ li h2, li p {
 .index-text08 {
   left: 82px;
   color: rgba(0, 0, 0, 1);
-  width: 100%;
+  width: 90%;
   height: auto;
   position: absolute;
   font-size: 200%;
@@ -378,4 +378,23 @@ li h2, li p {
   border-color: #FFFFFF;
   border-width: 2.5px;
   border-radius: 16px;
+}
+
+.index-add-new-teams-button-container {
+  height: 50px;
+  width: 600px;
+  display: flex;
+  position: absolute;
+  top: 180px;
+  left: 5%;
+}
+
+.index-add-new-teams-button {
+  background-color: rgb(32,92,252);
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  text-align: center;
 }
