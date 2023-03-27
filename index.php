@@ -4,7 +4,6 @@
     // Include the database connection file
     include_once("config.php");
 
-    $_SESSION["authenticated_username"] = "";
     //Verify username and password from login page
     if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]))
     {
@@ -20,7 +19,9 @@
       }
       else
       {
-        $_SESSION["authenticated_username"] = $username;
+        if (!isset($_SESSION["authenticated_username"])){
+          $_SESSION["authenticated_username"] = $username;
+        }
       }
     }
 ?>

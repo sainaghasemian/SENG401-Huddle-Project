@@ -44,23 +44,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
-.register-page--name-input {
-  top: 409px;
-  left: 979px;
-  width: 292px;
-  height: 61px;
-  position: absolute;
-  font-size: 20px;
-  font-family: Work Sans;
-  border-style: hidden;
-  background-color: #bbceff;
-  border-top-width: 10px;
-  border-left-width: 20px;
-  border-right-width: 10px;
-  border-bottom-width: 10px;
-}
+
 .register-page-confirm-password-input {
-  top: 811px;
+  top: 609px;
   left: 651px;
   width: 621px;
   height: 61px;
@@ -75,7 +61,7 @@
   border-bottom-width: 10px;
 }
 .register-page-password-input {
-  top: 713px;
+  top: 510px;
   left: 652px;
   width: 621px;
   height: 61px;
@@ -89,23 +75,9 @@
   border-right-width: 10px;
   border-bottom-width: 10px;
 }
-.register-page-email-input {
-  top: 609px;
-  left: 650px;
-  width: 621px;
-  height: 61px;
-  position: absolute;
-  font-size: 20px;
-  font-family: Work Sans;
-  border-style: hidden;
-  background-color: #bbceff;
-  border-top-width: 10px;
-  border-left-width: 20px;
-  border-right-width: 10px;
-  border-bottom-width: 10px;
-}
+
 .register-page-username-input {
-  top: 510px;
+  top: 409px;
   left: 649px;
   width: 621px;
   height: 61px;
@@ -119,38 +91,9 @@
   border-right-width: 10px;
   border-bottom-width: 10px;
 }
-.register-page--name-input {
-  top: 409px;
-  left: 647px;
-  width: 292px;
-  height: 61px;
-  position: absolute;
-  font-size: 20px;
-  font-family: Work Sans;
-  border-style: hidden;
-  background-color: #bbceff;
-  border-top-width: 10px;
-  border-left-width: 20px;
-  border-right-width: 10px;
-  border-bottom-width: 10px;
-}
-.register-page--lname-input {
-  top: 409px;
-  left: 977px;
-  width: 292px;
-  height: 61px;
-  position: absolute;
-  font-size: 20px;
-  font-family: Work Sans;
-  border-style: hidden;
-  background-color: #bbceff;
-  border-top-width: 10px;
-  border-left-width: 20px;
-  border-right-width: 10px;
-  border-bottom-width: 10px;
-}
+
 .register-page-sign-up-button {
-  top: 913px;
+  top: 713px;
   left: 828px;
   width: 234px;
   height: 63px;

@@ -109,7 +109,6 @@ INSERT INTO `team` (`TeamID`, `Name`) VALUES
 
 CREATE TABLE `user` (
   `UserID` varchar(11) NOT NULL,
-  `Name` varchar(45) DEFAULT NULL,
   `Password` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -117,9 +116,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`UserID`, `Name`, `Password`) VALUES
-('johnydo', 'Johny Do', 'f'),
-('tommydinh', 'tommydinh', 'f');
+INSERT INTO `user` (`UserID`, `Password`) VALUES
+('johnydo', 'f'),
+('tommydinh', 'f');
 
 -- --------------------------------------------------------
 
