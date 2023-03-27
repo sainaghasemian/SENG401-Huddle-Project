@@ -216,7 +216,7 @@
               class="index-account-icon"
             />
           </a>
-          <a href="team-page.php" class="home-account-page-navlink">
+          <a href="new-team-page.php" class="home-account-page-navlink">
           <img
             alt="MenuIcon1225"
             src="public/playground_assets/menuicon1225-ehcb.svg"
