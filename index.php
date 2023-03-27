@@ -97,43 +97,43 @@
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/62e3b6c0-216b-4f2b-9101-7bff224e0d07?org_if_sml=16661"
               class="index-middle-bar"
             />
-          </div>
-          <!-- <ul class ="list"> -->
-          <div class = "scrollable-list">
-            <ul>
-              <?php
-              if($_SESSION["authenticated_username"] == "")
-              {
-                $result = $pdo->query("SELECT * FROM  post ORDER BY DatePosted DESC LIMIT 20;");
-              }
-              else
-              {
-                $loggedInUser = $_SESSION["authenticated_username"];
-                $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID JOIN post ON usersubscription.Team_TeamID = post.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser';");
-              }
+            <!-- <ul class ="list"> -->
+            <div class = "scrollable-list">
+              <ul>
+                <?php
+                if($_SESSION["authenticated_username"] == "")
+                {
+                  $result = $pdo->query("SELECT * FROM  post ORDER BY DatePosted DESC LIMIT 20;");
+                }
+                else
+                {
+                  $loggedInUser = $_SESSION["authenticated_username"];
+                  $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID JOIN post ON usersubscription.Team_TeamID = post.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser';");
+                }
 
-              $posts = $result->fetchAll(PDO::FETCH_DEFAULT);
+                $posts = $result->fetchAll(PDO::FETCH_DEFAULT);
 
-              foreach($posts as $post)
-              {
+                foreach($posts as $post)
+                {
+                  ?>
+                  <li class = "post-list">
+                    <span class='posted-by'>Posted by: <?php echo $post['User_UserID']?></span>
+                    <h2> <?php echo $post['Title'] ?></h2>
+                    <p><?php echo $post['Content'] ?></p>
+                    <div class='likes'>
+                      <form method='POST' action='increment-likes.php'>
+                        <input type='hidden' name='post_id' value=" . $post['PostID'] . ">
+                        <button class='like-btn'>Like</button>
+                      </form>
+                      <span class='like-count'><?php echo $post['NumberOfLikes'] ?></span>
+                    </div>
+                    <span class='team-label'><?php echo $post['Team_Name'] ?></span>
+                  </li>
+                <?php
+                }
                 ?>
-                <li>
-                  <span class='posted-by'>Posted by: <?php echo $post['User_UserID']?></span>
-                  <h2> <?php echo $post['Title'] ?></h2>
-                  <p><?php echo $post['Content'] ?></p>
-                  <div class='likes'>
-                    <form method='POST' action='increment-likes.php'>
-                      <input type='hidden' name='post_id' value=" . $post['PostID'] . ">
-                      <button class='like-btn'>Like</button>
-                    </form>
-                    <span class='like-count'><?php echo $post['NumberOfLikes'] ?></span>
-                  </div>
-                  <span class='team-label'><?php echo $post['Team_Name'] ?></span>
-                </li>
-              <?php
-              }
-              ?>
-            </ul>
+              </ul>
+            </div>
           </div>
 
           <div class = "index-left-bar-container">
