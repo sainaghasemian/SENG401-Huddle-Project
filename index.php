@@ -159,7 +159,7 @@
               else
               {
                 $loggedInUser = $_SESSION["authenticated_username"];
-                $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser';");
+                $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser' ORDER BY team.Name;");
               }
               
 
