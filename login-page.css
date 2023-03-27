@@ -225,3 +225,68 @@
   background-color: var(--dl-color-primary-huddlelightlightgrey);
 }
 
+.login-page-post-icon {
+  top: 18px;
+  right: 200px;
+  width: 85px;
+  height: 40px;
+  position: absolute;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+
+}
+
+.login-page-logout-button {
+  top: 450px;
+  left: 828px;
+  width: 234px;
+  height: 63px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  text-decoration: none;
+}
+
+.login-page-text10 {
+  top: 400px;
+  left: 41%;
+  color: rgb(0, 0, 0);
+  width: 324px;
+  height: auto;
+  position: absolute;
+  font-size: 21.0343px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.login-page-text11 {
+  top: 14px;
+  left: 62px;
+  color: rgba(255, 255, 255, 1);
+  width: 111px;
+  height: auto;
+  position: absolute;
+  font-size: 27.606220245361328px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}

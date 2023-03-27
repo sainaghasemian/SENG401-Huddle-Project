@@ -2165,3 +2165,16 @@
   position: absolute;
   border-color: transparent;
 }
+
+.team-page-post-icon {
+  top: 18px;
+  right: 200px;
+  width: 85px;
+  height: 40px;
+  position: absolute;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+
+}

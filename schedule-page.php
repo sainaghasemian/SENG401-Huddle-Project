@@ -67,6 +67,18 @@
         src="public/playground_assets/accounticon7464-cogs.svg"
         class="schedule-page-account-icon"
       />
+      <?php
+            if (!$_SESSION["authenticated_username"] == ""){
+              
+              echo "<form action='post-page.php' method='get'>
+                      <button class='schedule-page-post-icon' type='submit'>
+                        <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                          Post
+                        </span>
+                      </button>
+                    </form>";
+            }
+          ?>
       <span class="schedule-page-huddle-top-logo"><span>Huddle</span></span>
 
       <span class="schedule-page-teams-drop-down-title">SELECT TEAM</span>

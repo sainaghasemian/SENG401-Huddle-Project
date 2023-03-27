@@ -3,6 +3,27 @@
 
     // Include the database connection file
     include_once("config.php");
+
+    //Verify username and password from login page
+    if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]))
+    {
+      $username = $_POST["username"];
+      $password = $_POST["password"];
+      
+      $result = $pdo->query("SELECT 1 FROM User WHERE UserID = '$username' AND Password = '$password'");
+      $success = $result->fetch(PDO::FETCH_ASSOC);
+      if($success == null)
+      {
+        $_SESSION["message"] = "The username or password is incorrect. Please try again.";
+        header("Location: login-page.php");
+      }
+      else
+      {
+        if (!isset($_SESSION["authenticated_username"])){
+          $_SESSION["authenticated_username"] = $username;
+        }
+      }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -81,43 +102,37 @@
           <div class = "scrollable-list">
             <ul>
               <?php
-              $result = $pdo->query("SELECT * FROM  post ORDER BY DatePosted DESC LIMIT 20;");
+              if($_SESSION["authenticated_username"] == "")
+              {
+                $result = $pdo->query("SELECT * FROM  post ORDER BY DatePosted DESC LIMIT 20;");
+              }
+              else
+              {
+                $loggedInUser = $_SESSION["authenticated_username"];
+                $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID JOIN post ON usersubscription.Team_TeamID = post.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser';");
+              }
+
               $posts = $result->fetchAll(PDO::FETCH_DEFAULT);
 
               foreach($posts as $post)
               {
-                echo "<li>
-                        <h2>" . $post['Title'] . "</h2>
-                        <p>" . $post['Content'] . "</p>
-                        <div class='likes'>
-                          <form method='POST' action='increment-likes.php'>
-                            <input type='hidden' name='post_id' value='" . $post['PostID'] . "'>
-                            <button class='like-btn'>Like</button>
-                          </form>
-                          <span class='like-count'>" . $post['NumberOfLikes'] . "</span>
-                        </div>
-                        <span class='team-label'>" . $post['Team_Name'] . "</span>
-                      </li>";
+                ?>
+                <li>
+                  <span class='posted-by'>Posted by: <?php echo $post['User_UserID']?></span>
+                  <h2> <?php echo $post['Title'] ?></h2>
+                  <p><?php echo $post['Content'] ?></p>
+                  <div class='likes'>
+                    <form method='POST' action='increment-likes.php'>
+                      <input type='hidden' name='post_id' value=" . $post['PostID'] . ">
+                      <button class='like-btn'>Like</button>
+                    </form>
+                    <span class='like-count'><?php echo $post['NumberOfLikes'] ?></span>
+                  </div>
+                  <span class='team-label'><?php echo $post['Team_Name'] ?></span>
+                </li>
+              <?php
               }
               ?>
-
-              <!-- <html>
-              <li>
-                <div class='index-huddle-user'>
-                  <span class='index-text08'><span><?php echo $post['Title']?></span></span>
-                  <span class="index-text10"><span><?php echo $post['Content']?></span></span>
-                  <div class='index-huddle-pic'>
-                    <img
-                      alt='Ellipse61225'
-                      src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c8594294-f92f-40ef-b97c-8dcb35bb78d1?org_if_sml=11247'
-                      class='index-ellipse6'
-                    />
-                    <span class='index-text12'><?php echo $post['User_UserID'][0]?></span>
-                  </div>
-                </div>
-              </li>
-              </html> -->
-
             </ul>
           </div>
 
@@ -129,7 +144,23 @@
             />
               <ul class ="list">
               <?php
-              $result = $pdo->query("SELECT * FROM team LIMIT 5");
+              if($_SESSION["authenticated_username"] == "")
+              {
+                //Get the top 5 teams in Huddle based on subscriber count
+                $result = $pdo->query("SELECT *, COUNT(usersubscription.User_UserID) AS count_subscribers
+                FROM team
+                JOIN usersubscription ON team.TeamID = usersubscription.Team_TeamID
+                GROUP BY team.TeamID
+                ORDER BY count_subscribers DESC
+                LIMIT 5;");
+              }
+              else
+              {
+                $loggedInUser = $_SESSION["authenticated_username"];
+                $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser';");
+              }
+              
+
               $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
 
               foreach($teams as $team)
@@ -160,8 +191,22 @@
           </div>
           <span class="index-text"><span>Huddle</span></span>
           <span class="index-text02"><span>Upcoming Matches</span></span>
-          <span class="index-text04"><span>Feed</span></span>
-          <span class="index-text06"><span>Top 5 Huddle Teams</span></span>
+          <?php
+              if($_SESSION["authenticated_username"] == "")
+              {
+                ?>
+                <span class="index-text04"><span>Feed</span></span>
+                <span class="index-text06"><span>Top 5 Huddle Teams</span></span>
+              <?php
+              }
+              else
+              {
+              ?>
+                <span class="index-text04"><span>My Feed</span></span>
+                <span class="index-text06"><span>My Teams</span></span>
+              <?php
+              }
+              ?>
           <img
             alt="SearchIcon1225"
             src="public/playground_assets/searchicon1225-xb2.svg"
@@ -174,11 +219,24 @@
               class="index-account-icon"
             />
           </a>
+          <a href="new-team-page.php" class="home-account-page-navlink">
           <img
             alt="MenuIcon1225"
             src="public/playground_assets/menuicon1225-ehcb.svg"
             class="index-menu-icon"
           />
+          <?php
+            if (!$_SESSION["authenticated_username"] == ""){
+              
+              echo "<form action='post-page.php' method='get'>
+                      <button class='index-page-post-icon' type='submit'>
+                        <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                          Post
+                        </span>
+                      </button>
+                    </form>";
+            }
+          ?>
         </div>
       </div>
     </div>
@@ -186,17 +244,6 @@
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
-
-    <script>
-      function offsetTeam() 
-      {
-        var cols = document.getElementsByClassName('index-text08');
-        for(i = 0; i < cols.length; i++) 
-        {
-          cols[i].style.backgroundColor = 'blue';
-        }
-      }
-    </script>
   </body>
 </html>
 
