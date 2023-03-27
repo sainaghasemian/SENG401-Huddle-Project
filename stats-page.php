@@ -27,7 +27,7 @@
 
       body {
         margin: 0;
-		padding: 0;
+		    padding: 0;
         font-weight: 400;
         font-style:normal;
         text-decoration: none;
@@ -58,11 +58,11 @@
 <body>
     <link href="./stats-page.css" rel="stylesheet" />
     <span class="stats-page-text"><span>Team Stats</span></span>
-    <img
+    <!-- <img
         src="public/playground_assets/separator1354-6i6.svg"
         alt="Separator1354"
         class="stats-page-separator"
-    />
+    /> -->
     <img
         alt="TopBar4512"
         src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/4d12000b-744e-4b7e-ac43-d7493314f2d9?org_if_sml=1887"
@@ -144,8 +144,8 @@
     <span class="stats-page-text31"><span>GAME TYPE</span></span>
     <select class = "stats-page-game-type-drop-down" id="gametype-select">
         <option value="">Select a Game Type</option>  
-        <option value="regular-season">Regular Season</option>
-        <option value="playoffs">Playoffs</option>
+        <option value="statsSingleSeason">Regular Season</option>
+        <option value="statsSingleSeasonPlayoffs">Playoffs</option>
     </select>
 
     <span class="stats-page-text35"><span>FRANCHISE</span></span>
@@ -166,7 +166,7 @@
         <option value="Florida Panthers">Florida Panthers</option>
         <option value="Los Angeles Kings">Los Angeles Kings</option>
         <option value="Minnesota Wild">Minnesota Wild</option>
-        <option value="Montreal Canadiens">Montreal Canadiens</option>
+        <option value="Montréal Canadiens">Montréal Canadiens</option>
         <option value="Nashville Predators">Nashville Predators</option>
         <option value="New Jersey Devils">New Jersey Devils</option>
         <option value="New York Islanders">New York Islanders</option>
@@ -197,26 +197,8 @@
     <span class="stats-page-text43"><span>REPORT</span></span>
     <select class="stats-page-report-drop-down" id="report-select">
                 <option value="">Summary</option>  
-            </select>
+    </select>
     
-      <!---
-    <img
-        alt="TopBar7469"
-        src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5558e828-1413-409e-a900-f1b5f91841f1?org_if_sml=1886"
-        class="stats-page-top-bar"
-        />
-        <img
-        alt="SearchIcon7469"
-        src="public/playground_assets/searchicon7469-94j5.svg"
-        class="stats-page-search-icon"
-        />
-        <a href="home-account-page.php" class="stats-page-navlink">
-        <img
-            alt="AccountIcon7469"
-            src="public/playground_assets/accounticon7469-slwj.svg"
-            class="stats-page-account-icon"
-        />
-        </a>--->
     
     <div id="playerStats"></div>
 

@@ -54,7 +54,6 @@
     <link href="./schedule-page.css" rel="stylesheet" />
     <span class="schedule-page-text"><span>Game Schedules</span></span>
     <img
-      alt="Separator1354"
       class="schedule-page-separator"
     />
     <img
