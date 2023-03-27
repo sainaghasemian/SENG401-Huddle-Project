@@ -83,6 +83,18 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/8e49ec87-996d-45d2-8ac2-e7e39504e23b?org_if_sml=16271"
             class="login-page-middle-bar"
           />
+          <?php
+            if (isset($_SESSION["username_logged"])){
+              
+              echo "<form action='post-page.php' method='get'>
+                      <button class='login-page-post-icon' type='submit'>
+                        <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                          Post
+                        </span>
+                      </button>
+                    </form>";
+            }
+          ?>
           <span class="login-page-text">New to Huddle? Sign up</span>
           <span class="login-page-text01"><span>Welcome!</span></span>
 

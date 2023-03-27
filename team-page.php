@@ -219,6 +219,18 @@
             src="public/playground_assets/menuicon1205-aai.svg"
             class="team-page-menu-icon"
           />
+          <?php
+            if (isset($_SESSION["username_logged"])){
+              
+              echo "<form action='post-page.php' method='get'>
+                      <button class='team-page-post-icon' type='submit'>
+                        <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                          Post
+                        </span>
+                      </button>
+                    </form>";
+            }
+          ?>
           <a href="post-page.php" class="team-page-post-button">
             <img
               alt="Rectangle121207"
