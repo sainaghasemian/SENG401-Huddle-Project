@@ -84,7 +84,7 @@
             class="login-page-middle-bar"
           />
           <?php
-            if (!isset($_SESSION["authenticated_username"])){
+            if ($_SESSION["authenticated_username"] == ""){
               ?>
                 <span class='login-page-text'>New to Huddle? Sign up</span>
                 <span class='login-page-text01'><span>Welcome!</span></span>
@@ -142,7 +142,7 @@
           <span class="login-page-text09"><span>Huddle</span></span>
 
           <?php
-            if (!isset($_SESSION["authenticated_username"])){
+            if ($_SESSION["authenticated_username"] == ""){
               echo "<a href='register-page.php' class='login-page-navlink button'>
                 here
               </a>";

@@ -73,7 +73,7 @@
             <option value="./new-team-page.php">Team Page</option>
           </select>
           <?php
-            if (isset($_SESSION["username_logged"])){
+            if (!$_SESSION["authenticated_username"] == ""){
               
               echo "<form action='post-page.php' method='get'>
                       <button class='new-team-page-post-icon' type='submit'>
