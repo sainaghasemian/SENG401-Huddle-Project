@@ -37,15 +37,19 @@
 }
 .hamburger-drop-down {
   top: 18px;
-  right: 44px;
-  width: 90px;
+  right: 35px;
+  width: 100px;
   height: 40px;
   position: absolute;
+  font-family: Work Sans;
   font-style: ExtraBold;
-  background-color: #1D5CFF;
-  border-color: whitesmoke;
+  font-weight: 800;
+  font-size: 21px;
+  color:#1D5CFF;
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
   border-width: 2.5px;
-  border-radius: 10%;
+  border-radius: 16px;
 }
 
 .new-team-page-huddle-top-logo {

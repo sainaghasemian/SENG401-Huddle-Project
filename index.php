@@ -92,6 +92,11 @@
           />
 
           <div class = "index-middle-bar-container">
+          <img
+              alt="MiddleBar1224"
+              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/62e3b6c0-216b-4f2b-9101-7bff224e0d07?org_if_sml=16661"
+              class="index-middle-bar"
+            />
             <div class = "scrollable-list">
               <ul>
                 <?php
@@ -201,24 +206,25 @@
               <?php
               }
               ?>
-          <img
-            alt="SearchIcon1225"
-            src="public/playground_assets/searchicon1225-xb2.svg"
-            class="index-search-icon"
-          />
-          <a href="login-page.php" class="index-navlink">
-            <img
-              alt="AccountIcon1225"
-              src="public/playground_assets/accounticon1225-7nvd.svg"
-              class="index-account-icon"
-            />
-          </a>
-          <a href="new-team-page.php" class="home-account-page-navlink">
-          <img
-            alt="MenuIcon1225"
-            src="public/playground_assets/menuicon1225-ehcb.svg"
-            class="index-menu-icon"
-          />
+          <select class="hamburger-drop-down" id="go-to-pg">
+            <option value="">Menu</option>
+            <option value="./index.php">Home Page</option>
+            <option value="./schedule-page.php">Schedule Page</option>
+            <option value="./stats-page.php">Stats Page</option>
+            <option value="./new-team-page.php">Team Page</option>
+          </select>
+
+          <script> 
+            const menuIcon = document.querySelector('.hamburger-drop-down');
+            const selectElement = document.querySelector('#go-to-pg');
+
+            menuIcon.addEventListener('change', () => {
+              const selectedValue = selectElement.value;
+              if (selectedValue !== '') {
+                window.location.href = selectedValue;
+              }
+            });
+          </script>
           <?php
             if (!$_SESSION["authenticated_username"] == ""){
               
@@ -229,6 +235,21 @@
                         </span>
                       </button>
                     </form>";
+              echo "<form action='login-page.php' method='get'>
+                <button class='index-log-icon' type='submit'>
+                <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                  Log Out
+                </span>
+                </button>
+            </form>";
+            } else {
+              echo "<form action='login-page.php' method='get'>
+                <button class='index-log-icon' type='submit'>
+                <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                  Log In
+                </span>
+                </button>
+              </form>";
             }
           ?>
         </div>
