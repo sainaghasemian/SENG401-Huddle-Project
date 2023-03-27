@@ -172,11 +172,11 @@
                   <span class='index-text08'><span><?php echo $team['Name']?></span></span>
                   <div class='index-huddle-pic'>
                     <img
-                      alt='Ellipse61225'
-                      src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c8594294-f92f-40ef-b97c-8dcb35bb78d1?org_if_sml=11247'
+                      alt='<?php echo $team['Name']?> logo'
+                      src='logos/<?php $str = str_replace(' ','',$team['Name']); echo $str . ".png"?>'
                       class='index-ellipse6'
                     />
-                    <span class='index-text12'><?php echo $team['Name'][0]?></span>
+                    <!-- <span class='index-text12'><?php echo $team['Name'][0]?></span> -->
                   </div>
                 </div>
               </li>

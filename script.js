@@ -155,7 +155,8 @@ function getGame() {
                                 gameStatus = "Game has not started."
                             }
                             output += `<p> ${awayTeam} @ ${homeTeam} </p>`;
-                            output += `<ul>
+                            output += `<table class="data-container">
+                                        <ul>
                                         <img src=${homeLogo}>
                                         <img src=${awayLogo}>
                                         <li> Game Date: ${gameDate} </li>
@@ -163,7 +164,9 @@ function getGame() {
                                         <li> ${homeTeam} : ${homeScore} </li>
                                         <li> ${awayTeam} : ${awayScore} </li>
                                         <li> Game Status: ${gameStatus} </li>
-                                    </ul>`;
+
+                                    </ul>
+                                    </table`;
                             document.getElementById("div").innerHTML = output;
                         }
                     }
@@ -365,7 +368,7 @@ function getPlayerStats(players) {
                         </tr>
                 </thead>
                 </tbody>`;
-
+    
     let playerName;
     let position;
     let gamesPlayed;

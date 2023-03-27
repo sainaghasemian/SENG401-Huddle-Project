@@ -150,7 +150,6 @@
           class="new-team-page-rectangle12"
         />
         <span onclick="getGame()" class="schedule-page-get-games-buttontext"><span>Get Games</span></span>
-          
       </button>
       
 
