@@ -108,7 +108,8 @@
               }
               else
               {
-                $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID JOIN post ON usersubscription.Team_TeamID = post.Team_TeamID WHERE usersubscription.User_UserID = '$username';");
+                $loggedInUser = $_SESSION["authenticated_username"];
+                $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID JOIN post ON usersubscription.Team_TeamID = post.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser';");
               }
 
               $posts = $result->fetchAll(PDO::FETCH_DEFAULT);
@@ -155,7 +156,8 @@
               }
               else
               {
-                $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID WHERE usersubscription.User_UserID = '$username';");
+                $loggedInUser = $_SESSION["authenticated_username"];
+                $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser';");
               }
               
 
