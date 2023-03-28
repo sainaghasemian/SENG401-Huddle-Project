@@ -27,28 +27,6 @@
   position: absolute;
   border-color: transparent;
 }
-.login-page-search-icon {
-  top: 22px;
-  right: 4.5%;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-}
-
-.login-page-menu-icon {
-  top: 14px;
-  right: 1%;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-}
-.login-page-account-icon {
-  top: 18px;
-  right: 7.5%;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-}
 .login-page-middle-bar {
   top: 78px;
   left: 26.5%;
@@ -224,10 +202,9 @@
   text-decoration: underline;
   background-color: var(--dl-color-primary-huddlelightlightgrey);
 }
-
 .login-page-post-icon {
   top: 18px;
-  right: 200px;
+  right: 150px;
   width: 85px;
   height: 40px;
   position: absolute;
@@ -236,6 +213,22 @@
   border: none;
   cursor: pointer;
 
+}
+.hamburger-drop-down {
+  top: 18px;
+  right: 35px;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  font-family: Work Sans;
+  font-style: ExtraBold;
+  font-weight: 800;
+  font-size: 21px;
+  color:#1D5CFF;
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  border-width: 2.5px;
+  border-radius: 16px;
 }
 
 .login-page-logout-button {

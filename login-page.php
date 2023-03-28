@@ -62,27 +62,32 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/e976054d-51a3-40db-9f8d-b4cf06b82f1d?org_if_sml=1887"
             class="login-page-top-bar"
           />
-          <!--This is the search button-->
-          <img
-            alt="SearchIcon7466"
-            src="public/playground_assets/searchicon7466-ox4mi.svg"
-            class="login-page-search-icon"
-          />
-          <img
-            alt="MenuIcon1203"
-            src="public/playground_assets/menuicon1203-hkr.svg"
-            class="login-page-menu-icon"
-          />
-          <img
-            alt="AccountIcon7466"
-            src="public/playground_assets/accounticon7466-s50p.svg"
-            class="login-page-account-icon"
-          />
           <img
             alt="MiddleBar6031"
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/8e49ec87-996d-45d2-8ac2-e7e39504e23b?org_if_sml=16271"
             class="login-page-middle-bar"
           />
+
+          <select class="hamburger-drop-down" id="go-to-pg">
+            <option value="">Menu</option>
+            <option value="./index.php">Home Page</option>
+            <option value="./schedule-page.php">Schedule Page</option>
+            <option value="./stats-page.php">Stats Page</option>
+            <option value="./new-team-page.php">Team Page</option>
+          </select>
+
+          <script> 
+            const menuIcon = document.querySelector('.hamburger-drop-down');
+            const selectElement = document.querySelector('#go-to-pg');
+
+            menuIcon.addEventListener('change', () => {
+              const selectedValue = selectElement.value;
+              if (selectedValue !== '') {
+                window.location.href = selectedValue;
+              }
+            });
+          </script>
+
           <?php
             if ($_SESSION["authenticated_username"] == ""){
               ?>
@@ -91,7 +96,7 @@
 
                 <form id = login action='index.php' method='post'>
                   <input
-                    type='text'
+                    type='password'
                     placeholder='Password'
                     class='login-page-password-input input'
                     name = 'password'
