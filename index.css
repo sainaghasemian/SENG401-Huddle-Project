@@ -428,24 +428,26 @@ li h2, li p {
 }
 
 .scrollable-list-right {
-  top: 8%;
-  left: 72%;
-  position: absolute;
-  width: 25%;
-  height: 720px;
-  border-collapse: collapse;
-  margin: 25px 0;
+  top: 126px;
+  right: 5%;
+  
+  
+  width: 77%;
+  height: 10px;
+  
+  margin: 10px 0;
  
   
-  padding: 10px;
+  
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.9;
   text-align: center;
   
   border-radius: 5px; 
   font-family: Work Sans;
   font-weight: 800;
   font-style: light;
+  z-index:1;
 }
 
   
@@ -457,13 +459,14 @@ li h2, li p {
 }
 
 .scrollable-list-right ul {
+  font-size: 3rem;
   margin-top: 10px;
   list-style: none;
   padding-left: 0;
 }
 
 .scrollable-list-right li {
-  font-size: 1rem;
+  font-size: 36%;
   margin-bottom: 5px;
   font-family: Work Sans;
   font-weight: 800;
@@ -471,8 +474,8 @@ li h2, li p {
 }
 
 .scrollable-list-right img {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   
   font-size: 1rem;
   margin-bottom: 5px;

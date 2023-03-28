@@ -83,23 +83,24 @@
     <div>
       <link href="./index.css" rel="stylesheet" />
 
-      <div class="index-container">
-        <div class="index-full-page-template">
+      
+        <div class="index-container">
           <img
             alt="TopBar1224"
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/d9a678dc-2593-4226-8391-de5b2bad1158?org_if_sml=1887"
             class="index-top-bar"
           />
           
-          <div class = "index-right-bar-container">
-            <img
-              alt="RightBar1224"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/0b229d4d-325e-407f-b8c5-ba6cf0523929?org_if_sml=14699"
-              class="index-right-bar"
-              />
+            <!-- <div class = "index-right-bar-container">
+              <img
+                alt="RightBar1224"
+                src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/0b229d4d-325e-407f-b8c5-ba6cf0523929?org_if_sml=14699"
+                class="index-right-bar"
+                /> -->
               
-            <script>homePageGameSchedule()</script>
+          
           </div>
+          <script>homePageGameSchedule()</script>
           <div id="home-page-div"></div>
           
 
@@ -307,7 +308,7 @@
             }
           ?>
         </div>
-      </div>
+      
     </div>
     <script
       data-section-id="navbar"
