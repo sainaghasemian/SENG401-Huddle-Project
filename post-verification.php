@@ -38,9 +38,11 @@
     foreach ($profanities as $profanity){
         if (str_contains($title, $profanity)){
             $_SESSION["message"] .= " Title of post may not contain any profanities or hurtful messages. \n";
+            break;
         }
         if (str_contains($body, $profanity)){
             $_SESSION["message"] .= " Body of post may not contain any profanities or hurtful messages. \n";
+            break;
         }
     } 
 
@@ -48,11 +50,6 @@
         header("Location: post-page.php");
     }
     else{
-        //add post to database1
-
-        //still need to make the user not hardcoded
-        //also need to figure out which team the post is for
-
         date_default_timezone_set('MST');
         $date = date("Y.m.d G:i:s");
 

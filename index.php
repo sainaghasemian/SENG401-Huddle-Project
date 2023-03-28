@@ -110,7 +110,7 @@
                 else
                 {
                   $loggedInUser = $_SESSION["authenticated_username"];
-                  $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID JOIN post ON usersubscription.Team_TeamID = post.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser' ORDER BY post.DatePosted DESC;");
+                  $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser' ORDER BY team.Name;");
                   $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
                   $teamNames = array();
                   foreach ($teams as $team)
@@ -119,7 +119,15 @@
                   }
 
                   $teamNamesJS = json_encode($teamNames);
-                }?>
+                  ?>
+
+                  </div>
+                  <script>homePageGameScheduleLoggedIn(<?php echo $teamNamesJS?>)</script>
+                  <div id="home-page-div"></div>
+                  <?php
+                }
+                ?>
+
 
           
           
@@ -239,7 +247,7 @@
                 <span class="index-text06"><span>My Teams</span></span>
                 <form id = post action = "add-new-teams.php" method="post">
                   <select class = "index-page-teams" name = "team">
-                    <option value="">Add Team</option>
+                    <option value="">Add/Remove Team</option>
                     <option value="Anaheim Ducks">Anaheim Ducks</option>
                     <option value="Arizona Coyotes">Arizona Coyotes</option>
                     <option value="Boston Bruins">Boston Bruins</option>
@@ -274,7 +282,7 @@
                     <option value="Winnipeg Jets">Winnipeg Jets</option>
                   </select>
                     <div class="index-add-new-teams-button-container">
-                      <button type="submit" class="index-add-new-teams-button">Add</button>
+                      <button type="submit" class="index-add-new-teams-button">Add/Remove</button>
                     </div>
                   
                 </form>

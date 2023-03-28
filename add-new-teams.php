@@ -51,7 +51,7 @@
     $success = $result->fetch(PDO::FETCH_ASSOC);
     if($success != null)
     {   
-        $_SESSION["message"] = "You already subscribe to the $team.";
+        $pdo->query("DELETE FROM `usersubscription` WHERE `User_UserID` = '{$_SESSION["authenticated_username"]}' AND `Team_TeamID` = '$teamID'");
     }
     else{
         $pdo->query("INSERT INTO `usersubscription` (`User_UserID`, `Team_TeamID`) VALUES
