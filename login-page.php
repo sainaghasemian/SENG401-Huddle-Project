@@ -91,7 +91,7 @@
 
                 <form id = login action='index.php' method='post'>
                   <input
-                    type='text'
+                    type='password'
                     placeholder='Password'
                     class='login-page-password-input input'
                     name = 'password'

@@ -63,13 +63,13 @@
           <span class="register-page-text"><span>Join the Team!</span></span>]
           <form action = "register-verification.php" method="post">
             <input
-              type="text"
+              type="password"
               placeholder="Confirm Password"
               class="register-page-confirm-password-input input"
               name="confirmed"
             />
             <input
-              type="text"
+              type="password"
               placeholder="Password"
               class="register-page-password-input input"
               name="password"
