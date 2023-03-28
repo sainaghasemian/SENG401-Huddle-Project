@@ -150,7 +150,7 @@
 
     <span class="stats-page-text35"><span>FRANCHISE</span></span>
     <select class = "stats-page-franchise-drop-down" id="franchise-select">
-        <option value="">All Franchises</option>  
+        <option value="All">All Franchises</option>  
         <option value="Anaheim Ducks">Anaheim Ducks</option>
         <option value="Arizona Coyotes">Arizona Coyotes</option>
         <option value="Boston Bruins">Boston Bruins</option>

@@ -91,7 +91,7 @@
 
       <span class="schedule-page-teams-drop-down-title">SELECT TEAM</span>
       <select class="schedule-page-teams-drop-down" id="franchise-select">
-        <option value="">All Teams</option>
+        <option value="All">All Teams</option>
         <option value="Anaheim Ducks">Anaheim Ducks</option>
         <option value="Arizona Coyotes">Arizona Coyotes</option>
         <option value="Boston Bruins">Boston Bruins</option>
@@ -128,9 +128,7 @@
 
       <span class="schedule-page-dates-drop-down-title">SELCT DATE</span>
       <select class="schedule-page-dates-drop-down" id="date-select">
-        <option value="">All Upcoming Games</option>
-        <option value="2023-03-26">Sunday, March 26</option>  
-        <option value="2023-03-27">Monday, March 27</option>  
+        <option value="all-upcoming">All Upcoming Games</option>
         <option value="2023-03-28">Tuesday, March 28</option>  
         <option value="2023-03-29">Wednesday, March 29</option>
         <option value="2023-03-30">Thursday, March 30</option>

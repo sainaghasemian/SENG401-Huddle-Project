@@ -35,6 +35,8 @@
   border-radius: 35px;
 }
 
+
+
 .index-left-bar {
   top: 0px;
   width: 100%;
@@ -42,6 +44,7 @@
   position: absolute;
   border-color: transparent;
   border-radius: 35px;
+  z-index: 0;
 } 
 
 .index-left-bar-container {
