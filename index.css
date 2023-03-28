@@ -437,11 +437,11 @@ li h2, li p {
   
   margin: 10px 0;
  
-  
+  white-space: 5px;
   
   font-size: 16px;
   line-height: 1.9;
-  text-align: center;
+  text-align: left;
   
   border-radius: 5px; 
   font-family: Work Sans;
@@ -481,12 +481,11 @@ li h2, li p {
   margin-bottom: 5px;
   font-family: Work Sans;
   font-weight: 800;
-  /* margin-bottom: 5px;
-  margin-right: 10px;
-  border-radius: 50%; */
+
   text-align: center;
   margin: 0 40px;
 }
+
 .logos {
   display: flex;
   flex-direction: row-reverse;
