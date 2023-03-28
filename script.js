@@ -868,7 +868,7 @@ function homePageGameScheduleLoggedIn(teamArr){
                             awayScore = 0;
                             gameStatus = "Game has not started."
                         }
-                        output += `<div class="blue-container">
+                        output += `<div class="scrollable-list-right">
                         <div class="team-names">
                             <p> ${awayTeam} @ ${homeTeam} </p>
                             <div class="logos">
