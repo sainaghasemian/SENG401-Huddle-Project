@@ -247,7 +247,7 @@
                 <span class="index-text06"><span>My Teams</span></span>
                 <form id = post action = "add-new-teams.php" method="post">
                   <select class = "index-page-teams" name = "team">
-                    <option value="">Add Team</option>
+                    <option value="">Add/Remove Team</option>
                     <option value="Anaheim Ducks">Anaheim Ducks</option>
                     <option value="Arizona Coyotes">Arizona Coyotes</option>
                     <option value="Boston Bruins">Boston Bruins</option>
@@ -282,7 +282,7 @@
                     <option value="Winnipeg Jets">Winnipeg Jets</option>
                   </select>
                     <div class="index-add-new-teams-button-container">
-                      <button type="submit" class="index-add-new-teams-button">Add</button>
+                      <button type="submit" class="index-add-new-teams-button">Add/Remove</button>
                     </div>
                   
                 </form>

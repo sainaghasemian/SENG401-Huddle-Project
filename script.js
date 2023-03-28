@@ -26,7 +26,6 @@ function getGame() {
         
     }
 
-
     // checking all franchises
     if (userInput === "All") {
         fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
