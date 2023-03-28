@@ -94,24 +94,26 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/f81d7405-e2c0-42f6-8c20-171da0b95b68?org_if_sml=1886"
             class="register-page-top-bar"
           />
-          <img
-            alt="SearchIcon7467"
-            src="public/playground_assets/searchicon7467-z6be.svg"
-            class="register-page-search-icon"
-          />
-          <a href="login-page.php" class="index-navlink">
-            <img
-              alt="AccountIcon1225"
-              src="public/playground_assets/accounticon1225-7nvd.svg"
-              class="register-page-account-icon"
-            />
-          </a>
+          <select class="hamburger-drop-down" id="go-to-pg">
+            <option value="">Menu</option>
+            <option value="./index.php">Home Page</option>
+            <option value="./schedule-page.php">Schedule Page</option>
+            <option value="./stats-page.php">Stats Page</option>
+            <option value="./new-team-page.php">Team Page</option>
+          </select>
+
+          <script> 
+            const menuIcon = document.querySelector('.hamburger-drop-down');
+            const selectElement = document.querySelector('#go-to-pg');
+
+            menuIcon.addEventListener('change', () => {
+              const selectedValue = selectElement.value;
+              if (selectedValue !== '') {
+                window.location.href = selectedValue;
+              }
+            });
+          </script>
           <span class="register-page-text4"><span>Huddle</span></span>
-          <img
-            alt="MenuIcon1204"
-            src="public/playground_assets/menuicon1204-jeit.svg"
-            class="register-page-menu-icon"
-          />
         </div>
       </div>
     </div>

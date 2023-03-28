@@ -312,24 +312,11 @@
   position: absolute;
   border-color: transparent;
 }
-.post-page-search-icon {
-  top: 22px;
-  left: 1790px;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-}
+
 .post-page-navlink {
   display: contents;
 }
-.post-page-account-icon {
-  top: 18px;
-  left: 1732px;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  text-decoration: none;
-}
+
 .post-page-text11 {
   top: 8px;
   left: 797px;
@@ -409,13 +396,7 @@
   margin-bottom: 0;
   text-decoration: none;
 }
-.post-page-menu-icon {
-  top: 14px;
-  left: 1840px;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-}
+
 .post-page-teams {
   top: 251px;
   left: 176px;
@@ -427,4 +408,33 @@
   border-color: var(--dl-color-primary-huddleblue);
   border-width: 2.5px;
   border-radius: 12px;
+}
+
+.post-page-log-icon {
+  top: 18px;
+  right: 150px;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-drop-down {
+  top: 18px;
+  right: 35px;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  font-family: Work Sans;
+  font-style: ExtraBold;
+  font-weight: 800;
+  font-size: 21px;
+  color:#1D5CFF;
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  border-width: 2.5px;
+  border-radius: 16px;
 }
