@@ -110,7 +110,7 @@
                 else
                 {
                   $loggedInUser = $_SESSION["authenticated_username"];
-                  $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID JOIN post ON usersubscription.Team_TeamID = post.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser' ORDER BY post.DatePosted DESC;");
+                  $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser' ORDER BY team.Name;");
                   $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
                   $teamNames = array();
                   foreach ($teams as $team)
@@ -119,7 +119,15 @@
                   }
 
                   $teamNamesJS = json_encode($teamNames);
-                }?>
+                  ?>
+
+                  </div>
+                  <script>homePageGameScheduleLoggedIn(<?php echo $teamNamesJS?>)</script>
+                  <div id="home-page-div"></div>
+                  <?php
+                }
+                ?>
+
 
           
           
