@@ -161,7 +161,9 @@ function getGame() {
 
 
                 if (output === "") {
-                    output += `<p> That team does not play within the time frame selected.</p>`
+                    output += `<div class="team-not-playing"> 
+                        <p> This team does not play within the time frame selected.</p>
+                        </div>`;
                     document.getElementById("div").innerHTML = output;
                 }
             })

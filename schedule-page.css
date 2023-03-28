@@ -268,10 +268,8 @@
   cursor: pointer;
 }
 
-.p{
+.team-not-playing{
   width: 94%;
-  border: 400px #1D5CFF;
-  font-size: 3rem;
 
   margin: 25px 0;
   margin-top: 499px;
@@ -280,11 +278,18 @@
   padding: 10px;
  
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
   color: black;
   border-radius: 5px; 
   font-family: Work Sans;
   font-weight: 800;
   font-style: light;
 
+}
+
+.team-not-playing p{
+  width: 94%;
+  border: 400px #1D5CFF;
+  font-size: 1.7rem;
+  margin-top: 1px;
 }
