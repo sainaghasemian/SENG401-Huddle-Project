@@ -75,7 +75,8 @@
   width: 50%; */
 } 
 
- .scrollable-list {
+
+.scrollable-list {
   height: 720px;
   width: 95%;
   top: 5px;
@@ -83,6 +84,7 @@
   position: absolute;
   z-index: 1;
 }
+
 
 ul {
   list-style: none;
@@ -414,3 +416,85 @@ li h2, li p {
   border-width: 2.5px;
   border-radius: 12px;
 }  
+
+
+
+
+.index-right-bar-container {
+  top: 1.9%;
+  left: 72%;
+  position: absolute;
+  width: 25%;
+}
+
+.scrollable-list-right {
+  top: 8%;
+  left: 72%;
+  position: absolute;
+  width: 25%;
+  height: 720px;
+  border-collapse: collapse;
+  margin: 25px 0;
+ 
+  
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  
+  border-radius: 5px; 
+  font-family: Work Sans;
+  font-weight: 800;
+  font-style: light;
+}
+
+  
+
+.scrollable-list-right p {
+  font-size: 1rem;
+  margin-top: 1px;
+
+}
+
+.scrollable-list-right ul {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.scrollable-list-right li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-family: Work Sans;
+  font-weight: 800;
+  
+}
+
+.scrollable-list-right img {
+  width: 50px;
+  height: 50px;
+  
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-family: Work Sans;
+  font-weight: 800;
+  /* margin-bottom: 5px;
+  margin-right: 10px;
+  border-radius: 50%; */
+  text-align: center;
+  margin: 0 40px;
+}
+.logos {
+  display: flex;
+  flex-direction: row-reverse;
+  
+  
+  justify-content: center; /* centers horizontally */
+  align-items: center; 
+  margin-top: 20px; 
+}
+
+.team-names {
+  font-size: 220px;
+  font-family: Work Sans;
+}

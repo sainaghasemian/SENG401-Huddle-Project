@@ -32,6 +32,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="script.js"></script>
     <!-- Mobile device compatability -->
     <title>Huddle</title>
     <meta charset="utf-8" />
@@ -78,6 +79,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    
     <div>
       <link href="./index.css" rel="stylesheet" />
 
@@ -90,14 +92,16 @@
           />
           
           <div class = "index-right-bar-container">
-          <img
-            alt="RightBar1224"
-            src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/0b229d4d-325e-407f-b8c5-ba6cf0523929?org_if_sml=14699"
-            class="index-right-bar"
-            />
-            <div class = "scrollable-list-right">
-              <ul>
-
+            <img
+              alt="RightBar1224"
+              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/0b229d4d-325e-407f-b8c5-ba6cf0523929?org_if_sml=14699"
+              class="index-right-bar"
+              />
+              
+            <script>homePageGameSchedule()</script>
+          </div>
+          <div id="home-page-div"></div>
+          
 
           <div class = "index-middle-bar-container">
           <img
@@ -309,7 +313,7 @@
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
-    <script src="script.js"></script>
+    
   </body>
 </html>
 

@@ -267,3 +267,24 @@
   border: none;
   cursor: pointer;
 }
+
+.p{
+  width: 94%;
+  border: 400px #1D5CFF;
+  font-size: 3rem;
+
+  margin: 25px 0;
+  margin-top: 499px;
+  margin-left: 55px;
+
+  padding: 10px;
+ 
+  line-height: 1.5;
+  text-align: center;
+  color: black;
+  border-radius: 5px; 
+  font-family: Work Sans;
+  font-weight: 800;
+  font-style: light;
+
+}

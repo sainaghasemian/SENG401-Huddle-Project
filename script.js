@@ -7,7 +7,7 @@ const options = {
     }
 };
 
-function getGame(isHomePage) {
+function getGame() {
     let homeTeam;  // home team name
     let homeLogo;   // url for home team logo
     let awayTeam; // away team name
@@ -20,30 +20,24 @@ function getGame(isHomePage) {
 
     let userInput = document.querySelector("#franchise-select").value;
     let userDate = document.querySelector("#date-select").value;  // saina change it here
-    if(userDate === "all-upcoming") {
-        return homePageGameSchedule(isHomePage);
+
+    if(userDate === "all-upcoming"){
+        return allUpcomingGames();
         
     }
+
+
     // checking all franchises
     if (userInput === "All") {
-        
         fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
             .then((data) => {
                 return data.json(); // convert to object 
             })
             .then((objectData) => {
                 // length of array that contains games 
-                console.log("I made it into all");
                 let objectLength = objectData.response.length;
                 let output = "";
 
-                // getting current date
-                let today = new Date();
-                var dd = String(today.getDate()).padStart(2, '0');
-                var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-                var yyyy = today.getFullYear();
-                // printing out today's date in rapidApi format
-                let currDate = yyyy + "-" + mm + "-" + dd;
                 // "yyyy-mm-dd"
                 // output += `<p> ${currDate}</p>`
                 // findings starting point aka games from today
@@ -491,10 +485,8 @@ function getPlayerStats(players) {
 
 
 
-function homePageGameSchedule(isHomePage) {
-    let userInput = document.querySelector("#franchise-select").value;
-
-
+function allUpcomingGames(){
+    const userInput = document.querySelector("#franchise-select").value;
     // getting current date
     let today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -502,7 +494,6 @@ function homePageGameSchedule(isHomePage) {
     var yyyy = today.getFullYear();
     // printing out today's date in rapidApi format
     let currDate = yyyy + "-" + mm + "-" + dd;
-    let counter = 0;
 
     if (userInput === "All") {
         fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
@@ -528,9 +519,7 @@ function homePageGameSchedule(isHomePage) {
 
                 // loop that goes through response array and find games that are being played today
                 for (let i = firstGameIndex; i < objectLength; i++) {
-                    if(counter === 5 && isHomePage){
-                        break;
-                    }
+                   
                     homeLogo = objectData.response[i].teams.home.logo;
                     awayLogo = objectData.response[i].teams.away.logo;
 
@@ -565,8 +554,7 @@ function homePageGameSchedule(isHomePage) {
                         <li> Game Status: ${gameStatus} </li>
                     </ul>
                 </div>`;
-                    document.getElementById("div").innerHTML = output;
-                    counter++;
+                    document.getElementById("div").innerHTML = output;    // saina you can change this div
                     // }
                 }
 
@@ -599,9 +587,7 @@ function homePageGameSchedule(isHomePage) {
 
 
                 for (let i = firstGameIndex; i < objectLength; i++) {
-                    if(counter === 5 && isHomePage){
-                        break;
-                    }
+        
                     
                     awayTeam = objectData.response[i].teams.away.name;  // away team name
                     homeTeam = objectData.response[i].teams.home.name;
@@ -636,8 +622,10 @@ function homePageGameSchedule(isHomePage) {
                                     <li> Game Status: ${gameStatus} </li>
                                 </ul>
                             </div>`;
-                            document.getElementById("div").innerHTML = output;
-                            counter++;
+                                document.getElementById("div").innerHTML = output;    // saina you can change this div
+                       
+                            
+                            
                         }
                     }
                 }
@@ -646,6 +634,173 @@ function homePageGameSchedule(isHomePage) {
                 if (output === "") {
                     output += `<p> That team does not play within the time frame selected.</p>`
                     document.getElementById("div").innerHTML = output;
+                }
+            })
+            .catch(error => console.log(error));
+
+    }
+
+}
+
+// This one for index
+function homePageGameSchedule() {
+    // let userInput = document.querySelector("#franchise-select").value;
+    const userInput = "All";
+
+    // getting current date
+    let today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    // printing out today's date in rapidApi format
+    let currDate = yyyy + "-" + mm + "-" + dd;
+    let counter = 0;
+    
+    if (userInput === "All") {
+        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
+            .then((data) => {
+                return data.json(); // convert to object 
+            })
+            .then((objectData) => {
+                // length of array that contains games 
+                console.log("I made it into all");
+                let objectLength = objectData.response.length;
+                let output = "";
+
+                // "yyyy-mm-dd"
+                // output += `<p> ${currDate}</p>`
+                // findings starting point aka games from today
+                let firstGameIndex = 0;
+                for (let i = 0; i < objectLength; i++) {
+                    if (objectData.response[i].date.includes(currDate)) {
+                        firstGameIndex = i;
+                        break;
+                    }
+                }
+
+                // loop that goes through response array and find games that are being played today
+                for (let i = firstGameIndex; i < objectLength; i++) {
+                    if(counter === 5){
+                        break;
+                    }
+                    homeLogo = objectData.response[i].teams.home.logo;
+                    awayLogo = objectData.response[i].teams.away.logo;
+
+                    awayTeam = objectData.response[i].teams.away.name;  // away team name
+                    homeTeam = objectData.response[i].teams.home.name;  // home team name
+                    console.log(awayTeam);
+                    console.log(homeTeam);
+                    gameDate = objectData.response[i].date.slice(0, 10); // date of the game
+                    homeScore = objectData.response[i].scores.home; // score of home team
+                    awayScore = objectData.response[i].scores.away; // score of away team
+                    gameStatus = objectData.response[i].status.short;   // status of the game (what period)
+                    startGameTime = objectData.response[i].time; // start time of game (currently in MST)
+                    // if (homeTeam === userInput || awayTeam === userInput) {
+                    if (homeScore === null) {
+                        homeScore = 0;
+                        awayScore = 0;
+                        gameStatus = "Game has not started."
+                    }
+                    output += `<div class="scrollable-list-right">
+                    <div class="team-names">
+                        <p> ${awayTeam} @ ${homeTeam} </p>
+                        <div class="logos">
+                            <img src=${homeLogo}>
+                            <img src=${awayLogo}>
+                        </div>
+                    </div>
+                    <ul>
+                        <li> Game Date: ${gameDate} </li>
+                        <li> Game Start Time: ${startGameTime} MST </li>
+                        <li> ${homeTeam} : ${homeScore} </li>
+                        <li> ${awayTeam} : ${awayScore} </li>
+                        <li> Game Status: ${gameStatus} </li>
+                    </ul>
+                </div>`;
+                    document.getElementById("home-page-div").innerHTML = output;    // saina you can change this div
+                    counter++;
+                    // }
+                }
+
+            })
+            .catch(error => console.log(error));
+
+        // checking for specific franchise
+    } else {
+
+        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
+            .then((data) => {
+
+                return data.json(); // convert to object 
+            })
+            .then((objectData) => {
+                // length of array that contains games 
+                let objectLength = objectData.response.length;
+                let output = "";
+
+                // "yyyy-mm-dd"
+                // output += `<p> ${currDate}</p>`
+                // findings starting point aka games from today
+                let firstGameIndex = 0;
+                for (let i = 0; i < objectLength; i++) {
+                    if (objectData.response[i].date.includes(currDate)) {
+                        firstGameIndex = i;
+                        break;
+                    }
+                }
+
+
+                for (let i = firstGameIndex; i < objectLength; i++) {
+                    if(counter === 5){
+                        break;
+                    }
+                    
+                    awayTeam = objectData.response[i].teams.away.name;  // away team name
+                    homeTeam = objectData.response[i].teams.home.name;
+                    if (awayTeam === userInput || homeTeam === userInput) {
+                        console.log(objectData.response[i]);
+                        homeLogo = objectData.response[i].teams.home.logo;
+                        awayLogo = objectData.response[i].teams.away.logo;
+                        gameDate = objectData.response[i].date.slice(0, 10); // date of the game
+                        homeScore = objectData.response[i].scores.home; // score of home team
+                        awayScore = objectData.response[i].scores.away; // score of away team
+                        gameStatus = objectData.response[i].status.short;   // status of the game (what period)
+                        startGameTime = objectData.response[i].time; // start time of game (currently in MST)
+                        if (homeTeam === userInput || awayTeam === userInput) {
+                            if (homeScore === null) {
+                                homeScore = 0;
+                                awayScore = 0;
+                                gameStatus = "Game has not started."
+                            }
+                            output += `<div class="scrollable-list-right">
+                                <div class="team-names">
+                                    <p> ${awayTeam} @ ${homeTeam} </p>
+                                    <div class="logos">
+                                        <img src=${homeLogo}>
+                                        <img src=${awayLogo}>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li> Game Date: ${gameDate} </li>
+                                    <li> Game Start Time: ${startGameTime} MST </li>
+                                    <li> ${homeTeam} : ${homeScore} </li>
+                                    <li> ${awayTeam} : ${awayScore} </li>
+                                    <li> Game Status: ${gameStatus} </li>
+                                </ul>
+                            </div>`;
+                                document.getElementById("home-page-div").innerHTML = output;    // saina you can change this div
+                                counter++;
+                                // }
+                            
+                            
+                        }
+                    }
+                }
+
+
+                if (output === "") {
+                    output += `<p> That team does not play within the time frame selected.</p>`
+                    document.getElementById("home-page-div").innerHTML = output;
                 }
             })
             .catch(error => console.log(error));

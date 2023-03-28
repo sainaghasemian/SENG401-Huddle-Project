@@ -128,6 +128,7 @@
 
       <span class="schedule-page-dates-drop-down-title">SELCT DATE</span>
       <select class="schedule-page-dates-drop-down" id="date-select">
+        <option value=""> All Season Games</option>
         <option value="all-upcoming">All Upcoming Games</option>
         <option value="2023-03-28">Tuesday, March 28</option>  
         <option value="2023-03-29">Wednesday, March 29</option>
