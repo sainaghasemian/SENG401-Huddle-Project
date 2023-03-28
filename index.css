@@ -389,7 +389,7 @@ li h2, li p {
   display: flex;
   position: absolute;
   top: 180px;
-  left: 5%;
+  left: 20%;
 }
 
 .index-add-new-teams-button {
@@ -401,3 +401,16 @@ li h2, li p {
   padding: 10px 30px;
   text-align: center;
 }
+
+.index-page-teams {
+  top: 180px;
+  left: 5%;
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  font-size: 23px;
+  font-family: Work Sans;
+  border-color: var(--dl-color-primary-huddleblue);
+  border-width: 2.5px;
+  border-radius: 12px;
+}  

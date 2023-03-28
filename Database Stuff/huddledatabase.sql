@@ -83,7 +83,7 @@ INSERT INTO `team` (`TeamID`, `Name`) VALUES
 (684, 'Florida Panthers'),
 (685, 'Los Angeles Kings'),
 (687, 'Minnesota Wild'),
-(688, 'Montréal Canadiens'),
+(688, 'Montreal Canadiens'),
 (689, 'Nashville Predators'),
 (690, 'New Jersey Devils'),
 (691, 'New York Islanders'),
