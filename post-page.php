@@ -161,18 +161,45 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/e446f15a-987e-4129-89ab-284a2ac1ea9d?org_if_sml=1886"
             class="post-page-top-bar"
           />
-          <img
-            alt="SearchIcon7468"
-            src="public/playground_assets/searchicon7468-c8vf.svg"
-            class="post-page-search-icon"
-          />
-          <a href="login-page.php" class="post-page-navlink">
-            <img
-              alt="AccountIcon7468"
-              src="public/playground_assets/accounticon7468-2tdj.svg"
-              class="post-page-account-icon"
-            />
-          </a>
+          <select class="hamburger-drop-down" id="go-to-pg">
+            <option value="">Menu</option>
+            <option value="./index.php">Home Page</option>
+            <option value="./schedule-page.php">Schedule Page</option>
+            <option value="./stats-page.php">Stats Page</option>
+            <option value="./new-team-page.php">Team Page</option>
+          </select>
+
+          <script> 
+            const menuIcon = document.querySelector('.hamburger-drop-down');
+            const selectElement = document.querySelector('#go-to-pg');
+
+            menuIcon.addEventListener('change', () => {
+              const selectedValue = selectElement.value;
+              if (selectedValue !== '') {
+                window.location.href = selectedValue;
+              }
+            });
+          </script>
+
+          <?php
+                  if (!$_SESSION["authenticated_username"] == ""){
+                          echo "<form action='login-page.php' method='get'>
+                          <button class='post-page-log-icon' type='submit'>
+                          <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                            Log Out
+                          </span>
+                          </button>
+                      </form>";
+                  } else {
+                    echo "<form action='login-page.php' method='get'>
+                      <button class='post-page-log-icon' type='submit'>
+                      <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
+                        Log In
+                      </span>
+                      </button>
+                    </form>";
+                  }
+                ?>
           <span class="post-page-text11"><span>Huddle</span></span>
           <span class="post-page-text15"><span>Create Post</span></span>
           <img
