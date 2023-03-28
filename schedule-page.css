@@ -172,27 +172,39 @@
 }
 
 
+.schedule-container {
+  margin-top: 500px;
+  margin-left: 55px;
+  width: 94%;
+  padding: 10px;
+}
+
 .blue-container {
   width: 94%;
   border-collapse: collapse;
   margin: 25px 0;
-  margin-top: 499px;
-  margin-left: 55px;
-  background-color: #C0D2FF;
+  margin-top: 500px;
+  margin-left: 54px;
+  background-color: #b3bfff;
   border: 400px #1D5CFF;
   padding: 10px;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   color: black;
-  border-radius: 5px; 
+  border-radius: 50px; 
   font-family: Work Sans;
   font-weight: 800;
   font-style: light;
 }
 
+.blue-container + .blue-container {
+  margin-top: 10px;
+}
+
 .blue-container p {
-  font-size: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
   margin-top: 1px;
 
 }
@@ -204,10 +216,10 @@
 }
 
 .blue-container li {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 5px;
   font-family: Work Sans;
-  font-weight: 800;
+  font-weight: 600;
   
 }
 
@@ -215,7 +227,7 @@
   width: 200px;
   height: 200px;
   
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-bottom: 5px;
   font-family: Work Sans;
   font-weight: 800;
