@@ -162,7 +162,7 @@ function getGame() {
 
                 if (output === "") {
                     output += `<div class="team-not-playing"> 
-                        <p> This team does not play within the time frame selected.</p>
+                        <p> The Team You Selected Does Not Play Within the Time Frame Selected.</p>
                         </div>`;
                     document.getElementById("div").innerHTML = output;
                 }
@@ -400,7 +400,9 @@ function getPlayerStats(players) {
         })).then(() => {
             if (counter === 0) {
                 console.log(counter);
-                output = "<p>Playoffs have not started yet. </p>";
+                output += `<div class="playoffs-error"> 
+                        <p> Playoffs Have Not Begun. Please Clear Filters and Choose Regular Season Games!</p>
+                        </div>`;
                 
             }
             document.getElementById("playerStats").innerHTML = output;

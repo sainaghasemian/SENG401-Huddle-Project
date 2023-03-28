@@ -573,3 +573,30 @@
     border-width: 2.5px;
     border-radius: 16px;
 }
+
+
+.playoffs-error{
+    width: 94%;
+  
+    margin: 25px 0;
+    margin-top: 499px;
+    margin-left: 55px;
+  
+    padding: 10px;
+   
+    line-height: 1.5;
+    text-align: left;
+    color: #1D5CFF;
+    border-radius: 5px; 
+    font-family: Work Sans;
+    font-weight: 800;
+    font-style: light;
+  
+  }
+  
+  .playoffs-error p{
+    width: 94%;
+    border: 400px #1D5CFF;
+    font-size: 1.7rem;
+    margin-top: 1px;
+  }
