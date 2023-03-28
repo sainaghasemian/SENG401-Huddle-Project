@@ -432,14 +432,14 @@ li h2, li p {
 
 
 .scrollable-list-right {
-  top: 0;
+  top: 5%;
   left: 4%;
-  width: 23.5%;
+   width: 23.5%;
   border-collapse: collapse;
   height: auto;
   
   margin: 2px 0;
-  margin-top: 0.1%;
+  margin-top: 9%;
   margin-left: 75%; 
   background-color: rgba(244, 244, 249, 0.943);
   padding: 8px;
@@ -450,7 +450,7 @@ li h2, li p {
   border-radius: 50px; 
   font-family: Work Sans;
   font-weight: 700;
-  font-style: light;
+  font-style: light; 
 }
 
 .scrollable-list-right + .scrollable-list-right {
@@ -492,12 +492,13 @@ li h2, li p {
   text-align: center;
   margin: 0 10px;
 }
+
 .logos {
   display: flex;
   flex-direction: row-reverse;
   
   
-  justify-content: center; /* centers horizontally */
+  justify-content: center; 
   align-items: center; 
   margin-top: 1px; 
 }
