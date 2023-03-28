@@ -98,10 +98,30 @@
                 class="index-right-bar"
                 /> -->
               
+                <?php
+                if($_SESSION["authenticated_username"] == "")
+                {?>
+                  </div>
+                  <script>homePageGameSchedule()</script>
+                  <div id="home-page-div"></div>
+
+                  <?php
+                }
+                else
+                {
+                  $loggedInUser = $_SESSION["authenticated_username"];
+                  $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID JOIN post ON usersubscription.Team_TeamID = post.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser' ORDER BY post.DatePosted DESC;");
+                  $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
+                  $teamNames = array();
+                  foreach ($teams as $team)
+                  {
+                    array_push($teamNames, $team['Name']);
+                  }
+
+                  $teamNamesJS = json_encode($teamNames);
+                }?>
+
           
-          </div>
-          <script>homePageGameSchedule()</script>
-          <div id="home-page-div"></div>
           
 
           <div class = "index-middle-bar-container">
