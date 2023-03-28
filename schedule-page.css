@@ -268,6 +268,52 @@
   cursor: pointer;
 }
 
+
+/* FOR CLEAR BUTTON */
+.schedule-page-clear-filters-button {
+  top: 403px;
+  left: 334px;
+  width: 233px;
+  height: 63px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+
+.schedule-page-rectangle121 {
+  top: 0px;
+  left: 0px;
+  width: 234px;
+  height: 63px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.schedule-page-text21 {
+  top: 13px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  width: 181px;
+  height: auto;
+  position: absolute;
+  font-size: 27.606220245361328px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+/* FOR CLEAR BUTTON */
+
+
 .team-not-playing{
   width: 94%;
 

@@ -158,6 +158,14 @@
         />
         <span onclick="getGame()" class="schedule-page-get-games-buttontext"><span>Get Games</span></span>
       </button>
+
+
+      <!---CLEAR FILTERS BUTTON--->
+      </button>
+          <button class="schedule-page-clear-filters-button" onclick="clearFilters()">
+          <img alt="Rectangle12I744" src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/c39129d5-2966-43b5-9aeb-272375884d42?org_if_sml=11235" class="schedule-page-rectangle121" />
+          <span class="schedule-page-text21"><span>Clear Filters</span></span>
+      </button>
       
 
       <select class="hamburger-drop-down" id="go-to-pg">
@@ -181,6 +189,23 @@
         }
       });
     </script>
+
+
+    <script>
+            // Reset the values of the filters
+            function clearFilters() 
+            {
+            // Clear the date drop down
+            document.getElementById("date-select").selectedIndex = 0;
+            // Clear the franchise drop down
+            document.getElementById("franchise-select").selectedIndex = 0;
+            // Refresh the page to apply the filter changes
+            location.reload();
+            }
+        </script>
+
+
+
     <script src="script.js"></script>
   </body>
 </html>
