@@ -87,7 +87,7 @@
               }
             });
           </script>
-
+            <div class = "login-page-middle-bar">
           <?php
             if ($_SESSION["authenticated_username"] == ""){
               ?>
@@ -114,7 +114,7 @@
                       class='login-page-rectangle12'
                     />
                     <span class='login-page-text07'><span>Log In</span></span>
-                  </a>"
+                  </a>
                 </form>
 
             <?php
@@ -144,15 +144,16 @@
             }
           ?>
 
-          <span class="login-page-text09"><span>Huddle</span></span>
-
-          <?php
+            <?php
             if ($_SESSION["authenticated_username"] == ""){
               echo "<a href='register-page.php' class='login-page-navlink button'>
                 here
               </a>";
             }
           ?>
+          </div>
+
+          <span class="login-page-text09"><span>Huddle</span></span>
 
         </div>
       </div>

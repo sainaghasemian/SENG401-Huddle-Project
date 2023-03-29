@@ -4,7 +4,6 @@
     // Include the database connection file
     include_once("config.php");
 
-    $_SESSION["authenticated_username"]="";
     echo $_SESSION["message"];
     $_SESSION["message"] = "";
 
