@@ -216,7 +216,7 @@ function getStandings(userTeam) {
             // western conference loop
             if (selectedTeam === "") {
 
-                for (let i = 0; i < 32; i++) {
+                for (let i = 32; i < 64; i++) {
                     teamLogo = objectData.response[0][i].team.logo;
                     teamName = objectData.response[0][i].team.name;
                     gamesPlayed = objectData.response[0][i].games.played;
@@ -903,5 +903,4 @@ function homePageGameScheduleLoggedIn(teamArr) {
 
 
 }
-
 
