@@ -263,3 +263,24 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
+
+.error-message-pass {
+    top: 578px;
+    left: 677px;
+    color: #1D5CFF;
+    width: 621px;
+    height: 61px;
+    position: absolute;
+    font-size: 19px;
+    align-self: auto;
+    font-style: Regular;
+    text-align: left;
+    font-family: Work Sans;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+} 

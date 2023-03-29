@@ -1,10 +1,14 @@
+
 <?php
     session_start();
 
     // Include the database connection file
     include_once("config.php");
     
-    echo $_SESSION["message"];
+?>
+<span class="error-message-pass"><span><?php echo $_SESSION["message"]?></span></span>
+<?php
+    // echo $_SESSION["message"];
     $_SESSION["message"] = "";
 
     //Verify username and password from login page
