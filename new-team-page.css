@@ -36,7 +36,7 @@
   border-color: transparent;
 }
 .hamburger-drop-down {
-  top: 18px;
+  top: 39px;
   right: 35px;
   width: 100px;
   height: 40px;
@@ -53,7 +53,7 @@
 }
 
 .new-team-page-huddle-top-logo {
-  top: 40px;
+  top: 58px;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 1);
@@ -181,7 +181,7 @@
 }
 
 .new-team-page-post-icon {
-  top: 18px;
+  top: 39px;
   right: 265px;
   width: 85px;
   height: 40px;
@@ -193,7 +193,7 @@
 }
 
 .new-team-page-log-icon {
-  top: 18px;
+  top: 39px;
   right: 150px;
   width: 100px;
   height: 40px;
