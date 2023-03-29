@@ -1,22 +1,4 @@
-/* .index-container {
-  width: 100%;
-  display: flex;
-  overflow: auto;
-  min-height: 100vh;
-  align-items: center;
-  flex-direction: column;
-}
-.index-full-page-template {
-  width: 100%;
-  height: 1193px;
-  display: flex;
-  overflow: hidden;
-  position: fixed;
-  align-items: flex-end;
-  flex-shrink: 0;
-  border-color: transparent;
-  background-color: rgba(255, 255, 255, 1);
-} */
+
 .index-top-bar {
   top: 20px;
   left: -1px;
@@ -34,8 +16,6 @@
   border-color: transparent;
   border-radius: 35px;
 }
-
-
 
 .index-left-bar {
   top: 0px;
