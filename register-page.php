@@ -60,7 +60,7 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/8c881379-6c3c-4487-8ab1-7013b26ddcc1?org_if_sml=16266"
             class="register-page-middle-bar"
           />
-          <span class="register-page-text"><span>Join the Team!</span></span>]
+          <span class="register-page-text"><span>Join the Team!</span></span>
           <form action = "register-verification.php" method="post">
             <input
               type="password"

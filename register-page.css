@@ -133,7 +133,7 @@
   text-decoration: none;
 }
 .register-page-top-bar {
-  top: 0px;
+  top: 20px;
   left: 0px;
   width: 1920px;
   height: 78px;
@@ -141,14 +141,14 @@
   border-color: transparent;
 }
 .register-page-text4 {
-  top: 8px;
-  left: 797px;
+  top: 58px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 1);
   width: 328px;
   height: auto;
   position: absolute;
   font-size: 48px;
-  align-self: auto;
   font-style: ExtraBold;
   text-align: center;
   font-family: Work Sans;
@@ -160,7 +160,7 @@
   text-decoration: none;
 }
 .hamburger-drop-down {
-  top: 18px;
+  top: 39px;
   right: 35px;
   width: 100px;
   height: 40px;

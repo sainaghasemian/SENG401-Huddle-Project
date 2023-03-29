@@ -21,7 +21,7 @@
 .post-page-post-background-box {
   top: 204.12103271484375px;
   left: 130px;
-  width: 1676px;
+  width: 88%;
   height: 945px;
   position: absolute;
   border-color: transparent;
@@ -46,7 +46,7 @@
 .post-page-body-post-input {
   top: 529px;
   left: 178px;
-  width: 1582px;
+  width: 83%;
   height: 483px;
   position: absolute;
   font-size: 30px;
@@ -60,7 +60,7 @@
 .post-page-title-subject-input {
   top: 384px;
   left: 180px;
-  width: 1575px;
+  width: 83%;
   height: 62px;
   position: absolute;
   font-size: 23px;
@@ -71,14 +71,14 @@
 .post-page-image-icon {
   top: 269.84649658203125px;
   left: 728.32861328125px;
-  width: 61px;
+  width: 3.2%;
   height: 60px;
   position: absolute;
 }
 .post-page-link-icon {
   top: 266.4469299316406px;
   left: 1442.243408203125px;
-  width: 68px;
+  width: 3.6%;
   height: 68px;
   position: absolute;
 }
@@ -86,7 +86,7 @@
   top: 266.4469299316406px;
   left: 406.5003356933594px;
   color: rgba(28, 92, 255, 1);
-  width: 142px;
+  width: 7.5%;
   height: auto;
   position: absolute;
   font-size: 54.39351272583008px;
@@ -105,7 +105,7 @@
   top: 266.4469299316406px;
   left: 1538.5653076171875px;
   color: rgba(28, 92, 255, 1);
-  width: 142px;
+  width: 7.5%;
   height: auto;
   position: absolute;
   font-size: 54.39351272583008px;
@@ -124,7 +124,7 @@
   top: 266.4469299316406px;
   left: 821.2508544921875px;
   color: rgba(28, 92, 255, 1);
-  width: 388px;
+  width: 20.4%;
   height: auto;
   position: absolute;
   font-size: 54.39351272583008px;
@@ -142,20 +142,20 @@
 .post-page-line1 {
   top: 350.3035888671875px;
   left: 256.918212890625px;
-  width: 347px;
+  width: 18.3%;
   height: 0px;
   position: absolute;
 }
 .post-page-rectangle14 {
   top: 480.6213684082031px;
   left: 177.5943603515625px;
-  width: 1582px;
+  width: 83.3%;
   height: 50px;
   position: absolute;
   border-color: transparent;
   border-radius: 38.95621109008789px 38.95621109008789px 0 0;
 }
-.post-page-text-option-bar {
+/* .post-page-text-option-bar {
   top: 488.5537414550781px;
   left: 216.12310791015625px;
   width: 132.01039123535156px;
@@ -176,7 +176,7 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: transparent;
-}
+} */
 .post-page-text06 {
   color: rgba(0, 0, 0, 1);
   width: 27px;
@@ -266,8 +266,8 @@
   position: absolute;
 }
 .post-page-post-button {
-  top: 1039.2880859375px;
-  left: 1494.3704833984375px;
+  top: 840px;
+  right:85px;
   width: 265px;
   height: 71.39148712158203px;
   display: flex;
@@ -305,7 +305,7 @@
   text-decoration: none;
 }
 .post-page-top-bar {
-  top: 0px;
+  top: 20px;
   left: 0px;
   width: 1920px;
   height: 78px;
@@ -318,14 +318,14 @@
 }
 
 .post-page-text11 {
-  top: 8px;
-  left: 797px;
+  top: 58px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 1);
   width: 328px;
   height: auto;
   position: absolute;
   font-size: 48px;
-  align-self: auto;
   font-style: ExtraBold;
   text-align: center;
   font-family: Work Sans;
@@ -400,7 +400,7 @@
 .post-page-teams {
   top: 251px;
   left: 176px;
-  width: 1582px;
+  width: 83.3%;
   height: 99px;
   position: absolute;
   font-size: 23px;
@@ -411,7 +411,7 @@
 }
 
 .post-page-log-icon {
-  top: 18px;
+  top: 39px;
   right: 150px;
   width: 100px;
   height: 40px;
@@ -423,7 +423,7 @@
 }
 
 .hamburger-drop-down {
-  top: 18px;
+  top: 39px;
   right: 35px;
   width: 100px;
   height: 40px;

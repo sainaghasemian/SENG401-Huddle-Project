@@ -71,7 +71,8 @@
             alt="PostIcon7446"
             src="public/playground_assets/posticon7446-bmli.svg"
             class="post-page-post-icon" -->
-          />
+          <!-- /> -->
+          
           <form id = post action = "post-verification.php" method="post">
             <select class = "post-page-teams" name = "team">
               <option value="">Select Related Team</option>
@@ -115,6 +116,7 @@
               class="post-page-title-subject-input input"
               name="title"
             />
+            <div class = "post-page-post-background-box">
             <a href="javascript: post.submit();" class="post-page-post-button">
               <img
                 alt="PostRec7449"
@@ -123,6 +125,7 @@
               />
               <span class="post-page-text09"><span>POST</span></span>
             </a>
+    </div>
           </form>
           <img
             alt="Line17447"
@@ -134,17 +137,6 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/67e403a6-97df-4d1a-b32b-0897713429d7?org_if_sml=11125"
             class="post-page-rectangle14"
           />
-          <div class="post-page-text-option-bar">
-            <span class="post-page-text06">B</span>
-            <span class="post-page-text07">i</span>
-            <div class="post-page-underline-icon">
-              <span class="post-page-text08">U</span>
-              <img
-                alt="Line27448"
-                src="public/playground_assets/line27448-dbpw.svg"
-                class="post-page-line2"
-              />
-            </div>
             <img
               alt="LeftSeparator7449"
               src="public/playground_assets/leftseparator7449-7u6.svg"
