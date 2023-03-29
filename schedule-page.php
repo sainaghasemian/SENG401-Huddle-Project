@@ -156,7 +156,7 @@
           src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/32875c77-5163-45b7-b5c6-8ec1403e308b?org_if_sml=11235"
           class="new-team-page-rectangle12"
         />
-        <span onclick="getGame()" class="schedule-page-get-games-buttontext"><span>Get Games</span></span>
+        <span onclick="getGame(document.querySelector(`#franchise-select`).value, document.querySelector(`#date-select`).value)" class="schedule-page-get-games-buttontext"><span>Get Games</span></span>
       </button>
 
 

@@ -409,7 +409,7 @@ function getPlayerStats(players) {
         })).then(() => {
             if (counter === 0) {
                 console.log(counter);
-                output += `<div class="playoffs-error"> 
+                output = `<div class="playoffs-error"> 
                         <p> Playoffs Have Not Begun. Please Clear Filters and Choose Regular Season Games!</p>
                         </div>`;
 
@@ -465,7 +465,9 @@ function getPlayerStats(players) {
         })).then(() => {
             if (counter === 0) {
                 console.log(counter);
-                output += "<p>Playoffs have not started yet. </p>";
+                output = `<div class="playoffs-error"> 
+                <p> Playoffs Have Not Begun. Please Clear Filters and Choose Regular Season Games!</p>
+                </div>`;
                 document.getElementById("playerStats").innerHTML = output;
             }
             return output;
