@@ -903,4 +903,10 @@ function homePageGameScheduleLoggedIn(teamArr) {
 
 
 }
+ module.exports  = getGames 
+function sum(a,b){
+    return a+b
+}
+module.exports = sum
+
 
