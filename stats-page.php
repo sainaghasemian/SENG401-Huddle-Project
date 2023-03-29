@@ -57,7 +57,7 @@
 
 <body>
     <link href="./stats-page.css" rel="stylesheet" />
-    <span class="stats-page-text"><span>Team Stats</span></span>
+    <span class="stats-page-text"><span>Player Stats</span></span>
     <!-- <img
         src="public/playground_assets/separator1354-6i6.svg"
         alt="Separator1354"
