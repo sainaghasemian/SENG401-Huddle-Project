@@ -169,6 +169,10 @@
   background-color: #C0D2FF;
 }
 
+.new-team-page-table tbody tr:nth-of-type(16n) {
+  border-bottom: 3px solid #1D5CFF;
+}
+
 .new-team-page-table tbody tr:last-of-type {
   border-bottom: 3px solid #1D5CFF;
 }
