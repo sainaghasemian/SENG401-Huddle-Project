@@ -483,3 +483,23 @@ li h2, li p {
   font-family: Work Sans;
 }
 
+
+.error-message-pass {
+  top: 230px;
+  left: 196px;
+  color: #041b55;
+  width: 621px;
+  height: 61px;
+  position: absolute;
+  font-size: 15px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+} 

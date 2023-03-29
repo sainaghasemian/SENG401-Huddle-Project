@@ -5,7 +5,9 @@
     include_once("config.php");
 
     $team = $_POST['team'];
-
+?>
+<span class="error-message-pass"><span><?php echo $_SESSION["message"]?></span></span>
+<?php
     if ($team == ""){
         $_SESSION["message"] .= " A team must be selected $team.";
         header("Location: index.php");
