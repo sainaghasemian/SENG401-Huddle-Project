@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    include_once("databaseQueries.php");
+    sessionStart();
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +87,7 @@
           </script>
 
           <?php
-            if (!$_SESSION["authenticated_username"] == ""){
+            if (checkAuthentication()){
               
               echo "<form action='post-page.php' method='get'>
                       <button class='new-team-page-post-icon' type='submit'>

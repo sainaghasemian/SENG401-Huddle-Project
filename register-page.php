@@ -1,9 +1,12 @@
 <?php
-    session_start();
-    ?>
-    <span class="register-page-error"><span><?php echo $_SESSION["message"]?></span></span>
-    <?php
-    $_SESSION["message"] = "";
+  include_once("databaseQueries.php");
+  sessionStart();  
+?>
+  
+<span class="register-page-error"><span><?php echo $_SESSION["message"]?></span></span>
+  
+<?php
+  resetMessageVariable();
 ?>
 
 <!DOCTYPE html>

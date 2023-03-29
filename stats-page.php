@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    include_once("databaseQueries.php");
+    sessionStart();
 ?>
 
 <!DOCTYPE html>
@@ -90,7 +91,7 @@
     </script>
 
     <?php
-             if (!$_SESSION["authenticated_username"] == ""){
+             if (checkAuthentication()){
               echo "<form action='post-page.php' method='get'>
                       <button class='stats-page-post-icon' type='submit'>
                         <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>

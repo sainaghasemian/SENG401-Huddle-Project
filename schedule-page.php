@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    include_once("databaseQueries.php");
+    sessionStart();
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +63,7 @@
         class="schedule-page-top-bar"
       />
       <?php
-            if (!$_SESSION["authenticated_username"] == ""){
+            if (checkAuthentication()){
               echo "<form action='post-page.php' method='get'>
                       <button class='schedule-page-post-icon' type='submit'>
                         <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>
@@ -202,7 +203,7 @@
             // Refresh the page to apply the filter changes
             location.reload();
             }
-        </script>
+    </script>
 
 
 

@@ -1,37 +1,15 @@
 
 <?php
-    session_start();
-
     // Include the database connection file
     include_once("config.php");
-    include_once("databaseQueries.php");   
+    include_once("databaseQueries.php");
+    
+    sessionStart();
 ?>
 <span class="error-message-pass"><span><?php echo $_SESSION["message"]?></span></span>
 <?php
-    // echo $_SESSION["message"];
-    $_SESSION["message"] = "";
-
-    //Verify username and password from login page
-    if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]))
-    {
-      $username = $_POST["username"];
-      $password = $_POST["password"];
-      
-      $success = verifyLogin($pdo, $username, $password);
-      // $result = $pdo->query("SELECT 1 FROM User WHERE UserID = '$username' AND Password = '$password'");
-      // $success = $result->fetch(PDO::FETCH_ASSOC);
-      if(count($success) == 0)
-      {
-        $_SESSION["message"] = "The username or password is incorrect. Please try again.";
-        header("Location: login-page.php");
-      }
-      else
-      {
-        if ($_SESSION["authenticated_username"]==""){
-          $_SESSION["authenticated_username"] = $username;
-        }
-      }
-    }
+    resetMessageVariable();
+    verifyLogin($pdo);
 ?>
 
 <!DOCTYPE html>
@@ -95,47 +73,10 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/d9a678dc-2593-4226-8391-de5b2bad1158?org_if_sml=1887"
             class="index-top-bar"
           />
-          
-            <!-- <div class = "index-right-bar-container">
-              <img
-                alt="RightBar1224"
-                src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/0b229d4d-325e-407f-b8c5-ba6cf0523929?org_if_sml=14699"
-                class="index-right-bar"
-                /> -->
               
-                <?php
-                if($_SESSION["authenticated_username"] == "")
-                {?>
-                  </div>
-                  <script>homePageGameSchedule()</script>
-                  <div id="home-page-div"></div>
-
-                  <?php
-                }
-                else
-                {
-                  $loggedInUser = $_SESSION["authenticated_username"];
-                  $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser' ORDER BY team.Name;");
-                  $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
-                  $teamNames = array();
-                  foreach ($teams as $team)
-                  {
-                    array_push($teamNames, $team['Name']);
-                  }
-
-                  $teamNamesJS = json_encode($teamNames);
-                  ?>
-
-                  </div>
-                  <script>homePageGameScheduleLoggedIn(<?php echo $teamNamesJS?>)</script>
-                  <div id="home-page-div"></div>
-                  <?php
-                }
-                ?>
-
-
-          
-          
+            <?php
+              getHomePageGameSchedules($pdo);
+            ?>
 
           <div class = "index-middle-bar-container">
           <img
@@ -146,43 +87,30 @@
             <div class = "scrollable-list">
               <ul>
                 <?php
-                if($_SESSION["authenticated_username"] == "")
-                {
-                  $result = $pdo->query("SELECT * FROM  post ORDER BY DatePosted DESC LIMIT 20;");
-                }
-                else
-                {
-                  $loggedInUser = $_SESSION["authenticated_username"];
-                  $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID JOIN post ON usersubscription.Team_TeamID = post.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser' ORDER BY post.DatePosted DESC;");
-                }
+                  $posts = getPosts($pdo);
 
-                $posts = $result->fetchAll(PDO::FETCH_DEFAULT);
-
-                foreach($posts as $post)
-                {
-                  ?>
-                  <li class = "post-list">
-                    <span class='posted-by'>Posted by: <?php echo $post['User_UserID']?></span>
-                    <h2> <?php echo $post['Title'] ?></h2>
-                    <p><?php echo $post['Content'] ?></p>
-                    <div class='likes'>
-                      <form method='POST' action='increment-likes.php'>
-                        <input type='hidden' name='post_id' value='<?php echo $post['PostID'] ?>'>
-                        <button class='like-button'>Like</button>
-                      </form>
-                      <span class='like-count'><?php echo $post['NumberOfLikes'] ?></span>
-                    </div>
-                    <span class='team-label'><?php echo $post['Team_Name'] ?></span>
-                  </li>
-                <?php
-                }
+                  foreach($posts as $post)
+                  {
+                      ?>
+                      <li class = "post-list">
+                      <span class='posted-by'>Posted by: <?php echo $post['User_UserID']?></span>
+                      <h2> <?php echo $post['Title'] ?></h2>
+                      <p><?php echo $post['Content'] ?></p>
+                      <div class='likes'>
+                          <form method='POST' action='increment-likes.php'>
+                          <input type='hidden' name='post_id' value='<?php echo $post['PostID'] ?>'>
+                          <button class='like-button'>Like</button>
+                          </form>
+                          <span class='like-count'><?php echo $post['NumberOfLikes'] ?></span>
+                      </div>
+                      <span class='team-label'><?php echo $post['Team_Name'] ?></span>
+                      </li>
+                  <?php
+                  }
                 ?>
               </ul>
             </div>
           </div>
-
-          
-
           <div class = "index-left-bar-container">
             <img
               alt="LeftBar1224"
@@ -191,48 +119,28 @@
             />
               <ul class ="list">
               <?php
-              if($_SESSION["authenticated_username"] == "")
-              {
-                //Get the top 5 teams in Huddle based on subscriber count
-                $result = $pdo->query("SELECT *, COUNT(usersubscription.User_UserID) AS count_subscribers
-                FROM team
-                JOIN usersubscription ON team.TeamID = usersubscription.Team_TeamID
-                GROUP BY team.TeamID
-                ORDER BY count_subscribers DESC
-                LIMIT 5;");
-              }
-              else
-              {
-                $loggedInUser = $_SESSION["authenticated_username"];
-                $result = $pdo->query("SELECT * FROM team JOIN usersubscription ON team.teamID = usersubscription.Team_TeamID WHERE usersubscription.User_UserID = '$loggedInUser' ORDER BY team.Name;");
-              }
-              
-
-              $teams = $result->fetchAll(PDO::FETCH_DEFAULT);
+              $teams = getTheTop5Teams($pdo);
 
               foreach($teams as $team)
               {
               ?>
-              
-              <html>
-              <li>
+                <html>
+                <li>
                 <div class='index-huddle-user'>
-                  <span class='index-text08'><span><?php echo $team['Name']?></span></span>
-                  <div class='index-huddle-pic'>
+                    <span class='index-text08'><span><?php echo $team['Name']?></span></span>
+                    <div class='index-huddle-pic'>
                     <img
-                      alt='<?php echo $team['Name']?> logo'
-                      src='logos/<?php $str = str_replace(' ','',$team['Name']); echo $str . ".png"?>'
-                      class='index-ellipse6'
+                        alt='<?php echo $team['Name']?> logo'
+                        src='logos/<?php $str = str_replace(' ','',$team['Name']); echo $str . ".png"?>'
+                        class='index-ellipse6'
                     />
-                  </div>
+                    </div>
                 </div>
-              </li>
-              </html>
-
+                </li>
+                </html>
               <?php
               }
-              $pdo = null;
-            ?>
+              ?>
             </ul>
           </div>
           <span class="index-text"><span>Huddle</span></span>
@@ -289,7 +197,6 @@
                     </select>
                     <button type="submit" class="index-add-new-teams-button">Add/Remove</button>
                   </div>
-                  
                 </form>
               <?php
               }
@@ -314,7 +221,7 @@
             });
           </script>
           <?php
-            if (!$_SESSION["authenticated_username"] == ""){
+            if (checkAuthentication()){
               
               echo "<form action='post-page.php' method='get'>
                       <button class='index-page-post-icon' type='submit'>
