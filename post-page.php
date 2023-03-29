@@ -4,8 +4,8 @@
     include_once("config.php");
     ?>
     <div class = "post-page-post-background-box">
-    <span class="post-page-error"><span><?php echo $_SESSION["message"]?></span></span>
-</div>
+      <span class="post-page-error"><span><?php echo $_SESSION["message"]?></span></span>
+    </div>
     <?php
     //echo $_SESSION["message"];
     $_SESSION["message"] = "";
