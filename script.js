@@ -216,7 +216,7 @@ function getStandings(userTeam) {
             // western conference loop
             if (selectedTeam === "") {
 
-                for (let i = 0; i < 32; i++) {
+                for (let i = 32; i < 64; i++) {
                     teamLogo = objectData.response[0][i].team.logo;
                     teamName = objectData.response[0][i].team.name;
                     gamesPlayed = objectData.response[0][i].games.played;
@@ -409,7 +409,7 @@ function getPlayerStats(players) {
         })).then(() => {
             if (counter === 0) {
                 console.log(counter);
-                output += `<div class="playoffs-error"> 
+                output = `<div class="playoffs-error"> 
                         <p> Playoffs Have Not Begun. Please Clear Filters and Choose Regular Season Games!</p>
                         </div>`;
 
@@ -465,7 +465,9 @@ function getPlayerStats(players) {
         })).then(() => {
             if (counter === 0) {
                 console.log(counter);
-                output += "<p>Playoffs have not started yet. </p>";
+                output = `<div class="playoffs-error"> 
+                <p> Playoffs Have Not Begun. Please Clear Filters and Choose Regular Season Games!</p>
+                </div>`;
                 document.getElementById("playerStats").innerHTML = output;
             }
             return output;
@@ -901,5 +903,4 @@ function homePageGameScheduleLoggedIn(teamArr) {
 
 
 }
-
 
