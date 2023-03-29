@@ -391,12 +391,12 @@ li h2, li p {
   display: flex;
   position: absolute;
   top: 180px;
-  left: 1%;
+  left: 5%;
 }
 
 .index-add-new-teams-button {
   background-color: rgb(32,92,252);
-  border-radius: 50px;
+  border-radius: 12px;
   color: white;
   font-size: 20px;
   font-weight: 500;
@@ -405,7 +405,7 @@ li h2, li p {
   display: inline-block;
   width: 160px;
   height: 50px;
-  margin-left: 255px;
+  margin-left: 220px;
 }
 
 .index-page-teams {
