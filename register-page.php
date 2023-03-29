@@ -100,7 +100,7 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/f81d7405-e2c0-42f6-8c20-171da0b95b68?org_if_sml=1886"
             class="register-page-top-bar"
           />
-          <select class="hamburger-drop-down" id="go-to-pg">
+          <select class="menu-drop-down" id="go-to-pg">
             <option value="">Menu</option>
             <option value="./index.php">Home Page</option>
             <option value="./schedule-page.php">Schedule Page</option>
@@ -109,7 +109,7 @@
           </select>
 
           <script> 
-            const menuIcon = document.querySelector('.hamburger-drop-down');
+            const menuIcon = document.querySelector('.menu-drop-down');
             const selectElement = document.querySelector('#go-to-pg');
 
             menuIcon.addEventListener('change', () => {

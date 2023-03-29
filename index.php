@@ -1,4 +1,3 @@
-
 <?php
     // Include the database connection file
     include_once("config.php");
@@ -201,7 +200,7 @@
               <?php
               }
               ?>
-          <select class="hamburger-drop-down" id="go-to-pg">
+          <select class="menu-drop-down" id="go-to-pg">
             <option value="">Menu</option>
             <option value="./index.php">Home Page</option>
             <option value="./schedule-page.php">Schedule Page</option>
@@ -210,7 +209,7 @@
           </select>
 
           <script> 
-            const menuIcon = document.querySelector('.hamburger-drop-down');
+            const menuIcon = document.querySelector('.menu-drop-down');
             const selectElement = document.querySelector('#go-to-pg');
 
             menuIcon.addEventListener('change', () => {

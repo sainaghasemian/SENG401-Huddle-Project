@@ -197,32 +197,9 @@ li h2, li p {
   margin-bottom: 0;
   text-decoration: none;
 }
-.index-search-icon {
-  top: 22px;
-  right: 87px;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  min-width: 16px;
-}
+
 .index-navlink {
   display: contents;
-}
-.index-account-icon {
-  top: 18px;
-  right: 138px;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  min-width: 16px;
-}
-.index-menu-icon {
-  top: 14px;
-  right: 24px;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  min-width: 16px;
 }
 
 .index-huddle-user {
@@ -348,7 +325,7 @@ li h2, li p {
   cursor: pointer;
 }
 
-.hamburger-drop-down {
+.menu-drop-down {
   top: 39px;
   right: 35px;
   width: 100px;
@@ -413,7 +390,6 @@ li h2, li p {
    width: 23.5%;
   border-collapse: collapse;
   height: auto;
-  
   margin: 2px 0;
   margin-top: 250px;
   margin-left: 75%; 
@@ -471,8 +447,6 @@ li h2, li p {
 .logos {
   display: flex;
   flex-direction: row-reverse;
-  
-  
   justify-content: center; 
   align-items: center; 
   margin-top: 1px; 
@@ -482,7 +456,6 @@ li h2, li p {
   font-size: 220px;
   font-family: Work Sans;
 }
-
 
 .error-message-pass {
   top: 230px;
@@ -503,3 +476,563 @@ li h2, li p {
   margin-bottom: 0;
   text-decoration: none;
 } 
+
+/* @media(max-width: 479px) {
+
+  .index-top-bar {
+    top: 0px;
+    left: -1px;
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    border-color: transparent;
+  }
+
+  .index-text {
+    top: 18px;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 1);
+    width: 328px;
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: ExtraBold;
+    text-align: center;
+    font-family: Work Sans;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+
+  .menu-drop-down-small {
+    top: 8px;
+    left: 50%;
+    width: 55px;
+    height: 20px;
+    position: absolute;
+    font-family: Work Sans;
+    font-style: ExtraBold;
+    font-weight: 800;
+    font-size: 10px;
+    color:#1D5CFF;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    border-width: 2.5px;
+    border-radius: 16px;
+  }
+
+  .menu-drop-down {
+    display: none;
+  }
+
+  .index-page-post-icon {
+    display:none;
+  }
+  
+  .index-log-icon {
+    display:none;
+  }
+
+  .index-right-bar {
+    display:none;
+    top: 151px;
+    right: 4%;
+    width: 367px;
+    height: 983px;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 35px;
+  }
+  
+  .index-left-bar {
+    display:none;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 35px;
+    z-index: 0;
+  } 
+  
+  .index-left-bar-container {
+    display:none;
+    top: 250px;
+    left: 4%;
+    position: absolute;
+    width: 25%;
+    margin: 0 auto;
+    width: 50%; 
+  }
+  
+  .index-middle-bar {
+    display:none;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+  }
+  
+  .index-middle-bar-container {
+    display:none;
+    top: 250px;
+    left: 33%;
+    position: absolute;
+    width: 40%;
+    height: 3000px;
+    margin: 0 auto;
+    width: 50%;
+  } 
+  
+  
+  .scrollable-list {
+    display:none;
+    height: 720px;
+    width: 95%;
+    top: 25px;
+    left: 10px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  
+  ul {
+    display:none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display:none;
+    position: relative;
+    padding: 25px 10px 25px 10px;
+  }
+  
+  .post-list
+  {
+    display:none;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  li h2, li p {
+    display:none;
+    margin: 0;
+  }
+  
+  .team-label {
+    display:none;
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    background-color: rgb(32,92,252);
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  .likes {
+    display:none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .like-button {
+    display:none;
+    background-color: #ccc;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .like-count {
+    display:none;
+    font-size: 17px;
+  }
+  
+  .list li {
+    display:none;
+    padding: 10px 10px 75px 10px;
+    text-align: center;
+  }
+
+  .index-text02 {
+    display:none;
+    top: 126px;
+    right: 5%;
+    color: rgb(0, 0, 0);
+    width: 315px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    align-self: auto;
+    font-style: ExtraBold;
+    text-align: left;
+    font-family: Work Sans;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+  .index-text04 {
+    display:none;
+    top: 126px;
+    left: 35%;
+    color: rgba(0, 0, 0, 1);
+    width: 241px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    align-self: auto;
+    font-style: ExtraBold;
+    text-align: left;
+    font-family: Work Sans;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+  } 
+  .index-text06 {
+    display:none;
+    top: 126px;
+    left: 5%;
+    color: rgb(0, 0, 0);
+    width: 300px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    align-self: auto;
+    font-style: ExtraBold;
+    text-align: left;
+    font-family: Work Sans;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+  
+  .index-navlink {
+    display:none;
+    display: contents;
+  }
+  
+  .index-huddle-user {
+    display:none;
+    left: 0px; 
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0;
+    position: absolute;
+    align-self: auto;
+    box-sizing: border-box;
+    align-items: flex-start;
+    flex-shrink: 1;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0;
+    margin-right: 0;
+    border-radius: 0px 0px 0px 0px;
+    margin-bottom: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: transparent;
+  } 
+  .index-text08 {
+    display:none;
+    left: 82px;
+    color: rgba(0, 0, 0, 1);
+    width: 90%;
+    height: auto;
+    position: absolute;
+    font-size: 200%;
+    align-self: auto;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Work Sans;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .index-text10 {
+    display:none;
+  }
+  .index-huddle-pic {
+    display:none;
+  }
+  .index-ellipse6 {
+    display:none;
+  }
+  .index-text12 {
+    display:none;
+  }
+
+  .index-add-new-teams-container {
+    .index-add-new-teams-container {
+      height: 50px;
+      width: 600px;
+      display: flex;
+      position: absolute;
+      top: 180px;
+      left: 5%;
+    }
+    
+    .index-add-new-teams-button {
+      background-color: rgb(32,92,252);
+      border-radius: 12px;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 10px 30px;
+      text-align: left;
+      display: inline-block;
+      width: 160px;
+      height: 50px;
+      margin-left: 220px;
+    }
+    
+    .index-page-teams {
+      width: 250px;
+      height: 50px;
+      position: absolute;
+      font-size: 23px;
+      font-family: Work Sans;
+      border-color: var(--dl-color-primary-huddleblue);
+      border-width: 2.5px;
+      border-radius: 12px;
+      display: inline-block;
+    }  
+    
+    .index-right-bar-container {
+      top: 1.9%;
+      left: 72%;
+      position: absolute;
+      width: 25%;
+    }
+    
+    .scrollable-list-right {
+      top: 60px;
+      left: 4%;
+       width: 23.5%;
+      border-collapse: collapse;
+      height: auto;
+      
+      margin: 2px 0;
+      margin-top: 250px;
+      margin-left: 75%; 
+      background-color: #F8FAFF;
+      padding: 8px;
+      font-size: 5px;
+      line-height: 1.5;
+      text-align: center;
+      color: black;
+      border-radius: 50px; 
+      font-family: Work Sans;
+      font-weight: 700;
+      font-style: light; 
+    }
+    
+    .scrollable-list-right + .scrollable-list-right {
+      margin-top: 10px;
+    }
+    
+    .scrollable-list-right p {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 1px;
+    
+    }
+    
+    .scrollable-list-right ul {
+      margin-top: 10px;
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .scrollable-list-right li {
+      font-size: 1rem;
+      margin-bottom: 5px;
+      font-family: Work Sans;
+      font-weight: 600;
+      
+    }
+    
+    .scrollable-list-right img {
+      width: 90px;
+      height: 90px;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      font-family: Work Sans;
+      font-weight: 600;
+    }
+    
+    .logos {
+      display: flex;
+      flex-direction: row-reverse;
+      
+      
+      justify-content: center; 
+      align-items: center; 
+      margin-top: 1px; 
+    }
+    
+    .team-names {
+      font-size: 220px;
+      font-family: Work Sans;
+    }
+    
+    
+    .error-message-pass {
+      top: 230px;
+      left: 196px;
+      color: #041b55;
+      width: 621px;
+      height: 61px;
+      position: absolute;
+      font-size: 15px;
+      align-self: auto;
+      font-style: Regular;
+      text-align: left;
+      font-family: Work Sans;
+      font-weight: 600;
+      line-height: normal;
+      font-stretch: normal;
+      margin-right: 0;
+      margin-bottom: 0;
+      text-decoration: none;
+    } 
+  }
+  
+  .index-add-new-teams-button {
+    background-color: rgb(32,92,252);
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    text-align: left;
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    margin-left: 220px;
+  }
+  
+  .index-page-teams {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    font-size: 23px;
+    font-family: Work Sans;
+    border-color: var(--dl-color-primary-huddleblue);
+    border-width: 2.5px;
+    border-radius: 12px;
+    display: inline-block;
+  }  
+  
+  .index-right-bar-container {
+    top: 1.9%;
+    left: 72%;
+    position: absolute;
+    width: 25%;
+  }
+  
+  .scrollable-list-right {
+    top: 60px;
+    left: 4%;
+     width: 23.5%;
+    border-collapse: collapse;
+    height: auto;
+    
+    margin: 2px 0;
+    margin-top: 250px;
+    margin-left: 75%; 
+    background-color: #F8FAFF;
+    padding: 8px;
+    font-size: 5px;
+    line-height: 1.5;
+    text-align: center;
+    color: black;
+    border-radius: 50px; 
+    font-family: Work Sans;
+    font-weight: 700;
+    font-style: light;
+  }
+  
+  .scrollable-list-right + .scrollable-list-right {
+    margin-top: 10px;
+  }
+  
+  .scrollable-list-right p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1px;
+  
+  }
+  
+  .scrollable-list-right ul {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .scrollable-list-right li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-family: Work Sans;
+    font-weight: 600;
+    
+  }
+  
+  .logos {
+    display: flex;
+    flex-direction: row-reverse;
+    
+    
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 1px; 
+  }
+  
+  .team-names {
+    font-size: 220px;
+    font-family: Work Sans;
+  }
+  
+  
+  .error-message-pass {
+    top: 230px;
+    left: 196px;
+    color: #041b55;
+    width: 621px;
+    height: 61px;
+    position: absolute;
+    font-size: 15px;
+    align-self: auto;
+    font-style: Regular;
+    text-align: left;
+    font-family: Work Sans;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+  } 
+} */
