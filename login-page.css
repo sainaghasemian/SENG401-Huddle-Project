@@ -28,7 +28,7 @@
   border-color: transparent;
 }
 .login-page-middle-bar {
-  top: 78px;
+  top: -50px;
   left: 26.5%;
   width: 913px;
   height: 1115px;
@@ -37,7 +37,7 @@
 }
 .login-page-text { /* This is the "New to Huddle?" text*/
   top: 827px;
-  left: 41%;
+  left: 295px;
   color: rgb(0, 0, 0);
   width: 324px;
   height: auto;
@@ -74,8 +74,8 @@
   text-decoration: none;
 }
 .login-page-text01 {  /*this is the Welcome msg */
-  top: 403px;
-  left: 703px;
+  top: 200px;
+  left: 200px;
   color: rgba(28, 92, 255, 1);
   width: 489px;
   height: auto;
@@ -94,7 +94,7 @@
 }
 .login-page-log-in-button { /*this is the Log In button "container" */
   top: 725px;
-  left: 831px;
+  left: 325px;
   width: 234px;
   height: 63px;
   display: flex;
@@ -133,14 +133,14 @@
   text-decoration: none;
 }
 .login-page-text09 { /*this is the Huddle Logo text on the top bar*/
-  top: 8px;
-  left: 40%;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 1);
   width: 328px;
   height: auto;
   position: absolute;
   font-size: 48px;
-  align-self: auto;
   font-style: ExtraBold;
   text-align: center;
   font-family: Work Sans;
@@ -153,7 +153,7 @@
 }
 .login-page-password-input {
   top: 630px;
-  left: 648px;
+  left: 145px;
   width: 621px;
   height: 61px;
   position: absolute;
@@ -168,7 +168,7 @@
 }
 .login-page-username-input {
   top: 510px;
-  left: 649px;
+  left: 145px;
   width: 621px;
   height: 61px;
   position: absolute;
@@ -185,7 +185,7 @@
 
 .login-page-navlink { /* This is for "here" button */
   top: 827px;
-  left: 54.5%;
+  left: 550px;
   color: var(--dl-color-primary-huddleblue);
   width: 56px;
   height: 30px;
