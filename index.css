@@ -340,6 +340,7 @@ li h2, li p {
   border-color: #FFFFFF;
   border-width: 2.5px;
   border-radius: 16px;
+  z-index: 1000;
 }
 
 .index-add-new-teams-container {
