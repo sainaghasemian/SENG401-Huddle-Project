@@ -118,8 +118,13 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`UserID`, `Name`, `Password`) VALUES
+('anap', NULL, 'hockey'),
+('breadman10', NULL, 'rangers'),
+('ducksfan101', NULL, '1234'),
+('ilemieux', NULL, 'password'),
 ('johnydo', 'Johny Do', 'f'),
 ('rdalton', NULL, 'seng401'),
+('sainagr', NULL, 'calgaryflames'),
 ('tommydinh', 'tommydinh', 'f');
 
 -- --------------------------------------------------------

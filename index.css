@@ -385,13 +385,13 @@ li h2, li p {
   border-radius: 16px;
 }
 
-.index-add-new-teams-button-container {
+.index-add-new-teams-container {
   height: 50px;
   width: 600px;
   display: flex;
   position: absolute;
   top: 180px;
-  left: 20%;
+  left: 1%;
 }
 
 .index-add-new-teams-button {
@@ -401,13 +401,15 @@ li h2, li p {
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
-  text-align: center;
+  text-align: left;
+  display: inline-block;
+  width: 160px;
+  height: 50px;
+  margin-left: 255px;
 }
 
 .index-page-teams {
-  top: 180px;
-  left: 5%;
-  width: 300px;
+  width: 250px;
   height: 50px;
   position: absolute;
   font-size: 23px;
@@ -415,6 +417,7 @@ li h2, li p {
   border-color: var(--dl-color-primary-huddleblue);
   border-width: 2.5px;
   border-radius: 12px;
+  display: inline-block;
 }  
 
 .index-right-bar-container {

@@ -93,7 +93,7 @@
         
 
         $pdo->query("INSERT INTO `post` (`Content`, `User_UserID`, `Team_TeamID`, `Team_Name`, `Post_PostID`, `DatePosted`, `Title`) VALUES
-        ($bodyText, 'tommydinh', $teamID, '$team', NULL, '$date', $titleText)");
+        ($bodyText, '{$_SESSION["authenticated_username"]}', $teamID, '$team', NULL, '$date', $titleText)");
         
         header("Location: index.php");
     }
