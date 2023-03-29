@@ -157,7 +157,7 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/e446f15a-987e-4129-89ab-284a2ac1ea9d?org_if_sml=1886"
             class="post-page-top-bar"
           />
-          <select class="hamburger-drop-down" id="go-to-pg">
+          <select class="menu-drop-down" id="go-to-pg">
             <option value="">Menu</option>
             <option value="./index.php">Home Page</option>
             <option value="./schedule-page.php">Schedule Page</option>
@@ -166,7 +166,7 @@
           </select>
 
           <script> 
-            const menuIcon = document.querySelector('.hamburger-drop-down');
+            const menuIcon = document.querySelector('.menu-drop-down');
             const selectElement = document.querySelector('#go-to-pg');
 
             menuIcon.addEventListener('change', () => {
@@ -198,11 +198,6 @@
                 ?>
           <span class="post-page-text11"><span>Huddle</span></span>
           <span class="post-page-text15"><span>Create Post</span></span>
-          <img
-            alt="MenuIcon1205"
-            src="public/playground_assets/menuicon1205-ncz.svg"
-            class="post-page-menu-icon"
-          />
         </div>
       </div>
     </div>

@@ -14,31 +14,6 @@
     border-color: transparent;
 }
 
-.stats-page-menu-icon {
-    top: 14px;
-    right: 24px;
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    min-width: 16px;
-}
-.stats-page-search-icon {
-    top: 22px;
-    right: 87px;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    min-width: 16px;
-}
-.stats-page-account-icon {
-    top: 39px;
-    right: 138px;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    min-width: 16px;
-}
-
 .stats-page-huddle-top-logo {
     top: 58px;
     left: 50%;
@@ -557,7 +532,7 @@
     cursor: pointer;
 }
 
-.hamburger-drop-down {
+.menu-drop-down {
     top: 39px;
     right: 35px;
     width: 100px;
