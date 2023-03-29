@@ -411,3 +411,24 @@
   border-width: 2.5px;
   border-radius: 16px;
 }
+
+
+.error-message-pass {
+  top: 110px;
+  left: 157.19677734375px;
+  color: #041b55;
+  width: 621px;
+  height: 61px;
+  position: absolute;
+  font-size: 15px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+} 
