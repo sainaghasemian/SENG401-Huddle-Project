@@ -1,23 +1,4 @@
-.post-page-container {
-  width: 100%;
-  display: flex;
-  overflow: auto;
-  min-height: 100vh;
-  align-items: center;
-  flex-direction: column;
-}
-.post-page-full-page-template {
-  width: 100%;
-  height: 1193px;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: transparent;
-  justify-content: flex-start;
-  background-color: rgba(255, 255, 255, 1);
-}
+
 .post-page-post-background-box {
   top: 204.12103271484375px;
   left: 130px;
@@ -26,16 +7,8 @@
   position: absolute;
   border-color: transparent;
   border-radius: 41.75089645385742px;
+  z-index: -1;
 }
-/* .post-page-post-bar {
-  top: 251.71536254882812px;
-  left: 176.46112060546875px;
-  width: 1582px;
-  height: 99px;
-  position: absolute;
-  border-color: transparent;
-  border-radius: 38.95621109008789px;
-} */
 .post-page-post-icon {
   top: 274px;
   left: 321px;

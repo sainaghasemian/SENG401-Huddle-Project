@@ -117,15 +117,15 @@
               name="title"
             />
             <div class = "post-page-post-background-box">
-            <a href="javascript: post.submit();" class="post-page-post-button">
-              <img
-                alt="PostRec7449"
-                src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/b56aae9d-329c-4c8c-bea9-0aec0240743e?org_if_sml=11434"
-                class="post-page-post-rec"
-              />
-              <span class="post-page-text09"><span>POST</span></span>
-            </a>
-    </div>
+              <a href="javascript: post.submit();" class="post-page-post-button">
+                <img
+                  alt="PostRec7449"
+                  src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/b56aae9d-329c-4c8c-bea9-0aec0240743e?org_if_sml=11434"
+                  class="post-page-post-rec"
+                />
+                <span class="post-page-text09"><span>POST</span></span>
+              </a>
+            </div>
           </form>
           <img
             alt="Line17447"
