@@ -114,7 +114,7 @@
           ?>
           <span class="new-team-page-huddle-top-logo"><span>Huddle</span></span>
           <span class="new-team-page-teams-drop-down-title">TEAMS</span>
-          <select class="new-team-page-teams-drop-down" id="team-select">
+          <select class="new-team-page-teams-drop-down" id="franchise-select">
             <option value="">All Teams</option>
             <option value="Anaheim Ducks">Anaheim Ducks</option>
             <option value="Arizona Coyotes">Arizona Coyotes</option>
@@ -155,7 +155,7 @@
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/32875c77-5163-45b7-b5c6-8ec1403e308b?org_if_sml=11235"
               class="new-team-page-rectangle12"
             />
-            <span onclick="getStandings()" class="new-team-pages-get-teams-buttontext"><span>Get Teams</span></span>
+            <span onclick="getStandings(document.querySelector(`#franchise-select`).value)" class="new-team-pages-get-teams-buttontext"><span>Get Teams</span></span>
              
           </button>
         </div>
