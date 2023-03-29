@@ -18,8 +18,8 @@
   background-color: rgba(255, 255, 255, 1);
 }
 .register-page-middle-bar {
-  top: 79px;
-  left: 509px;
+  top: -50px;
+  left: 26.5%;
   width: 913px;
   height: 1115px;
   position: absolute;
@@ -27,7 +27,7 @@
 }
 .register-page-text {
   top: 297px;
-  left: 694px;
+  left: 180px;
   color: rgba(28, 92, 255, 1);
   width: 543px;
   height: auto;
@@ -47,7 +47,7 @@
 
 .register-page-confirm-password-input {
   top: 609px;
-  left: 651px;
+  left: 145px;
   width: 621px;
   height: 61px;
   position: absolute;
@@ -62,7 +62,7 @@
 }
 .register-page-password-input {
   top: 510px;
-  left: 652px;
+  left: 145px;
   width: 621px;
   height: 61px;
   position: absolute;
@@ -78,7 +78,7 @@
 
 .register-page-username-input {
   top: 409px;
-  left: 649px;
+  left: 145px;
   width: 621px;
   height: 61px;
   position: absolute;
@@ -94,7 +94,7 @@
 
 .register-page-sign-up-button {
   top: 713px;
-  left: 828px;
+  left: 325px;
   width: 234px;
   height: 63px;
   display: flex;
@@ -175,3 +175,24 @@
   border-width: 2.5px;
   border-radius: 16px;
 }
+
+.register-page-error {
+  top: 630px;
+  left: 677px;
+  color: #1D5CFF;
+  width: 800px;
+  height: 61px;
+  position: absolute;
+  font-size: 19px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  z-index: 10;
+} 

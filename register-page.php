@@ -1,7 +1,8 @@
 <?php
     session_start();
-
-    echo $_SESSION["message"];
+    ?>
+    <span class="register-page-error"><span><?php echo $_SESSION["message"]?></span></span>
+    <?php
     $_SESSION["message"] = "";
 ?>
 
@@ -60,35 +61,37 @@
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/8c881379-6c3c-4487-8ab1-7013b26ddcc1?org_if_sml=16266"
             class="register-page-middle-bar"
           />
-          <span class="register-page-text"><span>Join the Team!</span></span>
-          <form action = "register-verification.php" method="post">
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              class="register-page-confirm-password-input input"
-              name="confirmed"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              class="register-page-password-input input"
-              name="password"
-            />
-            <input
-              type="text"
-              placeholder="Username"
-              class="register-page-username-input input"
-              name="username"
-            />
-            <button type="submit" class="register-page-sign-up-button">
-              <img
-                alt="SignUpButton6065"
-                src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/14c8e075-cf54-4ffc-b115-8db824213d04?org_if_sml=11235"
-                class="register-page-sign-up-button1"
+          <div class="register-page-middle-bar">
+            <span class="register-page-text"><span>Join the Team!</span></span>
+            <form action = "register-verification.php" method="post">
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                class="register-page-confirm-password-input input"
+                name="confirmed"
               />
-              <span class="register-page-text2"><span>Sign Up</span></span>
-            </button>
-          </form>
+              <input
+                type="password"
+                placeholder="Password"
+                class="register-page-password-input input"
+                name="password"
+              />
+              <input
+                type="text"
+                placeholder="Username"
+                class="register-page-username-input input"
+                name="username"
+              />
+              <button type="submit" class="register-page-sign-up-button">
+                <img
+                  alt="SignUpButton6065"
+                  src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/14c8e075-cf54-4ffc-b115-8db824213d04?org_if_sml=11235"
+                  class="register-page-sign-up-button1"
+                />
+                <span class="register-page-text2"><span>Sign Up</span></span>
+              </button>
+            </form>
+          </div>
           <img
             alt="TopBar7466"
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/f81d7405-e2c0-42f6-8c20-171da0b95b68?org_if_sml=1886"
