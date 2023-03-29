@@ -4,7 +4,7 @@
 
     // Include the database connection file
     include_once("config.php");
-    
+    include_once("databaseQueries.php");   
 ?>
 <span class="error-message-pass"><span><?php echo $_SESSION["message"]?></span></span>
 <?php
@@ -17,9 +17,10 @@
       $username = $_POST["username"];
       $password = $_POST["password"];
       
-      $result = $pdo->query("SELECT 1 FROM User WHERE UserID = '$username' AND Password = '$password'");
-      $success = $result->fetch(PDO::FETCH_ASSOC);
-      if($success == null)
+      $success = verifyLogin($pdo, $username, $password);
+      // $result = $pdo->query("SELECT 1 FROM User WHERE UserID = '$username' AND Password = '$password'");
+      // $success = $result->fetch(PDO::FETCH_ASSOC);
+      if(count($success) == 0)
       {
         $_SESSION["message"] = "The username or password is incorrect. Please try again.";
         header("Location: login-page.php");
