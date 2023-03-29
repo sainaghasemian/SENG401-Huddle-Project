@@ -80,7 +80,7 @@
         else if ($team == "Pittsburgh Penguins"){ $teamID = 696; }
         else if ($team == "San Jose Sharks"){ $teamID = 697; }
         else if ($team == "Seattle Kraken"){ $teamID = 1436; }
-        else if ($team == "St Louis Blues"){ $teamID = 698; }
+        else if ($team == "St. Louis Blues"){ $teamID = 698; }
         else if ($team == "Tampa Bay Lightning"){ $teamID = 699; }
         else if ($team == "Toronto Maple Leafs"){ $teamID = 700; }
         else if ($team == "Vancouver Canucks"){ $teamID = 701; }
