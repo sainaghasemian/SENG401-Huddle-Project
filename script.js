@@ -1,14 +1,52 @@
+// import options from './node_modules/options' 
+// this is tommy's account please do not leak this info 
 
-// this is tommy's account please do not leak this info or it will charge my credit card if i go over the limit
-const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '96f2faa6a9mshc33e80e95c0a95fp1e26ebjsn2c028e1d7bef',
-        'X-RapidAPI-Host': 'api-hockey.p.rapidapi.com'
+
+function getOptions(apiKey){
+    // console.log(decrypt(apiKey, 5));
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': decrypt(apiKey, 5),
+            'X-RapidAPI-Host': 'api-hockey.p.rapidapi.com'
+        }
+    };
+    return options;
+}
+
+function encrypt(str, key) {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+      let c = str.charCodeAt(i);
+      if (c >= 65 && c <= 90) {
+        result += String.fromCharCode((c - 65 + key) % 26 + 65);
+      } else if (c >= 97 && c <= 122) {
+        result += String.fromCharCode((c - 97 + key) % 26 + 97);
+      } else {
+        result += str.charAt(i);
+      }
     }
-};
+    console.log(result);
+    return result;
+  }
 
-function getGame(franchise, date) {
+  function decrypt(str, key) {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+      let c = str.charCodeAt(i);
+      if (c >= 65 && c <= 90) {
+        result += String.fromCharCode((c - 65 - key + 26) % 26 + 65);
+      } else if (c >= 97 && c <= 122) {
+        result += String.fromCharCode((c - 97 - key + 26) % 26 + 97);
+      } else {
+        result += str.charAt(i);
+      }
+    }
+    // console.log(result);
+    return result;
+  }
+
+async function getGame(franchise, date, apiKey) {
     let homeTeam;  // home team name
     let homeLogo;   // url for home team logo
     let awayTeam; // away team name
@@ -24,13 +62,13 @@ function getGame(franchise, date) {
 
     if (userDate === "all-upcoming") {
 
-        return allUpcomingGames(userInput);
+        return allUpcomingGames(userInput, apiKey);
 
     }
 
     // checking all franchises
     if (userInput === "All") {
-        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
+        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', getOptions(apiKey))
             .then((data) => {
                 return data.json(); // convert to object 
             })
@@ -92,7 +130,8 @@ function getGame(franchise, date) {
 
                     // }
                 }
-                return output;
+                console.log(output);
+                return 1;
 
             })
             .catch(error => console.log(error));
@@ -100,7 +139,7 @@ function getGame(franchise, date) {
         // checking for specific franchise
     } else {
 
-        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
+        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', getOptions(apiKey))
             .then((data) => {
 
                 return data.json(); // convert to object 
@@ -168,7 +207,7 @@ function getGame(franchise, date) {
                         </div>`;
                     document.getElementById("div").innerHTML = output;
                 }
-
+                console.log(output);
                 return output;
             })
             .catch(error => console.log(error));
@@ -181,9 +220,9 @@ function getGame(franchise, date) {
 }
 
 
-function getStandings(userTeam) {
+async function getStandings(userTeam, apiKey) {
     selectedTeam = userTeam;
-    fetch('https://api-hockey.p.rapidapi.com/standings/?league=57&season=2022', options)
+    fetch('https://api-hockey.p.rapidapi.com/standings/?league=57&season=2022', getOptions(apiKey))
         .then((data) => {
             // console.log(data);   // this is json format
             return data.json(); // convert to object 
@@ -277,7 +316,7 @@ function getStandings(userTeam) {
 
 
 // finding the team ID using user input team name with stats API
-function findTeamID(userTeam) {
+async function findTeamID(userTeam, userPosition, userPlayoff) {
     let userInput = userTeam;
     // let userInput = document.querySelector("#franchise-select").value;
 
@@ -305,16 +344,16 @@ function findTeamID(userTeam) {
             }
 
 
-            getRoster(teamIDs);
-
+            getRoster(teamIDs, userPosition, userPlayoff);
+            console.log(teamIDs);
             return teamIDs;
         })
         .catch(error => console.log(error));
 }
 
-function getRoster(teamID) {
+async function getRoster(teamID, userPosition, userPlayoff) {
     let players = [];
-    Promise.all(teamID.map(team => {
+    return Promise.all(teamID.map(team => {
         return fetch(`https://statsapi.web.nhl.com/api/v1/teams/${team}/roster`)
             .then((data) => {
                 return data.json(); // convert to object 
@@ -337,17 +376,19 @@ function getRoster(teamID) {
             })
             .catch(error => console.log(error));
     })).then(() => {
-        getPlayerStats(players);
-
+        getPlayerStats(players, userPosition, userPlayoff);
+        console.log(players);
         return players;
     })
 }
 
 
-function getPlayerStats(players) {
+async function getPlayerStats(players, userPosition, userPlayoff) {
     let season = 20222023;  // will change this to a user input after
-    let positionSelect = document.querySelector("#position-select").value;
-    let playoffSelect = document.querySelector("#gametype-select").value;
+    // let positionSelect = document.querySelector("#position-select").value;
+    // let playoffSelect = document.querySelector("#gametype-select").value;
+    let positionSelect = userPosition;
+    let playoffSelect = userPlayoff;
     // console.log(playoffSelect);
 
     let output = `<table class="table-chart">
@@ -464,7 +505,6 @@ function getPlayerStats(players) {
                 .catch(error => console.log(error));
         })).then(() => {
             if (counter === 0) {
-                console.log(counter);
                 output = `<div class="playoffs-error"> 
                 <p> Playoffs Have Not Begun. Please Clear Filters and Choose Regular Season Games!</p>
                 </div>`;
@@ -484,7 +524,7 @@ function getPlayerStats(players) {
 
 
 
-function allUpcomingGames(franchise) {
+async function allUpcomingGames(franchise, apiKey) {
     const userInput = franchise;
     // getting current date
     let today = new Date();
@@ -495,7 +535,7 @@ function allUpcomingGames(franchise) {
     let currDate = yyyy + "-" + mm + "-" + dd;
 
     if (userInput === "All") {
-        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
+        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', getOptions(apiKey))
             .then((data) => {
                 return data.json(); // convert to object 
             })
@@ -564,7 +604,7 @@ function allUpcomingGames(franchise) {
         // checking for specific franchise
     } else {
 
-        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
+        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', getOptions(apiKey))
             .then((data) => {
 
                 return data.json(); // convert to object 
@@ -645,7 +685,7 @@ function allUpcomingGames(franchise) {
 }
 
 // This one for index
-function homePageGameSchedule() {
+async function homePageGameSchedule(apiKey) {
     const userInput = "All";
 
     // getting current date
@@ -658,11 +698,14 @@ function homePageGameSchedule() {
     let counter = 0;
 
     if (userInput === "All") {
-        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
+        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', getOptions(apiKey))
             .then((data) => {
                 return data.json(); // convert to object 
             })
             .then((objectData) => {
+                // console.log(options)
+                console.log(getOptions(apiKey));
+                
                 // length of array that contains games 
                 console.log("I made it into all");
                 let objectLength = objectData.response.length;
@@ -731,7 +774,7 @@ function homePageGameSchedule() {
         // checking for specific franchise
     } else {
 
-        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
+        fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', getOptions(apiKey))
             .then((data) => {
 
                 return data.json(); // convert to object 
@@ -815,7 +858,7 @@ function homePageGameSchedule() {
 
 }
 
-function homePageGameScheduleLoggedIn(teamArr) {
+async function homePageGameScheduleLoggedIn(teamArr, apiKey) {
 
     // getting current date
     let today = new Date();
@@ -826,7 +869,7 @@ function homePageGameScheduleLoggedIn(teamArr) {
     let currDate = yyyy + "-" + mm + "-" + dd;
     let counter = 0;
 
-    fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', options)
+    fetch('https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton', getOptions(apiKey))
         .then((data) => {
             return data.json(); // convert to object 
         })
@@ -903,6 +946,3 @@ function homePageGameScheduleLoggedIn(teamArr) {
 
 
 }
-
-
-

@@ -48,7 +48,7 @@
         if(!checkAuthentication())
         {   ?>
                 </div>
-                <script>homePageGameSchedule()</script>
+                <script>homePageGameSchedule("96k2kff6f9rxmh33j80j95h0f95ku1j26jgoxs2h028j1i7gjk")</script>
                 <div id="home-page-div"></div>
             <?php
         }
@@ -66,7 +66,7 @@
             $teamNamesJS = json_encode($teamNames);
             ?>
                 </div>
-                <script>homePageGameScheduleLoggedIn(<?php echo $teamNamesJS?>)</script>
+                <script>homePageGameScheduleLoggedIn(<?php echo $teamNamesJS?>, "96k2kff6f9rxmh33j80j95h0f95ku1j26jgoxs2h028j1i7gjk")</script>
                 <div id="home-page-div"></div>
             <?php
         }

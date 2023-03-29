@@ -156,7 +156,7 @@
               src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/32875c77-5163-45b7-b5c6-8ec1403e308b?org_if_sml=11235"
               class="new-team-page-rectangle12"
             />
-            <span onclick="getStandings(document.querySelector(`#franchise-select`).value)" class="new-team-pages-get-teams-buttontext"><span>Get Teams</span></span>
+            <span onclick="getStandings(document.querySelector(`#franchise-select`).value, '96k2kff6f9rxmh33j80j95h0f95ku1j26jgoxs2h028j1i7gjk')" class="new-team-pages-get-teams-buttontext"><span>Get Teams</span></span>
              
           </button>
         </div>
