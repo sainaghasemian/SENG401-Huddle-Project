@@ -29,26 +29,26 @@
             else return true;
         }
 
-        static function verifyLogin($pdo) 
+        static function verifyLogin($pdo) : void
         {
 
-                //Verify username and password from login page
-                if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]))
-                {
+            //Verify username and password from login page
+            if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]))
+            {
                 $username = $_POST["username"];
                 $password = $_POST["password"];
                 $result = $pdo->query("SELECT 1 FROM User WHERE UserID = '$username' AND Password = '$password'");
                 $success = $result->fetch(PDO::FETCH_ASSOC);
-                if(count($success) == 0)
-                {
-                    $_SESSION["message"] = "The username or password is incorrect. Please try again.";
-                    header("Location: login-page.php");
-                }
-                else
-                {
-                    if ($_SESSION["authenticated_username"]==""){
-                    $_SESSION["authenticated_username"] = $username;
-                    }
+            }
+            if($success == null)
+            {
+                $_SESSION["message"] = "The username or password is incorrect. Please try again.";
+                header("Location: login-page.php");
+            }
+            else
+            {
+                if ($_SESSION["authenticated_username"]==""){
+                $_SESSION["authenticated_username"] = $username;
                 }
             }
         }
