@@ -91,7 +91,7 @@
     </script>
 
     <?php
-             if (databaseQueries::checkAuthentication()){
+             if (checkAuthentication()){
               echo "<form action='post-page.php' method='get'>
                       <button class='stats-page-post-icon' type='submit'>
                         <span style='font-family: Work Sans; font-style: ExtraBold; font-weight: 800; font-size: 21px; color: rgb(32,92,252);'>

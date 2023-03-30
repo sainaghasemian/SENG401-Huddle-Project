@@ -946,3 +946,6 @@ async function homePageGameScheduleLoggedIn(teamArr, apiKey) {
 
 
 }
+
+// module.exports.findTeamID = findTeamID;
+// module.exports.getRoster = getRoster;
