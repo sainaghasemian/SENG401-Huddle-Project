@@ -1,6 +1,6 @@
 <?php
+    include_once("databaseQueries.php");
     sessionStart();
-
     resetAuthenticatedUsernameVariable();
     resetLikedPostsVariable();
     

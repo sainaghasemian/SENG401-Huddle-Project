@@ -39,18 +39,20 @@
                 $password = $_POST["password"];
                 $result = $pdo->query("SELECT 1 FROM User WHERE UserID = '$username' AND Password = '$password'");
                 $success = $result->fetch(PDO::FETCH_ASSOC);
-            }
-            if($success == null)
-            {
-                $_SESSION["message"] = "The username or password is incorrect. Please try again.";
-                header("Location: login-page.php");
-            }
-            else
-            {
-                if ($_SESSION["authenticated_username"]==""){
-                $_SESSION["authenticated_username"] = $username;
+
+                if($success == null)
+                {
+                    $_SESSION["message"] = "The username or password is incorrect. Please try again.";
+                    header("Location: login-page.php");
+                }
+                else
+                {
+                    if ($_SESSION["authenticated_username"]==""){
+                    $_SESSION["authenticated_username"] = $username;
+                    }
                 }
             }
+            
         }
 
         function getHomePageGameSchedules($pdo)
