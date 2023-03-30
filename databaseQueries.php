@@ -57,7 +57,7 @@
 
         function getHomePageGameSchedules($pdo)
         {
-            if(!databaseQueries::checkAuthentication())
+            if(!checkAuthentication())
             {   ?>
                     </div>
                     <script>homePageGameSchedule("96k2kff6f9rxmh33j80j95h0f95ku1j26jgoxs2h028j1i7gjk")</script>
