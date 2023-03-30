@@ -3,7 +3,6 @@
 
 
 function getOptions(apiKey){
-    // console.log(decrypt(apiKey, 5));
     const options = {
         method: 'GET',
         headers: {
@@ -26,7 +25,6 @@ function encrypt(str, key) {
         result += str.charAt(i);
       }
     }
-    console.log(result);
     return result;
   }
 
@@ -42,7 +40,6 @@ function encrypt(str, key) {
         result += str.charAt(i);
       }
     }
-    // console.log(result);
     return result;
   }
 
@@ -97,8 +94,6 @@ async function getGame(franchise, date, apiKey) {
 
                     awayTeam = objectData.response[i].teams.away.name;  // away team name
                     homeTeam = objectData.response[i].teams.home.name;  // home team name
-                    console.log(awayTeam);
-                    console.log(homeTeam);
                     gameDate = objectData.response[i].date.slice(0, 10); // date of the game
                     homeScore = objectData.response[i].scores.home; // score of home team
                     awayScore = objectData.response[i].scores.away; // score of away team
@@ -130,8 +125,7 @@ async function getGame(franchise, date, apiKey) {
 
                     // }
                 }
-                console.log(output);
-                return 1;
+                return output;
 
             })
             .catch(error => console.log(error));
@@ -165,7 +159,6 @@ async function getGame(franchise, date, apiKey) {
                     awayTeam = objectData.response[i].teams.away.name;  // away team name
                     homeTeam = objectData.response[i].teams.home.name;
                     if (awayTeam === userInput || homeTeam === userInput) {
-                        console.log(objectData.response[i]);
                         homeLogo = objectData.response[i].teams.home.logo;
                         awayLogo = objectData.response[i].teams.away.logo;
                         gameDate = objectData.response[i].date.slice(0, 10); // date of the game
@@ -207,7 +200,6 @@ async function getGame(franchise, date, apiKey) {
                         </div>`;
                     document.getElementById("div").innerHTML = output;
                 }
-                console.log(output);
                 return output;
             })
             .catch(error => console.log(error));
@@ -224,11 +216,9 @@ async function getStandings(userTeam, apiKey) {
     selectedTeam = userTeam;
     fetch('https://api-hockey.p.rapidapi.com/standings/?league=57&season=2022', getOptions(apiKey))
         .then((data) => {
-            // console.log(data);   // this is json format
             return data.json(); // convert to object 
         })
         .then((objectData) => {
-            console.log(objectData);
             // length of array that contains games 
             let objectLength = objectData.response.length;
             let output = `<table class="new-team-page-table">
@@ -321,7 +311,6 @@ async function findTeamID(userTeam, userPosition, userPlayoff) {
     // let userInput = document.querySelector("#franchise-select").value;
 
     if (userInput === "") {
-        console.log("user input was empty");
         return -1;
     }
     fetch('https://statsapi.web.nhl.com/api/v1/teams')
@@ -329,7 +318,6 @@ async function findTeamID(userTeam, userPosition, userPlayoff) {
             return data.json(); // convert to object 
         })
         .then((objectData) => {
-            console.log(objectData);
             let objectLength = objectData.teams.length;
             let teamIDs = [];
             for (let i = 0; i < objectLength - 1; i++) {  // loop that runs through list of teams to find ID
@@ -345,7 +333,6 @@ async function findTeamID(userTeam, userPosition, userPlayoff) {
 
 
             getRoster(teamIDs, userPosition, userPlayoff);
-            console.log(teamIDs);
             return teamIDs;
         })
         .catch(error => console.log(error));
@@ -377,7 +364,6 @@ async function getRoster(teamID, userPosition, userPlayoff) {
             .catch(error => console.log(error));
     })).then(() => {
         getPlayerStats(players, userPosition, userPlayoff);
-        console.log(players);
         return players;
     })
 }
@@ -385,11 +371,8 @@ async function getRoster(teamID, userPosition, userPlayoff) {
 
 async function getPlayerStats(players, userPosition, userPlayoff) {
     let season = 20222023;  // will change this to a user input after
-    // let positionSelect = document.querySelector("#position-select").value;
-    // let playoffSelect = document.querySelector("#gametype-select").value;
     let positionSelect = userPosition;
     let playoffSelect = userPlayoff;
-    // console.log(playoffSelect);
 
     let output = `<table class="table-chart">
                     <thead>
@@ -442,14 +425,11 @@ async function getPlayerStats(players, userPosition, userPlayoff) {
                                     </tr> `;
                         // document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
                     }
-                    // console.log(output);
-                    // going to need one for goalie
 
                 })
                 .catch(error => console.log(error));
         })).then(() => {
             if (counter === 0) {
-                console.log(counter);
                 output = `<div class="playoffs-error"> 
                         <p> Playoffs Have Not Begun. Please Clear Filters and Choose Regular Season Games!</p>
                         </div>`;
@@ -470,10 +450,8 @@ async function getPlayerStats(players, userPosition, userPlayoff) {
                     const playerName = player.fullName;
                     const position = player.position;
                     if (position !== "G" && positionSelect === position && objectData.stats[0].splits.length > 0) {
-                        console.log(objectData);
                         ++counter;
 
-                        console.log(counter);
                         const statObject = objectData.stats[0].splits[0].stat;
                         const gamesPlayed = statObject.games;
                         const goals = statObject.goals;
@@ -496,7 +474,6 @@ async function getPlayerStats(players, userPosition, userPlayoff) {
                                     </tr> `;
                         document.getElementById("playerStats").innerHTML = output;  // return back to dom element in HTML
                     }
-                    // console.log(output);
 
 
                     // going to need one for goalie
@@ -541,7 +518,6 @@ async function allUpcomingGames(franchise, apiKey) {
             })
             .then((objectData) => {
                 // length of array that contains games 
-                console.log("I made it into all");
                 let objectLength = objectData.response.length;
                 let output = "";
 
@@ -564,8 +540,6 @@ async function allUpcomingGames(franchise, apiKey) {
 
                     awayTeam = objectData.response[i].teams.away.name;  // away team name
                     homeTeam = objectData.response[i].teams.home.name;  // home team name
-                    console.log(awayTeam);
-                    console.log(homeTeam);
                     gameDate = objectData.response[i].date.slice(0, 10); // date of the game
                     homeScore = objectData.response[i].scores.home; // score of home team
                     awayScore = objectData.response[i].scores.away; // score of away team
@@ -632,7 +606,6 @@ async function allUpcomingGames(franchise, apiKey) {
                     awayTeam = objectData.response[i].teams.away.name;  // away team name
                     homeTeam = objectData.response[i].teams.home.name;
                     if (awayTeam === userInput || homeTeam === userInput) {
-                        console.log(objectData.response[i]);
                         homeLogo = objectData.response[i].teams.home.logo;
                         awayLogo = objectData.response[i].teams.away.logo;
                         gameDate = objectData.response[i].date.slice(0, 10); // date of the game
@@ -703,11 +676,8 @@ async function homePageGameSchedule(apiKey) {
                 return data.json(); // convert to object 
             })
             .then((objectData) => {
-                // console.log(options)
-                console.log(getOptions(apiKey));
                 
                 // length of array that contains games 
-                console.log("I made it into all");
                 let objectLength = objectData.response.length;
                 let output = "";
 
@@ -732,8 +702,6 @@ async function homePageGameSchedule(apiKey) {
 
                     awayTeam = objectData.response[i].teams.away.name;  // away team name
                     homeTeam = objectData.response[i].teams.home.name;  // home team name
-                    console.log(awayTeam);
-                    console.log(homeTeam);
                     gameDate = objectData.response[i].date.slice(0, 10); // date of the game
                     homeScore = objectData.response[i].scores.home; // score of home team
                     awayScore = objectData.response[i].scores.away; // score of away team
@@ -804,7 +772,6 @@ async function homePageGameSchedule(apiKey) {
                     awayTeam = objectData.response[i].teams.away.name;  // away team name
                     homeTeam = objectData.response[i].teams.home.name;
                     if (awayTeam === userInput || homeTeam === userInput) {
-                        console.log(objectData.response[i]);
                         homeLogo = objectData.response[i].teams.home.logo;
                         awayLogo = objectData.response[i].teams.away.logo;
                         gameDate = objectData.response[i].date.slice(0, 10); // date of the game
