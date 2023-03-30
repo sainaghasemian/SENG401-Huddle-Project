@@ -145,10 +145,6 @@ class PHPUnitTests extends TestCase
         $this->assertEquals(null, $_SESSION["authenticated_username"]);
     }
 
-   
-    
-    //dont know how to test getHomePageGameSchedules()
-
     public function testGetPosts(): void {
         $dsn = "mysql:host=localhost;dbname=huddledatabase";
 
