@@ -1,8 +1,8 @@
 <?php
-    databaseQueries::sessionStart();
+    sessionStart();
 
-    databaseQueries::resetAuthenticatedUsernameVariable();
-    databaseQueries::resetLikedPostsVariable();
+    resetAuthenticatedUsernameVariable();
+    resetLikedPostsVariable();
     
     header("Location: index.php");
 ?>

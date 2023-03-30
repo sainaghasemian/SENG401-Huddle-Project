@@ -1,12 +1,12 @@
 <?php
   include_once("databaseQueries.php");
-  databaseQueries::sessionStart();  
+  sessionStart();  
 ?>
   
 <span class="register-page-error"><span><?php echo $_SESSION["message"]?></span></span>
   
 <?php
-  databaseQueries::resetMessageVariable();
+  resetMessageVariable();
 ?>
 
 <!DOCTYPE html>
