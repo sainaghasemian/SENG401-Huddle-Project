@@ -81,6 +81,8 @@ class PHPUnitTests extends TestCase
         session_destroy();
         databaseQueries::sessionStart();
 
+        $_SESSION["authenticated_username"] = null;
+
         $_POST["username"] = "ilemieux";
         $_POST["password"] = "password";
 
@@ -109,6 +111,8 @@ class PHPUnitTests extends TestCase
         session_destroy();
         databaseQueries::sessionStart();
 
+        $_SESSION["authenticated_username"] = null;
+
         $_POST["username"] = "NotAnAccount";
         $_POST["password"] = "aydf4";
 
@@ -136,6 +140,8 @@ class PHPUnitTests extends TestCase
 
         session_destroy();
         databaseQueries::sessionStart();
+
+        $_SESSION["authenticated_username"] = null;
 
         $_POST["username"] = "ilemieux";
         $_POST["password"] = "notthepassword";
