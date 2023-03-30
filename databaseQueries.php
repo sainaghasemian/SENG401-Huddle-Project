@@ -10,6 +10,16 @@
             $_SESSION["message"] = "";
         }
 
+        static function resetAuthenticatedUsernameVariable()
+        {
+            $_SESSION["authenticated_username"] = null;
+        }
+
+        static function resetLikedPostsVariable()
+        {
+            $_SESSION["liked_posts"] = null;
+        }
+
         static function checkAuthentication()
         {
             if($_SESSION["authenticated_username"] == "")

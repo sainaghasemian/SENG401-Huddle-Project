@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    databaseQueries::sessionStart();
 
     // Include the database connection file
     include_once("config.php");
