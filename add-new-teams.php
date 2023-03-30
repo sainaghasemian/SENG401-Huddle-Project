@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    databaseQueries::sessionStart();
 
     // Include the database connection file
     include_once("config.php");
@@ -7,5 +7,5 @@
 ?>
 <span class="error-message-pass"><span><?php echo $_SESSION["message"]?></span></span>
 <?php
-    subscribeUnsubscribe($pdo);
+    databaseQueries::subscribeUnsubscribe($pdo);
 ?>

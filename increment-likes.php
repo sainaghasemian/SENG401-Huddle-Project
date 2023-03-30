@@ -1,9 +1,9 @@
 <?php
-    session_start();
+    databaseQueries::sessionStart();
 
     // Include the database connection file
     include_once("config.php");
     include_once("databaseQueries.php");   
 
-    incrementLikes($pdo);
+    databaseQueries::incrementLikes($pdo);
 ?>

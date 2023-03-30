@@ -1,8 +1,8 @@
 <?php
-    session_start();
+    databaseQueries::sessionStart();
 
     include_once("config.php");
     include_once("databaseQueries.php");   
-    verifyRegistration($pdo);
+    databaseQueries::verifyRegistration($pdo);
 
 ?>

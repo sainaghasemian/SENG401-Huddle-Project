@@ -1,12 +1,12 @@
 <?php
     include_once("databaseQueries.php");
-    sessionStart();
+    databaseQueries::sessionStart();
     ?>
     <div class = "post-page-post-background-box">
       <span class="post-page-error"><span><?php echo $_SESSION["message"]?></span></span>
     </div>
     <?php
-    resetMessageVariable();
+    databaseQueries::resetMessageVariable();
 ?>
 
 <!DOCTYPE html>

@@ -1,8 +1,8 @@
 <?php
-    session_start();
+    databaseQueries::sessionStart();
 
-    $_SESSION["authenticated_username"] = null;
-    $_SESSION['liked_posts'] = null;
+    databaseQueries::resetAuthenticatedUsernameVariable();
+    databaseQueries::resetLikedPostsVariable();
     
     header("Location: index.php");
 ?>
