@@ -300,7 +300,7 @@ class PHPUnitTests extends TestCase
 
         $pdo->query("DELETE FROM post WHERE PostID = 700");
 
-        $this->assertEquals(1, $success[0]);
+        $this->assertEquals(1, $success['NumberOfLikes']);
     }
 }
 
