@@ -3,12 +3,12 @@
     include_once("config.php");
     include_once("databaseQueries.php");
     
-    databaseQueries::sessionStart();
+    sessionStart();
 ?>
 <span class="error-message-pass"><span><?php echo $_SESSION["message"]?></span></span>
 <?php
-    databaseQueries::resetMessageVariable();
-    databaseQueries::verifyLogin($pdo);
+    resetMessageVariable();
+    verifyLogin($pdo);
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +74,7 @@
           />
               
             <?php
-              databaseQueries::getHomePageGameSchedules($pdo);
+              getHomePageGameSchedules($pdo);
             ?>
 
           <div class = "index-middle-bar-container">
@@ -86,7 +86,7 @@
             <div class = "scrollable-list">
               <ul>
                 <?php
-                  $posts = databaseQueries::getPosts($pdo);
+                  $posts = getPosts($pdo);
 
                   foreach($posts as $post)
                   {
@@ -118,7 +118,7 @@
             />
               <ul class ="list">
               <?php
-              $teams = databaseQueries::getTheTop5Teams($pdo);
+              $teams = getTheTop5Teams($pdo);
 
               foreach($teams as $team)
               {
@@ -220,7 +220,7 @@
             });
           </script>
           <?php
-            if (databaseQueries::checkAuthentication()){
+            if (checkAuthentication()){
               
               echo "<form action='post-page.php' method='get'>
                       <button class='index-page-post-icon' type='submit'>
