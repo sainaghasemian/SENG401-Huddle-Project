@@ -7,5 +7,5 @@
 ?>
 <span class="error-message-pass"><span><?php echo $_SESSION["message"]?></span></span>
 <?php
-    subscribeUnsubscribe($pdo);
+    databaseQueries::subscribeUnsubscribe($pdo);
 ?>

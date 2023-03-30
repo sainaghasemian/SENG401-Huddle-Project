@@ -1,6 +1,6 @@
 <?php
     include_once("databaseQueries.php");
-    sessionStart();
+    databaseQueries::sessionStart();
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +87,7 @@
           </script>
 
           <?php
-            if (checkAuthentication()){
+            if (databaseQueries::checkAuthentication()){
               
               echo "<form action='post-page.php' method='get'>
                       <button class='new-team-page-post-icon' type='submit'>

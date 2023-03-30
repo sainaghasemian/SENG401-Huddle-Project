@@ -5,5 +5,5 @@
     include_once("config.php");
     include_once("databaseQueries.php");   
 
-    incrementLikes($pdo);
+    databaseQueries::incrementLikes($pdo);
 ?>
