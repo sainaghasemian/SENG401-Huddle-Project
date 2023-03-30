@@ -1,91 +1,44 @@
-//https://www.youtube.com/watch?v=FgnxcUQ5vho
-// Import the getGame function
-const { getGame } = require('./script.js');
+/*
+PLEASE READ THIS:
+Uncomment module.export lines at the very bottom of script.js file
+*/
+const myFunctions = require('./script');
 
-describe("getGame", () => {
-    it("should call allUpcomingGames() if userDate === 'all-upcoming'", () => {
-      // Arrange
-      const allUpcomingGames = jest.fn();
-      const userDate = "all-upcoming";
-      const franchiseSelect = {
-        value: "some-franchise",
-      };
-      const dateSelect = {
-        value: userDate,
-      };
-      document.querySelector = jest.fn((selector) => {
-        if (selector === "#franchise-select") {
-          return franchiseSelect;
-        } else if (selector === "#date-select") {
-          return dateSelect;
-        }
-      });
-  
-      // Act
-      getGame();
-  
-      // Assert
-      expect(allUpcomingGames).toHaveBeenCalled();
-    });
-  
-    it("should fetch data and display games for all franchises if userInput === 'All'", async () => {
-      // Arrange
-      const userDate = "2023-03-28";
-      const franchiseSelect = {
-        value: "All",
-      };
-      const dateSelect = {
-        value: userDate,
-      };
-      document.querySelector = jest.fn((selector) => {
-        if (selector === "#franchise-select") {
-          return franchiseSelect;
-        } else if (selector === "#date-select") {
-          return dateSelect;
-        }
-      });
-  
-      const mockData = {
-        response: [
-          {
-            teams: {
-              home: {
-                logo: "https://some-url.com/home-logo.png",
-                name: "Home Team",
-              },
-              away: {
-                logo: "https://some-url.com/away-logo.png",
-                name: "Away Team",
-              },
-            },
-            date: `${userDate}T23:00:00.000Z`,
-            scores: {
-              home: 2,
-              away: 1,
-            },
-            status: {
-              short: "Final",
-            },
-            time: "7:00 PM",
-          },
-        ],
-      };
-      const mockJsonPromise = Promise.resolve(mockData);
-      const mockFetchPromise = Promise.resolve({
-        json: () => mockJsonPromise,
-      });
-      global.fetch = jest.fn().mockImplementation(() => mockFetchPromise);
-  
-      // Act
-      await getGame();
-  
-      // Assert
-      expect(global.fetch).toHaveBeenCalledWith(
-        "https://api-hockey.p.rapidapi.com/games/?league=57&season=2022&timezone=America%2FEdmonton",
-        { method: "GET" }
-      );
-      expect(document.getElementById("div").innerHTML).toContain(
-        "<p> Away Team @ Home Team </p>"
-      );
-    });
-});
+// ********* findTeamID() JEST TESTS ************
+test("getTeamID with flames only", async () => {
+    const teamID = await myFunctions.findTeamID("Calgary Flames", "All Skaters", "statsSingleSeason" );
+    expect(teamID).toEqual([20]);
+})
+
+// ********* getRoster() JEST TESTS ************
+
+test("testing getRoster function with only 1 team being Calgary Flames ID", async () => {
+    const players = await myFunctions.getRoster([20]);
+    expect(players).toEqual([
+        { id: 8474628, fullName: 'Michael Stone', position: 'D' },
+        { id: 8473453, fullName: 'Trevor Lewis', position: 'C' },
+        { id: 8473473, fullName: 'Milan Lucic', position: 'L' },
+        { id: 8474150, fullName: 'Mikael Backlund', position: 'C' },
+        { id: 8474593, fullName: 'Jacob Markstrom', position: 'G' },
+        { id: 8475172, fullName: 'Nazem Kadri', position: 'C' },
+        { id: 8475690, fullName: 'Chris Tanev', position: 'D' },
+        { id: 8475726, fullName: 'Tyler Toffoli', position: 'R' },
+        { id: 8476399, fullName: 'Blake Coleman', position: 'C' },
+        { id: 8476456, fullName: 'Jonathan Huberdeau', position: 'C' },
+        { id: 8477346, fullName: 'MacKenzie Weegar', position: 'D' },
+        { id: 8477496, fullName: 'Elias Lindholm', position: 'C' },
+        { id: 8477507, fullName: 'Nikita Zadorov', position: 'D' },
+        { id: 8477941, fullName: 'Nick Ritchie', position: 'L' },
+        { id: 8478233, fullName: 'Andrew Mangiapane', position: 'L' },
+        { id: 8478396, fullName: 'Noah Hanifin', position: 'D' },
+        { id: 8478397, fullName: 'Rasmus Andersson', position: 'D' },
+        { id: 8478435, fullName: 'Dan Vladar', position: 'G' },
+        { id: 8478502, fullName: 'Dennis Gilbert', position: 'D' },
+        { id: 8479346, fullName: 'Dillon Dube', position: 'C' },
+        { id: 8479442, fullName: 'Troy Stecher', position: 'D' },
+        { id: 8480008, fullName: 'Adam Ruzicka', position: 'C' },
+        { id: 8481592, fullName: 'Jakob Pelletier', position: 'L' },
+        { id: 8482652, fullName: 'Walker Duehr', position: 'R' },
+        { id: 8482679, fullName: 'Matt Coronato', position: 'R' }
+      ]);
+})
