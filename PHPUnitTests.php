@@ -1,5 +1,5 @@
 <?php
-require_once 'databaseQueries.php';
+require_once 'databaseQueriesTest.php';
 use PHPUnit\Framework\TestCase;
 
 class PHPUnitTests extends TestCase

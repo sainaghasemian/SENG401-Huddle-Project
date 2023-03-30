@@ -1,26 +1,27 @@
 <?php
-
-        function sessionStart()
+    class databaseQueries
+    {
+        static function sessionStart()
         {
             session_start();
         }
 
-        function resetMessageVariable()
+        static function resetMessageVariable()
         {
             $_SESSION["message"] = "";
         }
 
-        function resetAuthenticatedUsernameVariable()
+        static function resetAuthenticatedUsernameVariable()
         {
             $_SESSION["authenticated_username"] = null;
         }
 
-        function resetLikedPostsVariable()
+        static function resetLikedPostsVariable()
         {
             $_SESSION["liked_posts"] = null;
         }
 
-        function checkAuthentication()
+        static function checkAuthentication()
         {
             if($_SESSION["authenticated_username"] == "")
             {
@@ -29,7 +30,7 @@
             else return true;
         }
 
-        function verifyLogin($pdo) : void
+        static function verifyLogin($pdo) : void
         {
 
             //Verify username and password from login page
@@ -53,7 +54,7 @@
             }
         }
 
-        function getHomePageGameSchedules($pdo)
+        static function getHomePageGameSchedules($pdo)
         {
             if(!databaseQueries::checkAuthentication())
             {   ?>
@@ -82,7 +83,7 @@
             }
         }
 
-        function getPosts($pdo)
+        static function getPosts($pdo)
         {
             if($_SESSION["authenticated_username"] == "")
             {
@@ -97,7 +98,7 @@
             return $result->fetchAll(PDO::FETCH_DEFAULT);
         }
 
-        function getTheTop5Teams($pdo)
+        static function getTheTop5Teams($pdo)
         {
             if($_SESSION["authenticated_username"] == "")
             {
@@ -119,7 +120,7 @@
             return $result->fetchAll(PDO::FETCH_DEFAULT);
         }
 
-        function subscribeUnsubscribe($pdo)
+        static function subscribeUnsubscribe($pdo)
         {
             $team = $_POST['team'];
             if ($team == ""){
@@ -176,7 +177,7 @@
             header("Location: index.php");
         }
 
-        function incrementLikes($pdo)
+        static function incrementLikes($pdo)
         {
             $post_id = $_POST['post_id'];
 
@@ -196,7 +197,7 @@
             header("Location: index.php");
         }
 
-        function post($pdo)
+        static function post($pdo)
         {
             $title = $_POST["title"];
             $body = $_POST["body"];
@@ -294,7 +295,7 @@
             }
         }
 
-        function verifyRegistration($pdo)
+        static function verifyRegistration($pdo)
         {
             if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]) && isset($_POST["confirmed"]))
             {
@@ -355,4 +356,5 @@
             }
             }
         }
+    }
 ?>
